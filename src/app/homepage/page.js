@@ -11,6 +11,7 @@ import {
   Performance,
   Feedback,
   Quiz,
+  Psychologist,
 } from "@/components/Home";
 
 const page = () => {
@@ -24,6 +25,7 @@ const page = () => {
       <Performance />
       <Feedback />
       <Quiz />
+      <Psychologist />
       {/* <section style="width: 100%;">
         <img src="../../../public/assets/images/madina.svg" />
       </section> */}
