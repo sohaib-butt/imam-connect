@@ -8,7 +8,8 @@ import {
   MediaPartners,
   Services,
   ServiceProvider,
-  Performance
+  Performance,
+  Feedback,
 } from "@/components/Home";
 
 const page = () => {
@@ -20,6 +21,11 @@ const page = () => {
       <Services />
       <ServiceProvider />
       <Performance />
+      <Feedback />
+
+      {/* <section style="width: 100%;">
+        <img src="../../../public/assets/images/madina.svg" />
+      </section> */}
       <GettingStarted />
       <Footer />
     </div>
