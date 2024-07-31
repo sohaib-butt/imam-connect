@@ -10,6 +10,7 @@ import {
   ServiceProvider,
   Performance,
   Feedback,
+  Quiz,
 } from "@/components/Home";
 
 const page = () => {
@@ -22,7 +23,7 @@ const page = () => {
       <ServiceProvider />
       <Performance />
       <Feedback />
-
+      <Quiz />
       {/* <section style="width: 100%;">
         <img src="../../../public/assets/images/madina.svg" />
       </section> */}

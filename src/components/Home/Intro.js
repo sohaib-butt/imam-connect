@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "../../styles/homepage.module.scss";
+import Image from "next/image";
 
 const Intro = () => {
   const popularTags = [
@@ -29,10 +30,13 @@ const Intro = () => {
             className={styles.intro_search_div}
             placeholder="Try Search: Nikah"
           />
-          <img
-            src="assets/images/searchIcon.svg"
-            className={styles.intro_search_icon}
-          />
+          <div className={styles.intro_search_icon}>
+            <Image
+              src="assets/images/searchIcon.svg"
+              // class={styles.intro_search_icon}
+              fill
+            />
+          </div>
         </div>
         <div style={{ textAlign: "start", width: "100%", paddingTop: "1rem" }}>
           <div

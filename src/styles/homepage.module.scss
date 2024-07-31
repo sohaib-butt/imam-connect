@@ -400,7 +400,7 @@
   align-items: center;
   justify-content: space-between;
 }
-.quiz-heading {
+.quiz_heading {
   font-family: $font-poppins;
   font-size: 50px;
   font-weight: 700;
@@ -409,7 +409,7 @@
   text-align: left;
   color: $performance_desc-color;
 }
-.quiz-content {
+.quiz_content {
   font-family: $font-poppins;
   font-family: Poppins;
   font-size: $font-size-small;
@@ -418,7 +418,7 @@
   text-align: left;
   color: $performance_desc-color;
 }
-.review-div {
+.review_div {
   width: 100%;
   display: flex;
   align-items: center;
