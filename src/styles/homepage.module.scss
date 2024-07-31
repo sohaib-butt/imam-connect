@@ -582,7 +582,7 @@
   }
 }
 
-.footer-primary_button {
+.footer_primary_button {
   margin-top: $margin-top-small;
   width: 40%;
   height: 56px;
@@ -734,7 +734,7 @@
   margin-bottom: 10px;
 }
 
-.marriage-container {
+.marriage_container {
   display: flex;
   flex-direction: column;
   justify-content: start;
@@ -756,7 +756,7 @@
   @include service-box(#b9ffc8);
 }
 
-.listing-count {
+.listing_count {
   background-color: #442d87;
   border-radius: 8px;
   padding: 0px, 21.01px, 0px, 21.01px;
@@ -772,7 +772,7 @@
   justify-content: center;
 }
 
-.txt-marriage-service {
+.txt_marriage_service {
   font-family: $font-poppins;
   font-size: 20px;
   font-weight: 500;

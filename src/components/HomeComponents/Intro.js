@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../styles/homepage.module.scss";
+import styles from "../../styles/homepage.module.scss";
 
 const Intro = () => {
   const popularTags = [
