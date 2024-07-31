@@ -461,17 +461,17 @@
   color: $performance_desc-color;
 }
 
-.how-it-works {
+.how_it_works {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-//   background-image: url("../../public/images/howItWorksBg.svg") !important;
+  background-image: url("../../public/assets/images/howItWorksBg.svg") !important;
   padding: 80px 105px 40px 105px;
   gap: 4rem;
 }
 
-.how-it-works-heading {
+.how_it_works_heading {
   font-family: $font-poppins;
   font-size: 48px;
   font-weight: 700;
@@ -973,7 +973,7 @@
   }
 }
 
-.steps-container {
+.steps_container {
   display: flex;
   justify-content: space-around;
   align-items: flex-start;
@@ -1019,11 +1019,11 @@
   }
 }
 
-.steps-container .step:last-child .number::after {
+.steps_container .step:last-child .number::after {
   display: none;
 }
 
-.step-heading {
+.step_heading {
   font-family: $font-poppins;
   font-size: 21px;
   font-weight: 600;
@@ -1033,7 +1033,7 @@
   color: $white-color;
 }
 
-.step-content {
+.step_content {
   font-family: $font-poppins;
   font-size: 17px;
   font-weight: 400;

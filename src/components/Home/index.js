@@ -6,3 +6,4 @@ export {default as Services} from './Services';
 export {default as Feedback} from './Feedback';
 export {default as Quiz} from './Quiz';
 export {default as Psychologist} from './Psychologist';
+export {default as HowItWorks} from './HowItWorks';

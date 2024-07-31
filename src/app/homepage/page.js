@@ -12,6 +12,7 @@ import {
   Feedback,
   Quiz,
   Psychologist,
+  HowItWorks,
 } from "@/components/Home";
 
 const page = () => {
@@ -26,6 +27,7 @@ const page = () => {
       <Feedback />
       <Quiz />
       <Psychologist />
+      <HowItWorks />
       {/* <section style="width: 100%;">
         <img src="../../../public/assets/images/madina.svg" />
       </section> */}
