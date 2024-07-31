@@ -5,6 +5,7 @@ import GettingStarted from "@/components/GettingStarted";
 import Intro from "@/components/HomeComponents/Intro";
 import MediaPartners from "@/components/HomeComponents/MediaPartners";
 import Services from "@/components/HomeComponents/Services";
+import ServiceProvider from "@/components/HomeComponents/ServiceProvider";
 
 const page = () => {
   return (
@@ -13,6 +14,7 @@ const page = () => {
       <Intro />
       <MediaPartners />
       <Services />
+      <ServiceProvider />
       <GettingStarted />
       <Footer />
     </div>
