@@ -1,11 +1,15 @@
 import React from "react";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import GettingStarted from "@/components/GettingStarted";
-import Intro from "@/components/HomeComponents/Intro";
-import MediaPartners from "@/components/HomeComponents/MediaPartners";
-import Services from "@/components/HomeComponents/Services";
-import ServiceProvider from "@/components/HomeComponents/ServiceProvider";
+import Header from "@/components/shared/Header";
+import Footer from "@/components/shared/Footer";
+import GettingStarted from "@/components/shared/GettingStarted";
+
+import {
+  Intro,
+  MediaPartners,
+  Services,
+  ServiceProvider,
+  Performance
+} from "@/components/Home";
 
 const page = () => {
   return (
@@ -15,6 +19,7 @@ const page = () => {
       <MediaPartners />
       <Services />
       <ServiceProvider />
+      <Performance />
       <GettingStarted />
       <Footer />
     </div>

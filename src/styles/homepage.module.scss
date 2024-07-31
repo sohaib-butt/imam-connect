@@ -297,7 +297,7 @@
   margin-bottom: 1rem;
 }
 
-.performance-desc {
+.performance_desc {
   font-family: "Poppins", sans-serif;
   font-size: 16px;
   font-weight: 400;
@@ -306,7 +306,7 @@
   color: #2d2d2d;
 }
 
-.stat-div {
+.stat_div {
   border-left: 4px solid #442d87; /* Line thickness and color */
   height: 70px; /* Line height */
   padding-left: 1rem;
@@ -316,7 +316,7 @@
   justify-content: start;
 }
 
-.stat-count {
+.stat_count {
   font-family: "Poppins", sans-serif;
   font-size: 38px;
   font-weight: 700;
@@ -325,7 +325,7 @@
   text-align: left;
 }
 
-.stat-txt {
+.stat_txt {
   font-family: "Poppins", sans-serif;
   font-size: 16px;
   font-weight: 400;
@@ -333,7 +333,7 @@
   text-align: left;
 }
 
-.stats-container {
+.stats_container {
   display: flex;
   align-items: center;
   justify-content: start;
@@ -407,7 +407,7 @@
   line-height: 65px;
   letter-spacing: -0.02em;
   text-align: left;
-  color: $performance-desc-color;
+  color: $performance_desc-color;
 }
 .quiz-content {
   font-family: $font-poppins;
@@ -416,7 +416,7 @@
   font-weight: 400;
   line-height: $font-size-medium;
   text-align: left;
-  color: $performance-desc-color;
+  color: $performance_desc-color;
 }
 .review-div {
   width: 100%;
@@ -434,14 +434,14 @@
   font-size: $font-size-small;
   font-weight: 700;
   line-height: 22px;
-  color: $performance-desc-color;
+  color: $performance_desc-color;
 }
 .review {
   font-family: Inter;
   font-size: $font-size-small;
   font-weight: 400;
   line-height: 22px;
-  color: $performance-desc-color;
+  color: $performance_desc-color;
 }
 
 .psychologist {
@@ -458,7 +458,7 @@
   font-weight: 400;
   line-height: 31.5px;
   text-align: left;
-  color: $performance-desc-color;
+  color: $performance_desc-color;
 }
 
 .how-it-works {
