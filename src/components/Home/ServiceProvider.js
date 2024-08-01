@@ -4,6 +4,7 @@ import styles from "../../styles/homepage.module.scss";
 const ServiceProvider = () => {
   return (
     <section className={styles.services}>
+      <span className={`${styles.txt_popular_services} block lg:hidden`}>Popular services providers</span>
       <div
         style={{
           display: "flex",
@@ -12,7 +13,7 @@ const ServiceProvider = () => {
           width: "100%",
         }}
       >
-        <span className={styles.txt_popular_services}>Popular services providers</span>
+        <span className={`${styles.txt_popular_services} hidden lg:block`}>Popular services providers</span>
         <span className={styles.view_all}>View all</span>
       </div>
       <div className={styles.cards_container}>

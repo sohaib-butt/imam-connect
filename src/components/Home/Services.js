@@ -4,10 +4,16 @@ import styles from "../../styles/homepage.module.scss";
 const Services = () => {
   return (
     <section className={styles.services}>
-      <span className={styles.txt_popular_services}>Popular Services</span>
+      <span className={`${styles.txt_popular_services} hidden lg:block`}>
+        Popular Services
+      </span>
+      <span className={`${styles.txt_popular_services} block lg:hidden`}>
+        Services we offer for you
+      </span>
       <div className={styles.service_list}>
         <div className={styles.marriage_container}>
           <span
+            className="hidden lg:block"
             style={{
               fontFamily: "Poppins",
               fontSize: "12px",
@@ -21,15 +27,8 @@ const Services = () => {
             Family services
           </span>
           <div className={styles.marriage}>
-            <img src="assets/images/cuate.svg" style={{ width: "60%" }} />
-            <div
-              style={{
-                display: "flex",
-                height: "100%",
-                alignItems: "flex-start",
-                width: "40%",
-              }}
-            >
+            <img src="assets/images/cuate.svg" className={styles.service_img} />
+            <div className={styles.listing_count_div}>
               <div className={styles.listing_count}>232 listings</div>
             </div>
           </div>
@@ -41,6 +40,7 @@ const Services = () => {
         </div>
         <div className={styles.marriage_container}>
           <span
+            className="hidden lg:block"
             style={{
               fontFamily: "Poppins",
               fontSize: "12px",
@@ -54,15 +54,11 @@ const Services = () => {
             Life services
           </span>
           <div className={styles.life}>
-            <img src="assets/images/rafiki.svg" style={{ width: "60%" }} />
-            <div
-              style={{
-                display: "flex",
-                height: "100%",
-                alignItems: "flex-start",
-                width: "40%",
-              }}
-            >
+            <img
+              src="assets/images/rafiki.svg"
+              className={styles.service_img}
+            />
+            <div className={styles.listing_count_div}>
               <div className={styles.listing_count}>232 listings</div>
             </div>
           </div>
@@ -70,6 +66,7 @@ const Services = () => {
         </div>
         <div className={styles.marriage_container}>
           <span
+            className="hidden lg:block"
             style={{
               fontFamily: "Poppins",
               fontSize: "12px",
@@ -83,15 +80,11 @@ const Services = () => {
             Development services
           </span>
           <div className={styles.training}>
-            <img src="assets/images/breathing.svg" style={{ width: "60%" }} />
-            <div
-              style={{
-                display: "flex",
-                height: "100%",
-                alignItems: "flex-start",
-                width: "40%",
-              }}
-            >
+            <img
+              src="assets/images/breathing.svg"
+              className={styles.service_img}
+            />
+            <div className={styles.listing_count_div}>
               <div className={styles.listing_count}>232 listings</div>
             </div>
           </div>
@@ -102,6 +95,7 @@ const Services = () => {
         </div>
         <div className={styles.marriage_container}>
           <span
+            className="hidden lg:block"
             style={{
               fontFamily: "Poppins",
               fontSize: "12px",
@@ -115,19 +109,17 @@ const Services = () => {
             Support services
           </span>
           <div className={styles.counsel}>
-            <img src="assets/images/counsel.svg" style={{ width: "60%" }} />
-            <div
-              style={{
-                display: "flex",
-                height: "100%",
-                alignItems: "flex-start",
-                width: "40%",
-              }}
-            >
+            <img
+              src="assets/images/counsel.svg"
+              className={styles.service_img}
+            />
+            <div className={styles.listing_count_div}>
               <span className={styles.listing_count}>232 listings</span>
             </div>
           </div>
-          <span className={styles.txt_marriage_service}>Counselling & Support</span>
+          <span className={styles.txt_marriage_service}>
+            Counselling & Support
+          </span>
         </div>
       </div>
     </section>

@@ -438,6 +438,18 @@
   align-items: start;
   padding: 80px 105px 40px 105px;
   gap: $gap-medium;
+
+  @media (max-width: 640px) {
+    padding: 24px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @media (min-width: 641px) and (max-width: 1024px) {
+    padding: 24px;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 .txt_popular_services {
@@ -446,6 +458,22 @@
   font-size: $font-size-xlarge;
   font-weight: 600;
   letter-spacing: -1.2px;
+
+  @media (max-width: 640px) {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 48px;
+    letter-spacing: -1.2000000476837158px;
+    text-align: center;
+  }
+
+  @media (min-width: 641px) and (max-width: 1024px) {
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 48px;
+    letter-spacing: -1.2000000476837158px;
+    text-align: center;
+  }
 }
 
 .service_list {
@@ -454,6 +482,17 @@
   align-items: start;
   flex-wrap: wrap;
   gap: $gap-large;
+  @media (max-width: 640px) {
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+  }
+
+  @media (min-width: 641px) and (max-width: 1024px) {
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+  }
 }
 
 .view_all {
@@ -463,6 +502,13 @@
   line-height: $font-size-xlarge;
   text-align: left;
   color: $primary-color;
+  @media (max-width: 640px) {
+    display: none;
+  }
+
+  @media (min-width: 641px) and (max-width: 1024px) {
+    display: none;
+  }
 }
 
 .performance {
@@ -963,6 +1009,16 @@
   justify-content: space-between;
   margin-top: 8px;
   margin-bottom: 10px;
+
+  @media (max-width: 640px) {
+    width: 150px;
+    height: 95px;
+  }
+
+  @media (min-width: 641px) and (max-width: 1024px) {
+    width: 200px;
+    height: 115px;
+  }
 }
 
 .marriage_container {
@@ -987,6 +1043,32 @@
   @include service-box(#b9ffc8);
 }
 
+.service_img {
+  width: 60%;
+
+  @media (max-width: 640px) {
+    width: 50%;
+  }
+
+  @media (min-width: 641px) and (max-width: 1024px) {
+    width: 50%;
+  }
+}
+.listing_count_div {
+  display: flex;
+  height: 100%;
+  align-items: start;
+  width: 40%;
+
+  @media (max-width: 640px) {
+    width: 50%;
+  }
+
+  @media (min-width: 641px) and (max-width: 1024px) {
+    width: 50%;
+  }
+}
+
 .listing_count {
   background-color: #442d87;
   border-radius: 8px;
@@ -1001,6 +1083,22 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @media (max-width: 640px) {
+    height: 17px;
+    width: 79px;
+    padding: 0px 12px 0px 12px;
+    font-size: 8px;
+    line-height: 12.5px;
+  }
+
+  @media (min-width: 641px) and (max-width: 1024px) {
+    height: 17px;
+    width: 79px;
+    padding: 0px 12px 0px 12px;
+    font-size: 10px;
+    line-height: 12.5px;
+  }
 }
 
 .txt_marriage_service {
@@ -1011,6 +1109,18 @@
   letter-spacing: -0.3799065351486206px;
   text-align: left;
   color: #161c2d;
+
+  @media (max-width: 640px) {
+    font-size: 14px;
+    line-height: 21px;
+    letter-spacing: -0.2168908268213272px;
+  }
+
+  @media (min-width: 641px) and (max-width: 1024px) {
+    font-size: 16px;
+    line-height: 21px;
+    letter-spacing: -0.2168908268213272px;
+  }
 }
 
 .card {
