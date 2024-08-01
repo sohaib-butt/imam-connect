@@ -1,21 +1,30 @@
 import React from "react";
-import styles from '../../styles/homepage.module.scss';
+import styles from "../../styles/homepage.module.scss";
+import Link from "next/link";
 
 const Header = () => {
   return (
     <div className={styles.header}>
-      <img src='assets/images/imamLogo.svg' />
+      <img src="assets/images/imamLogo.svg" />
       <div className={styles.navigation_menu}>
         <div className={styles.menu_items_div}>
           <span>
-            <a href="/homepage" id="home" className={`${styles.sub_menu_item} ${styles.selected}`}>
+            <Link
+              href="/homepage"
+              id="home"
+              className={`${styles.sub_menu_item} ${styles.selected}`}
+            >
               Home
-            </a>
+            </Link>
           </span>
           <span>
-            <a href="/aboutus" id="about-us" className={styles.sub_menu_item}>
+            <Link
+              href="/aboutus"
+              id="about-us"
+              className={styles.sub_menu_item}
+            >
               About Us
-            </a>
+            </Link>
           </span>
           <div
             style={{
@@ -26,9 +35,13 @@ const Header = () => {
             }}
           >
             <span>
-              <a href="/services" id="services" className={styles.sub_menu_item}>
+              <Link
+                href="/services"
+                id="services"
+                className={styles.sub_menu_item}
+              >
                 Services
-              </a>
+              </Link>
             </span>
             <img
               src="assets/images/downArrow.svg"
@@ -36,13 +49,13 @@ const Header = () => {
             />
           </div>
           <span>
-            <a
+            <Link
               href="/testimonials"
               id="testimonials"
               className={styles.sub_menu_item}
             >
               Testimonials
-            </a>
+            </Link>
           </span>
         </div>
         <div style={{ width: "5%" }}></div>
@@ -70,6 +83,9 @@ const Header = () => {
             </button>
           </div>
         </div>
+      </div>
+      <div className={styles.hamburger_button}>
+        <img src="assets/images/hamburger_button.svg" />
       </div>
     </div>
   );

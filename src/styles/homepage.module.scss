@@ -8,6 +8,7 @@
   padding-right: $padding-left-right;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .navigation_menu {
@@ -15,6 +16,16 @@
   justify-content: space-between;
   align-items: center;
   width: 80%;
+
+  @media (max-width: 991px) {
+    display: none;
+  }
+}
+
+.hamburger_button {
+  @media (min-width: 991px) {
+    display: none;
+  }
 }
 
 .menu_items_div {
