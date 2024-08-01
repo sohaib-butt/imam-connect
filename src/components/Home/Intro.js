@@ -15,13 +15,13 @@ const Intro = () => {
   return (
     <section className={styles.intro}>
       <div className={styles.inside_intro}>
-        <p className={styles.intro_find_text}>
+        <span className={styles.intro_find_text}>
           FIND MUSLIM SERVICES PROVIDERS ON
-        </p>
-        <p className={styles.intro_welcome_text}>
+        </span>
+        <span className={styles.intro_welcome_text}>
           Welcome to the World's First Online Hub{" "}
           <span style={{ fontWeight: "700" }}>for Muslim Services</span>
-        </p>
+        </span>
         <div style={{ width: "100%", position: "relative" }}>
           <input
             name="name"
@@ -56,7 +56,7 @@ const Intro = () => {
             </div>
           </div>
         </div>
-        <div style={{ width: "35%", textAlign: "center" }}>
+        <div className={styles.needs_btn_div}>
           <button className={styles.needs_primary_button}>
             Find your needs
           </button>
@@ -64,6 +64,7 @@ const Intro = () => {
         <img
           src="assets/images/girl-holding-books.svg"
           style={{ marginTop: "2rem" }}
+          className='hidden lg:block'
         />
       </div>
     </section>

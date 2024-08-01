@@ -125,11 +125,14 @@
 .intro {
   background-color: #f3efff;
   /* height: 874px; */
-  padding-top: $padding-left-right;
+  padding-top: 5%;
   display: flex;
   flex-direction: column;
   justify-content: start;
   align-items: center;
+  @media (max-width: 640px) {
+    padding-top: 10%;
+  }
 }
 
 .inside_intro {
@@ -139,6 +142,9 @@
   flex-direction: column;
   justify-content: start;
   align-items: center;
+  @media (max-width: 640px) {
+    width: 90%;
+  }
 }
 
 .intro_find_text {
@@ -147,6 +153,23 @@
   font-size: 20px;
   color: $primary-bg-color;
   line-height: $gap-medium;
+  @media (max-width: 640px) {
+    font-family: $font-poppins;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 21px;
+    text-align: center;
+    color: $primary-bg-color;
+  }
+
+  @media (min-width: 641px) and (max-width: 1024px) {
+    font-family: $font-poppins;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 26px;
+    text-align: center;
+    color: $primary-bg-color;
+  }
 }
 
 .intro_welcome_text {
@@ -155,6 +178,26 @@
   font-size: 48px;
   color: $primary-bg-color;
   line-height: 72px;
+  padding-top: 10px;
+  padding-bottom: 20px;
+
+  @media (max-width: 640px) {
+    font-family: $font-poppins;
+    font-size: 32px;
+    font-weight: 300;
+    line-height: 48px;
+    text-align: center;
+    color: $primary-bg-color;
+  }
+
+  @media (min-width: 641px) and (max-width: 1024px) {
+    font-family: $font-poppins;
+    font-size: 38px;
+    font-weight: 300;
+    line-height: 48px;
+    text-align: center;
+    color: $primary-bg-color;
+  }
 }
 
 .intro_search_div {
@@ -177,6 +220,50 @@
     font-size: 20px;
     color: $search-color;
   }
+
+  @media (max-width: 640px) {
+    width: 90%;
+    height: 54px;
+    border-radius: 12px;
+    background-color: $white-color;
+    border: 1px solid $search-border-color;
+    color: $search-color;
+    font-family: $font-poppins;
+    font-weight: 400;
+    font-size: 16px;
+    padding-left: 2rem;
+    padding-right: $margin-top-small;
+    outline: none;
+
+    &::placeholder {
+      font-family: $font-poppins;
+      font-weight: 400;
+      font-size: 16px;
+      color: $search-color;
+    }
+  }
+
+  @media (min-width: 641px) and (max-width: 1024px) {
+    width: 100%;
+    height: 64px;
+    border-radius: 12px;
+    background-color: $white-color;
+    border: 1px solid $search-border-color;
+    color: $search-color;
+    font-family: $font-poppins;
+    font-weight: 400;
+    font-size: 18px;
+    padding-left: 2rem;
+    padding-right: $margin-top-small;
+    outline: none;
+
+    &::placeholder {
+      font-family: $font-poppins;
+      font-weight: 400;
+      font-size: 18px;
+      color: $search-color;
+    }
+  }
 }
 
 .intro_search_icon {
@@ -184,7 +271,19 @@
   height: 35px;
   width: 35px;
   top: 25px;
-  right: -$border-radius-small;
+  right: 15px;
+
+  @media (max-width: 640px) {
+    height: 25px;
+    width: 25px;
+    top: 15px;
+    right: 30px;
+  }
+
+  @media (min-width: 641px) and (max-width: 1024px) {
+    top: 15px;
+    right: 15px;
+  }
 }
 
 .popular_text {
@@ -192,6 +291,14 @@
   font-weight: 500;
   font-size: 20px;
   color: #161616;
+
+  @media (max-width: 640px) {
+    font-size: 16px;
+  }
+
+  @media (min-width: 641px) and (max-width: 1024px) {
+    font-size: 18px;
+  }
 }
 
 .popular_list {
@@ -200,6 +307,16 @@
   justify-content: start;
   align-items: center;
   gap: $margin-top-small;
+
+  @media (max-width: 640px) {
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  @media (min-width: 641px) and (max-width: 1024px) {
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
 }
 
 .popular_tag {
@@ -208,16 +325,34 @@
   font-size: 18px;
   background-color: #e0d6ff;
   color: $primary-bg-color;
-  padding-left: $padding-small;
-  padding-right: $padding-small;
+  padding-left: 1rem;
+  padding-right: 1rem;
   border-radius: 13px;
   height: 48px;
   display: flex;
   justify-content: center;
   align-items: center;
   text-wrap: nowrap;
+
+  @media (max-width: 1024px) {
+    font-size: 16px;
+  }
 }
 
+.needs_btn_div {
+  width: 35%;
+  text-align: center;
+
+  @media (max-width: 640px) {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  @media (min-width: 641px) and (max-width: 1024px) {
+    width: 50%;
+    margin-bottom: 2rem;
+  }
+}
 .needs_primary_button {
   margin-top: $margin-top-small;
   width: 100%;
@@ -237,7 +372,20 @@
   background-color: $primary-bg-color;
   display: flex;
   flex-direction: column;
+  justify-content: start;
   padding: 20px 50px 20px 105px;
+
+  @media (max-width: 640px) {
+    justify-content: center;
+    align-items: center;
+    padding: 24px;
+  }
+
+  @media (min-width: 641px) and (max-width: 1024px) {
+    justify-content: center;
+    align-items: center;
+    padding: 24px;
+  }
 }
 
 .txt_media_partners {
@@ -245,6 +393,22 @@
   font-family: $font-poppins;
   font-size: $font-size-large;
   font-weight: 700;
+
+  @media (max-width: 640px) {
+    font-family: $font-poppins;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 36px;
+    text-align: center;
+  }
+
+  @media (min-width: 641px) and (max-width: 1024px) {
+    font-family: $font-poppins;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 36px;
+    text-align: center;
+  }
 }
 
 .media_list {
@@ -253,6 +417,18 @@
   align-items: center;
   flex-wrap: wrap;
   gap: $gap-large;
+
+  @media (max-width: 640px) {
+    overflow-x: auto;
+    scrollbar-width: none;
+    flex-wrap: nowrap;
+  }
+
+  @media (min-width: 641px) and (max-width: 1024px) {
+    overflow-x: auto;
+    scrollbar-width: none;
+    flex-wrap: nowrap;
+  }
 }
 
 .services {
@@ -404,22 +580,45 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: "cover";
-  padding: 80px 160px 80px 160px;
   position: relative;
   display: flex;
   justify-content: end;
   align-items: center;
 }
 .madina_gradient {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(270deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 100%);
+  background: linear-gradient(
+    270deg,
+    rgba(0, 0, 0, 0.75) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
   z-index: 1;
 }
+
+.madina_heading {
+  font-family: $font-poppins;
+  color: $white-color;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 52px;
+  letter-spacing: -0.02em;
+  text-align: left;
+}
+
+.madina_content {
+  font-family: $font-poppins;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+}
+
 .quiz {
   width: 100%;
   display: flex;
