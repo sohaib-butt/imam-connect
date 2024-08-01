@@ -17,8 +17,8 @@ const Performance = () => {
         helps you.
       </span>
       <div className={styles.stats_container}>
-        {statsData?.map((s) => (
-          <div className={styles.stat_div}>
+        {statsData?.map((s, index) => (
+          <div key={index} className={styles.stat_div}>
             <span className={styles.stat_count}>{s?.count}</span>
             <span className={styles.stat_txt}>{s?.text}</span>
           </div>

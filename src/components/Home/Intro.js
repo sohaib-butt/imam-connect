@@ -51,7 +51,7 @@ const Intro = () => {
             <p className={styles.popular_text}>Popular:</p>
             <div className={styles.popular_list}>
               {popularTags?.map((t, index) => (
-                <div className={styles.popular_tag}>{t}</div>
+                <div key={index} className={styles.popular_tag}>{t}</div>
               ))}
             </div>
           </div>

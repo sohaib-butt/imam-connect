@@ -26,8 +26,8 @@ const ServiceProvider = () => {
             flexWrap: "wrap"
           }}
         >
-          {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((a) => (
-            <div className={styles.card} key={a}>
+          {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((index) => (
+            <div className={styles.card} key={index}>
               <img
                 src="assets/images/happy-girl.svg"
                 alt="Putri Azzahra"

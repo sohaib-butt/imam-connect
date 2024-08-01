@@ -1,4 +1,4 @@
-@import './variables';
+@import "./variables";
 
 .header {
   background-color: $primary-bg-color;
@@ -386,6 +386,29 @@
   text-align: left;
 }
 
+.madina {
+  // width: 100%;
+  // height: 440px;
+  background-image: url("../../public/assets/images/madina-bg.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: "cover";
+  padding: 80px 160px 80px 160px;
+  position: relative;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+.madina_gradient {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(270deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 100%);
+  z-index: 1;
+}
 .quiz {
   width: 100%;
   display: flex;
@@ -411,7 +434,6 @@
 }
 .quiz_content {
   font-family: $font-poppins;
-  font-family: Poppins;
   font-size: $font-size-small;
   font-weight: 400;
   line-height: $font-size-medium;

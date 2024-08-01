@@ -16,8 +16,8 @@ const MediaPartners = () => {
     <section className={styles.media_partners}>
       <span className={styles.txt_media_partners}>Our partner media</span>
       <div className={styles.media_list}>
-        {logos?.map((l) => (
-          <img src={l} alt="Logo" />
+        {logos?.map((l, index) => (
+          <img key={index} src={l} alt="Logo" />
         ))}
       </div>
     </section>
