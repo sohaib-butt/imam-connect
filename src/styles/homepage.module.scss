@@ -517,6 +517,14 @@
   flex-direction: column;
   align-items: center;
   padding: 100px 55px 100px 55px;
+
+  @media (max-width: 640px) {
+    padding: 60px 30px 60px 30px;
+  }
+
+  @media (min-width: 641px) and (max-width: 1024px) {
+    padding: 60px 30px 60px 30px;
+  }
 }
 
 .performance_heading {
@@ -528,6 +536,18 @@
   text-align: center;
   color: #000000;
   margin-bottom: 1rem;
+
+  @media (max-width: 640px) {
+    font-size: 32px;
+    line-height: 41.6px;
+    letter-spacing: -0.02em;
+  }
+
+  @media (min-width: 641px) and (max-width: 1024px) {
+    font-size: 34px;
+    line-height: 41.6px;
+    letter-spacing: -0.02em;
+  }
 }
 
 .performance_desc {
@@ -537,6 +557,16 @@
   line-height: 20.8px;
   text-align: center;
   color: #2d2d2d;
+
+  @media (max-width: 640px) {
+    font-size: 14px;
+    line-height: 18.2px;
+  }
+
+  @media (min-width: 641px) and (max-width: 1024px) {
+    font-size: 14px;
+    line-height: 18.2px;
+  }
 }
 
 .stat_div {
@@ -556,6 +586,14 @@
   line-height: 49.4px;
   letter-spacing: -0.02em;
   text-align: left;
+
+  @media (max-width: 640px) {
+    font-size: 32px;
+  }
+
+  @media (min-width: 641px) and (max-width: 1024px) {
+    font-size: 34px;
+  }
 }
 
 .stat_txt {
@@ -564,32 +602,73 @@
   font-weight: 400;
   line-height: 20.8px;
   text-align: left;
+
+  @media (max-width: 640px) {
+    font-size: 14px;
+  }
+
+  @media (min-width: 641px) and (max-width: 1024px) {
+    font-size: 14px;
+  }
 }
 
 .stats_container {
   display: flex;
   align-items: center;
   justify-content: start;
+  flex-wrap: wrap;
   gap: 9rem;
   width: 100%;
   margin-top: 4rem;
+
+  @media (max-width: 640px) {
+    gap: 3rem;
+  }
+
+  @media (min-width: 641px) and (max-width: 1024px) {
+    gap: 3rem;
+  }
 }
 
 .feedback {
   background-color: $white-color;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: space-between;
   padding: 40px 105px 40px 105px;
   gap: $gap-medium;
+
+  @media (max-width: 640px) {
+    padding: 32px 24px 32px 24px;
+  }
+
+  @media (min-width: 641px) and (max-width: 1024px) {
+    padding: 32px 24px 32px 24px;
+  }
 }
 
 .feedback_first_div {
-  width: 50%;
+  // width: 50%;
   display: flex;
-  flex-direction: column;
+  // flex-direction: column;
   justify-content: space-between;
-  align-items: start;
+  align-items: center;
+
+  @media (max-width: 640px) {
+    flex-direction: column-reverse;
+  }
+
+  @media (min-width: 641px) and (max-width: 1024px) {
+    flex-direction: column-reverse;
+  }
+}
+
+.feedback_heading_txt_div {
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
 }
 
 .feedback_heading_txt {
@@ -599,12 +678,33 @@
   line-height: 62.4px;
   letter-spacing: -0.02em;
   text-align: left;
-  margin-bottom: 8rem;
+
+  @media (max-width: 640px) {
+    font-size: 36px;
+    line-height: 46.8px;
+    letter-spacing: -0.02em;
+  }
+
+  @media (min-width: 641px) and (max-width: 1024px) {
+    font-size: 36px;
+    line-height: 46.8px;
+    letter-spacing: -0.02em;
+  }
+}
+
+.feedback_quote_div {
+  width: 50%;
+  @media (max-width: 640px) {
+    width: 100%;
+  }
+
+  @media (min-width: 641px) and (max-width: 1024px) {
+    width: 100%;
+  }
 }
 
 .feedback_content_div {
-  width: 600px px;
-  height: 158px px;
+  width: 100%;
   padding: $font-size-medium;
   gap: $font-size-small;
   border-radius: 4px;
@@ -617,6 +717,21 @@
   font-weight: 400;
   line-height: 22px;
   text-align: left;
+}
+
+.feedback_avatar {
+  width: 360px;
+  height: 360px;
+
+  @media (max-width: 640px) {
+    width: 200px;
+    height: 200px;
+  }
+
+  @media (min-width: 641px) and (max-width: 1024px) {
+    width: 200px;
+    height: 200px;
+  }
 }
 
 .madina {
