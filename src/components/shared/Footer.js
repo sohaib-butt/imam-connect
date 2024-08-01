@@ -1,33 +1,16 @@
 import React from "react";
-import styles from '../../styles/homepage.module.scss';
+import styles from "../../styles/homepage.module.scss";
 
 const Footer = () => {
   return (
     <section className={styles.footer}>
       <div className={styles.footer_first_box}>
-        <div
-          style={{
-            width: "60%",
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "start",
-            alignItems: "start",
-            gap: "0.5rem",
-          }}
-        >
+        <div className={styles.footer_first_box_inner}>
           <span className={styles.footer_first_box_heading}>Subscribe</span>
           <span className={styles.footer_first_box_content}>
             To get latest information from us, and updated news.
           </span>
-          <div
-            style={{
-              width: "100%",
-              display: "flex",
-              justifyContent: "space-between",
-              alignItems: "end",
-              gap: "1rem",
-            }}
-          >
+          <div className={styles.email_btn_div}>
             <input
               name="email"
               id="email"
@@ -42,11 +25,15 @@ const Footer = () => {
       <div className={styles.footer_second_div}>
         <div className={styles.footer_third_div}>
           <div className={styles.footer_imamconnect}>
-            <span className={styles.footer_imamconnect_heading}>IMAMCONNECT</span>
+            <span className={styles.footer_imamconnect_heading}>
+              IMAMCONNECT
+            </span>
             <div className={styles.footer_imamconnect}>
               <span className={styles.footer_imamconnect_content}>About</span>
               <span className={styles.footer_imamconnect_content}>Team</span>
-              <span className={styles.footer_imamconnect_content}>Privacy Policy</span>
+              <span className={styles.footer_imamconnect_content}>
+                Privacy Policy
+              </span>
               <span className={styles.footer_imamconnect_content}>Terms</span>
             </div>
           </div>
@@ -54,22 +41,33 @@ const Footer = () => {
             <span className={styles.footer_imamconnect_heading}>NEWS</span>
             <div className={styles.footer_imamconnect}>
               <span className={styles.footer_imamconnect_content}>Guides</span>
-              <span className={styles.footer_imamconnect_content}>In the media</span>
-              <span className={styles.footer_imamconnect_content}>Specials</span>
+              <span className={styles.footer_imamconnect_content}>
+                In the media
+              </span>
+              <span className={styles.footer_imamconnect_content}>
+                Specials
+              </span>
             </div>
           </div>
           <div className={styles.footer_imamconnect}>
             <span className={styles.footer_imamconnect_heading}>Support</span>
             <div className={styles.footer_imamconnect}>
-              <span className={styles.footer_imamconnect_content}>Code of Conduc</span>
+              <span className={styles.footer_imamconnect_content}>
+                Code of Conduc
+              </span>
               <span className={styles.footer_imamconnect_content}>FAQ</span>
-              <span className={styles.footer_imamconnect_content}>Contact us</span>
+              <span className={styles.footer_imamconnect_content}>
+                Contact us
+              </span>
               <span className={styles.footer_imamconnect_content}>Payment</span>
             </div>
           </div>
         </div>
+        <div className={styles.horizontal_line}></div>
         <div className={styles.footer_address}>
-          <span className={styles.footer_imamconnect_heading}>MAIN OFFICE ADDRESS</span>
+          <span className={styles.footer_imamconnect_heading}>
+            MAIN OFFICE ADDRESS
+          </span>
           <div className={styles.footer_address}>
             <span className={styles.footer_address_content}>
               Imam Connect LTD (12658054)
