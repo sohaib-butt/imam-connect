@@ -1042,6 +1042,14 @@
   background-image: url("../../public/assets/images/howItWorksBg.svg") !important;
   padding: 80px 105px 40px 105px;
   gap: 4rem;
+
+  @media (max-width: 640px) {
+    display: none;
+  }
+
+  @media (min-width: 641px) and (max-width: 1024px) {
+    display: none;
+  }
 }
 
 .how_it_works_heading {
@@ -1060,6 +1068,14 @@
   align-items: center;
   justify-content: center;
   padding: 80px 105px 40px 105px;
+
+  @media (max-width: 640px) {
+    padding: 40px 24px 40px 24px;
+  }
+
+  @media (min-width: 641px) and (max-width: 1024px) {
+    padding: 40px 24px 40px 24px;
+  }
 }
 
 .get_started_card {
@@ -1069,6 +1085,46 @@
   border-radius: $font-size-medium;
   padding: 40px 80px 40px 80px;
   position: relative;
+
+  @media (max-width: 640px) {
+    width: 100%;
+    padding: 24px;
+  }
+
+  @media (min-width: 641px) and (max-width: 1024px) {
+    width: 100%;
+    padding: 24px;
+  }
+}
+
+.get_started_card_inner {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  gap: 1rem;
+
+  @media (max-width: 640px) {
+    width: 100%;
+  }
+
+  @media (min-width: 641px) and (max-width: 1024px) {
+    width: 100%;
+  }
+}
+
+.get_started_btn_div {
+  width: 50%;
+  text-align: center;
+
+  @media (max-width: 640px) {
+    width: 100%;
+  }
+
+  @media (min-width: 641px) and (max-width: 1024px) {
+    width: 100%;
+  }
 }
 
 .get_started_heading {
@@ -1079,7 +1135,18 @@
   letter-spacing: -1.2000000476837158px;
   text-align: left;
   color: $white-color;
+
+  @media (max-width: 640px) {
+    font-size: 32px;
+    line-height: 48px;
+  }
+
+  @media (min-width: 641px) and (max-width: 1024px) {
+    font-size: 48px;
+    line-height: 48px;
+  }
 }
+
 .get_started_content {
   font-family: $font-poppins;
   font-size: 20px;
