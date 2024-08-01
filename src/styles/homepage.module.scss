@@ -781,14 +781,14 @@
     width: 100%;
     justify-content: center;
     align-items: center;
-    padding: 15% 5% 15% 5%;
+    padding: 15% 10% 15% 10%;
   }
 
   @media (min-width: 641px) and (max-width: 1024px) {
     width: 100%;
     justify-content: center;
     align-items: center;
-    padding: 15% 5% 15% 5%;
+    padding: 15% 10% 15% 10%;
   }
 }
 
@@ -854,6 +854,16 @@
   align-items: center;
   justify-content: start;
   gap: 5rem;
+
+  @media (max-width: 640px) {
+    align-items: start;
+    flex-direction: column;
+  }
+
+  @media (min-width: 641px) and (max-width: 1024px) {
+    align-items: start;
+    flex-direction: column;
+  }
 }
 .quiz-first-div {
   width: 50%;
@@ -861,6 +871,14 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+
+  @media (max-width: 640px) {
+    width: 100%;
+  }
+
+  @media (min-width: 641px) and (max-width: 1024px) {
+    width: 100%;
+  }
 }
 .quiz_heading {
   font-family: $font-poppins;
@@ -870,6 +888,18 @@
   letter-spacing: -0.02em;
   text-align: left;
   color: $performance_desc-color;
+
+  @media (max-width: 640px) {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 41.6px;
+  }
+
+  @media (min-width: 641px) and (max-width: 1024px) {
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 41.6px;
+  }
 }
 .quiz_content {
   font-family: $font-poppins;
@@ -879,16 +909,58 @@
   text-align: left;
   color: $performance_desc-color;
 }
+
+.health_check_btn_div {
+  width: 70%;
+  text-align: center;
+
+  @media (max-width: 640px) {
+    width: 100%;
+  }
+
+  @media (min-width: 641px) and (max-width: 1024px) {
+    width: 100%;
+  }
+}
+
+.outer_review_div {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+
+  @media (max-width: 640px) {
+    width: 100%;
+  }
+
+  @media (min-width: 641px) and (max-width: 1024px) {
+    width: 100%;
+  }
+}
+
 .review_div {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-around;
-  height: 184px;
   padding: $margin-top-small;
   border-radius: $border-radius-small;
   background-color: #f8f8f8;
   gap: 2rem;
+
+  @media (max-width: 640px) {
+    align-items: start;
+    justify-content: start;
+    flex-direction: column;
+  }
+
+  @media (min-width: 641px) and (max-width: 1024px) {
+    align-items: start;
+    justify-content: start;
+    flex-direction: column;
+  }
 }
 .reviewer {
   font-family: Inter;

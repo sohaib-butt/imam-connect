@@ -22,7 +22,7 @@ const Quiz = () => {
             service, we, in collaboration with our vetted Muslim counsellors,
             have designed a tool to do a marriage health check in just 2 minutes
           </span>
-          <div style={{ width: "70%", textAlign: "center" }}>
+          <div className={styles.health_check_btn_div}>
             <button className={styles.needs_primary_button}>
               Muslim Marriage Health Check
             </button>
@@ -37,7 +37,6 @@ const Quiz = () => {
             justifyContent: "start",
             alignItems: "start",
             gap: "1rem",
-            width: "50%",
           }}
         >
           <span className={styles.quiz_heading}>
@@ -51,16 +50,9 @@ const Quiz = () => {
           </span>
         </div>
         <div
-          style={{
-            width: "50%",
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            justifyContent: "space-between",
-            gap: "2rem",
-          }}
+          className={styles.outer_review_div}
         >
-          <div className="review_div">
+          <div className={styles.review_div}>
             <img src="assets/images/avatar1.svg" />
             <div
               style={{
@@ -71,8 +63,8 @@ const Quiz = () => {
                 gap: "1rem",
               }}
             >
-              <span className="reviewer">Putri Azzahra</span>
-              <span className="review">
+              <span className={styles.reviewer}>Putri Azzahra</span>
+              <span className={styles.review}>
                 “I’m very happy to be one of service providers at ImamConnect.
                 Really glad I can help so many people in this platform.”
               </span>
