@@ -1092,11 +1092,15 @@
   gap: 4rem;
 
   @media (max-width: 640px) {
-    display: none;
+    background-image: none !important;
+    background-color: $white-color;
+    padding: 24px;
   }
 
   @media (min-width: 641px) and (max-width: 1024px) {
-    display: none;
+    background-image: none !important;
+    background-color: $white-color;
+    padding: 24px;
   }
 }
 
@@ -1106,6 +1110,139 @@
   font-weight: 700;
   line-height: 44px;
   letter-spacing: -1.2000000476837158px;
+  text-align: center;
+  color: $white-color;
+
+  @media (max-width: 640px) {
+    font-size: 32px;
+    color: #442d87;
+  }
+
+  @media (min-width: 641px) and (max-width: 1024px) {
+    font-size: 38px;
+    color: #442d87;
+  }
+}
+
+.steps_container {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  width: 80%;
+
+  @media (max-width: 640px) {
+    width: 100%;
+    overflow-x: scroll;
+    scrollbar-width: none;
+    flex-direction: row;
+    justify-content: start;
+    align-items: start;
+    flex-wrap: nowrap;
+    gap: 1rem;
+  }
+
+  @media (min-width: 641px) and (max-width: 1024px) {
+    width: 100%;
+    overflow-x: scroll;
+    scrollbar-width: none;
+    flex-direction: row;
+    justify-content: start;
+    align-items: start;
+    flex-wrap: nowrap;
+    gap: 1rem;
+  }
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  // max-width: 200px;
+  width: 200px;
+  gap: 2rem;
+
+  @media (max-width: 640px) {
+    min-width: 70%;
+    height: 307px;
+    padding: 16px;
+    border-radius: 16px;
+    background-color: #442d87;
+    gap: 1rem;
+  }
+
+  @media (min-width: 641px) and (max-width: 1024px) {
+    min-width: 70%;
+    height: 307px;
+    padding: 16px;
+    border-radius: 16px;
+    background-color: #442d87;
+    gap: 1rem;
+  }
+}
+
+.number {
+  background-color: #fff;
+  color: #4a148c;
+  width: 73px;
+  height: 73px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: $font-poppins;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 48px;
+  letter-spacing: -1.2000000476837158px;
+  text-align: center;
+  margin: 0 auto 10px;
+  position: relative;
+
+  &::after {
+    content: "";
+    width: 275px;
+    border-bottom: 3px dashed #d5d7dd;
+    position: absolute;
+    top: 50%;
+    right: 0px;
+    left: 100%;
+  }
+
+  @media (max-width: 640px) {
+    &::after {
+      display: none;
+    }
+  }
+
+  @media (min-width: 641px) and (max-width: 1024px) {
+    &::after {
+      display: none;
+    }
+  }
+}
+
+.steps_container .step:last-child .number::after {
+  display: none;
+}
+
+.step_heading {
+  font-family: $font-poppins;
+  font-size: 21px;
+  font-weight: 600;
+  line-height: 32px;
+  letter-spacing: -0.5px;
+  text-align: center;
+  color: $white-color;
+}
+
+.step_content {
+  font-family: $font-poppins;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 29px;
+  letter-spacing: -0.20000000298023224px;
   text-align: center;
   color: $white-color;
 }
@@ -1917,74 +2054,4 @@
     outline: none;
     cursor: pointer;
   }
-}
-
-.steps_container {
-  display: flex;
-  justify-content: space-around;
-  align-items: flex-start;
-  width: 80%;
-}
-
-.step {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  max-width: 200px;
-  gap: 2rem;
-}
-
-.number {
-  background-color: #fff;
-  color: #4a148c;
-  width: 73px;
-  height: 73px;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: $font-poppins;
-  font-size: 36px;
-  font-weight: 700;
-  line-height: 48px;
-  letter-spacing: -1.2000000476837158px;
-  text-align: center;
-  margin: 0 auto 10px;
-  position: relative;
-
-  &::after {
-    content: "";
-    width: 275px;
-    border-bottom: 3px dashed #d5d7dd;
-    position: absolute;
-    top: 50%;
-    right: 0px;
-    left: 100%;
-  }
-}
-
-.steps_container .step:last-child .number::after {
-  display: none;
-}
-
-.step_heading {
-  font-family: $font-poppins;
-  font-size: 21px;
-  font-weight: 600;
-  line-height: 32px;
-  letter-spacing: -0.5px;
-  text-align: center;
-  color: $white-color;
-}
-
-.step_content {
-  font-family: $font-poppins;
-  font-size: 17px;
-  font-weight: 400;
-  line-height: 29px;
-  letter-spacing: -0.20000000298023224px;
-  text-align: center;
-  color: $white-color;
 }
