@@ -18,7 +18,7 @@ import {
 
 const page = () => {
   return (
-    <div>
+    <div className="relative">
       <Header />
       <Intro />
       <MediaPartners />
