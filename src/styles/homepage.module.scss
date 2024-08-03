@@ -1736,6 +1736,14 @@
   justify-content: center;
   align-items: center;
   width: 100%;
+
+  @media (max-width: 640px) {
+    display: none;
+  }
+
+  @media (min-width: 641px) and (max-width: 1024px) {
+    display: none;
+  }
 }
 
 @mixin service-box($background-color) {
@@ -1869,7 +1877,6 @@
   flex-direction: column !important;
   justify-content: center !important;
   align-items: center !important;
-  // width: 330px;
   // height: 521.67px;
   border-radius: 18px;
   border: 1px solid #d7d7d7;
@@ -1877,6 +1884,10 @@
   opacity: 0px;
   gap: 0.75rem;
   position: relative;
+
+  @media (max-width: 646px) {
+    width: 100% !important;
+  }
 
   .profile_picture {
     width: 161px;
@@ -1890,8 +1901,8 @@
     position: absolute;
     width: 71px;
     height: 26px;
-    top: 27%;
-    left: 39%;
+    top: calc(31% - 13px); /* Adjusted for the height of the level element */
+    left: calc(50% - 35.5px);
     background-color: #e0d6ff;
     color: #442d87;
     padding: 2px 8px 2px 8px;
@@ -1913,8 +1924,8 @@
   }
 
   .recommendation_div {
-    width: 80%;
-    height: 20px;
+    width: 100%;
+    height: 34px;
     margin-top: 10px;
     border-radius: 1666px;
     padding: 8px 16px 8px 16px;
@@ -1923,6 +1934,19 @@
     align-items: center;
     justify-content: start;
     gap: 8%;
+
+    @media (max-width: 640px) {
+      width: 100%;
+      height: 34px;
+      justify-content: center;
+    }
+
+    @media (min-width: 641px) and (max-width: 1024px) {
+      width: 80%;
+      height: 34px;
+      justify-content: center;
+    }
+
     .recommendation {
       color: $white-color;
       font-family: $font-poppins;
@@ -2042,6 +2066,100 @@
 
   .session_primary_button {
     // margin-top: $margin-top-small;
+    width: 100%;
+    height: 56px;
+    color: $white-color;
+    background-color: $primary-color;
+    border-radius: $border-radius-small;
+    font-family: $font-poppins;
+    font-size: $font-size-small;
+    font-weight: 700;
+    border: none;
+    outline: none;
+    cursor: pointer;
+  }
+}
+
+.sliderContainer {
+  padding: 0px 24px 80px 24px; // Adjust the padding as needed
+
+  .swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .swiper_button_prev,
+  .swiper_button_next {
+    position: absolute;
+    top: 40%;
+    background-color: #fff;
+    color: #082c5b;
+    border: none;
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: 0 0.83px 2.5px rgba(0, 0, 0, 0.1), 0 5px 5px rgba(0, 0, 0, 0.09),
+      0 10px 5.83px rgba(0, 0, 0, 0.05), 0 18.34px 7.5px rgba(0, 0, 0, 0.01),
+      0 28.34px 8.34px rgba(0, 0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .swiper_button_prev {
+    left: 15px;
+    z-index: 9999;
+  }
+
+  .swiper_button_next {
+    right: 15px;
+    z-index: 9999;
+  }
+
+  .swiperButtonContainer img {
+    width: 15px;
+    height: 15px;
+  }
+
+  .swiperPagination {
+    position: absolute;
+    bottom: 8% !important;
+    width: 100% !important;
+    padding: 0px 24px 0px 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.view_primary_button_div {
+  display: none;
+
+  @media (max-width: 640px) {
+    display: block;
+    padding: 0px 24px 20px 24px;
+    width: 100%;
+  }
+
+  @media (min-width: 641px) and (max-width: 1024px) {
+    display: block;
+    padding: 0px 24px 20px 24px;
+    width: 100%;
+  }
+
+  .view_primary_button {
     width: 100%;
     height: 56px;
     color: $white-color;
