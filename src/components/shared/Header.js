@@ -91,7 +91,7 @@ const Header = () => {
           </div>
         </div>
       </div>
-      <div className={styles.hamburger_button} onClick={toggleMenu}>
+      <div className={`${styles.hamburger_button} cursor-pointer`} onClick={toggleMenu}>
         <img src="assets/images/hamburger_button.svg" />
       </div>
 
@@ -108,7 +108,7 @@ const Header = () => {
             }}
           >
             <img src="assets/images/imamLogo.svg" />
-            <img src="assets/images/close_icon.svg" onClick={toggleMenu} />
+            <img src="assets/images/close_icon.svg" className="cursor-pointer" onClick={toggleMenu} />
           </div>
           <span>
             <Link
