@@ -3,7 +3,7 @@ import styles from './intro.module.scss';
 
 const index = () => {
   return (
-    <section className={styles.intro}>Intro Services</section>
+    <section className={styles.intro}></section>
   )
 }
 

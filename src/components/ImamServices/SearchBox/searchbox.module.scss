@@ -3,7 +3,6 @@
 .search_section {
   position: absolute;
   bottom: 10%;
-  left: calc(25% - 200px);
   z-index: 1000;
   background-color: $white-color;
   border: 1px solid #e7e7e7;
@@ -11,7 +10,7 @@
     0px 60px 36px rgba(0, 0, 0, 0.05), 0px 106px 43px rgba(0, 0, 0, 0.01),
     0px 166px 47px rgba(0, 0, 0, 0);
   padding: 20px;
-  border-radius: 8px;
+  border-radius: 24px;
   width: 80%;
   display: flex;
   flex-direction: column;
@@ -100,50 +99,20 @@
     top: 18px;
     right: 18px;
 
-    @media (max-width: 640px) {
-      height: 25px;
-      width: 25px;
-      top: 15px;
-      right: 30px;
-    }
-
     @media (min-width: 641px) and (max-width: 1024px) {
-      top: 15px;
+      top: 10px;
       right: 15px;
-    }
-  }
-
-  .search_bar {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-
-    input[type="text"] {
-      flex: 1;
-      padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      margin-right: 10px;
-    }
-
-    .search_button {
-      background-color: #17a2b8;
-      border: none;
-      padding: 10px;
-      border-radius: 4px;
-      color: #fff;
-      cursor: pointer;
-
-      i {
-        font-size: 1rem;
-      }
+      height: 24px;
+      width: 24px;
     }
   }
 
   .filters {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: start;
     width: 100%;
+    gap: 1rem;
 
     select {
       //   flex: 1;

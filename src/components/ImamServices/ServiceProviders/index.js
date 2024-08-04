@@ -1,0 +1,94 @@
+import React from "react";
+import styles from "./serviceproviders.module.scss"
+import homeStyles from "../../../styles/homepage.module.scss"
+const index = () => {
+  const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+  return (
+    <>
+      <section className={homeStyles.services}>
+        <span className={styles.txt_search_results}>
+          Search result “Pshycotherapist” showed 172 results
+        </span>
+        <div className={homeStyles.cards_container}>
+          <div
+            style={{
+              display: "flex",
+              width: "100%",
+              justifyContent: "start",
+              alignItems: "center",
+              gap: "95px",
+              flexWrap: "wrap",
+            }}
+          >
+            {cards.map((index) => (
+              <div className={homeStyles.card} key={index}>
+                <img
+                  src="assets/images/happy-girl.svg"
+                  alt="Putri Azzahra"
+                  className={homeStyles.profile_picture}
+                />
+                <span className={homeStyles.level}>Level 1</span>
+                <img
+                  src="assets/images/heart.svg"
+                  alt="Putri Azzahra"
+                  className={homeStyles.heart_icon}
+                />
+                <div className={homeStyles.recommendation_div}>
+                  <img src="assets/images/like-icon.svg" />
+                  <span className={homeStyles.recommendation}>
+                    Recommended by ImamConnect
+                  </span>
+                </div>
+                <div className={homeStyles.location_div}>
+                  <img src="assets/images/location-icon.svg" />
+                  <span className={homeStyles.location}>London, UK</span>
+                </div>
+                <div
+                  style={{
+                    width: "100%",
+                    height: "1px",
+                    backgroundColor: "#E7E7E7",
+                    marginTop: "10px",
+                  }}
+                ></div>
+                <div style={{ width: "100%" }}>
+                  <span className={homeStyles.name}>Putri Azzahra</span>
+                </div>
+
+                <div className={homeStyles.price_rating}>
+                  <div className={homeStyles.price_div}>
+                    <span className={homeStyles.price}>$10.00</span>
+                  </div>
+                  <div
+                    style={{
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                    }}
+                  ></div>
+                  <img src="assets/images/rating.svg" />
+                  <span className={homeStyles.rating}>(372 reviews)</span>
+                </div>
+                <div className={homeStyles.tags}>
+                  <div className={homeStyles.tag_voice}>
+                    <img src="assets/images/user-voice.svg" />
+                    <span className={homeStyles.tag_voice_txt}>Arabic</span>
+                  </div>
+                  <div className={homeStyles.tag_role}>
+                    <img src="assets/images/user-role.svg" />
+                    <span className={homeStyles.tag_role_txt}>Psychotherapist</span>
+                  </div>
+                </div>
+                <button className={homeStyles.session_primary_button}>
+                  5 Sessions For $80
+                </button>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    </>
+  );
+};
+
+export default index;
