@@ -1,13 +1,35 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "../../styles/homepage.module.scss";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [selectedMenuItem, setSelectedMenuItem] = useState("");
+  const pathname = usePathname();
+  console.log(pathname, "pathname");
+
+  useEffect(() => {
+    const path = pathname;
+    console.log("Router path:", path);
+    if (path === "/") {
+      setSelectedMenuItem("home");
+    } else if (path === "/aboutus") {
+      setSelectedMenuItem("about-us");
+    } else if (path === "/ImamServices") {
+      setSelectedMenuItem("services");
+    } else if (path === "/testimonials") {
+      setSelectedMenuItem("testimonials");
+    }
+  }, [pathname]);
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
+  };
+
+  const handleMenuItemClick = (menuItem) => {
+    setSelectedMenuItem(menuItem);
   };
 
   return (
@@ -17,9 +39,12 @@ const Header = () => {
         <div className={styles.menu_items_div}>
           <span>
             <Link
-              href="/homepage"
+              href="/"
               id="home"
-              className={`${styles.sub_menu_item} ${styles.selected}`}
+              className={`${styles.sub_menu_item} ${
+                selectedMenuItem === "home" ? styles.selected : ""
+              }`}
+              onClick={() => handleMenuItemClick("home")}
             >
               Home
             </Link>
@@ -28,7 +53,10 @@ const Header = () => {
             <Link
               href="/aboutus"
               id="about-us"
-              className={styles.sub_menu_item}
+              className={`${styles.sub_menu_item} ${
+                selectedMenuItem === "about-us" ? styles.selected : ""
+              }`}
+              onClick={() => handleMenuItemClick("about-us")}
             >
               About Us
             </Link>
@@ -43,9 +71,12 @@ const Header = () => {
           >
             <span>
               <Link
-                href="/services"
+                href="/ImamServices"
                 id="services"
-                className={styles.sub_menu_item}
+                className={`${styles.sub_menu_item} ${
+                  selectedMenuItem === "services" ? styles.selected : ""
+                }`}
+                onClick={() => handleMenuItemClick("services")}
               >
                 Services
               </Link>
@@ -59,7 +90,10 @@ const Header = () => {
             <Link
               href="/testimonials"
               id="testimonials"
-              className={styles.sub_menu_item}
+              className={`${styles.sub_menu_item} ${
+                selectedMenuItem === "testimonials" ? styles.selected : ""
+              }`}
+              onClick={() => handleMenuItemClick("testimonials")}
             >
               Testimonials
             </Link>
@@ -91,7 +125,10 @@ const Header = () => {
           </div>
         </div>
       </div>
-      <div className={`${styles.hamburger_button} cursor-pointer`} onClick={toggleMenu}>
+      <div
+        className={`${styles.hamburger_button} cursor-pointer`}
+        onClick={toggleMenu}
+      >
         <img src="assets/images/hamburger_button.svg" />
       </div>
 
@@ -108,13 +145,20 @@ const Header = () => {
             }}
           >
             <img src="assets/images/imamLogo.svg" />
-            <img src="assets/images/close_icon.svg" className="cursor-pointer" onClick={toggleMenu} />
+            <img
+              src="assets/images/close_icon.svg"
+              className="cursor-pointer"
+              onClick={toggleMenu}
+            />
           </div>
           <span>
             <Link
-              href="/homepage"
+              href="/"
               id="home"
-              className={`${styles.sub_menu_item} ${styles.selected}`}
+              className={`${styles.sub_menu_item} ${
+                selectedMenuItem === "home" ? styles.selected : ""
+              }`}
+              onClick={() => handleMenuItemClick("home")}
             >
               Home
             </Link>
@@ -123,7 +167,10 @@ const Header = () => {
             <Link
               href="/aboutus"
               id="about-us"
-              className={styles.sub_menu_item}
+              className={`${styles.sub_menu_item} ${
+                selectedMenuItem === "about-us" ? styles.selected : ""
+              }`}
+              onClick={() => handleMenuItemClick("about-us")}
             >
               About Us
             </Link>
@@ -138,9 +185,12 @@ const Header = () => {
           >
             <span>
               <Link
-                href="/services"
+                href="/ImamServices"
                 id="services"
-                className={styles.sub_menu_item}
+                className={`${styles.sub_menu_item} ${
+                  selectedMenuItem === "services" ? styles.selected : ""
+                }`}
+                onClick={() => handleMenuItemClick("services")}
               >
                 Services
               </Link>
@@ -154,7 +204,10 @@ const Header = () => {
             <Link
               href="/testimonials"
               id="testimonials"
-              className={styles.sub_menu_item}
+              className={`${styles.sub_menu_item} ${
+                selectedMenuItem === "testimonials" ? styles.selected : ""
+              }`}
+              onClick={() => handleMenuItemClick("testimonials")}
             >
               Testimonials
             </Link>
