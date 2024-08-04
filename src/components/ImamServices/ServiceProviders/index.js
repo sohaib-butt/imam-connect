@@ -1,15 +1,32 @@
-import React from "react";
-import styles from "./serviceproviders.module.scss"
-import homeStyles from "../../../styles/homepage.module.scss"
+"use client";
+import React, { useState } from "react";
+import styles from "./serviceproviders.module.scss";
+import homeStyles from "../../../styles/homepage.module.scss";
+import Pagination from "../../shared/Pagination";
+
 const index = () => {
   const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+  const [currentPage, setCurrentPage] = useState(0);
+  const cardsPerPage = 3;
+  const pageCount = Math.ceil(cards.length / cardsPerPage);
+
+  const handlePageClick = (event) => {
+    setCurrentPage(event.selected);
+  };
+
+  const displayCards = cards.slice(
+    currentPage * cardsPerPage,
+    (currentPage + 1) * cardsPerPage
+  );
+
   return (
     <>
       <section className={homeStyles.services}>
         <span className={styles.txt_search_results}>
           Search result “Pshycotherapist” showed 172 results
         </span>
-        <div className={homeStyles.cards_container}>
+        <div className={styles.mb_cards_container}>
           <div
             style={{
               display: "flex",
@@ -20,8 +37,9 @@ const index = () => {
               flexWrap: "wrap",
             }}
           >
-            {cards.map((index) => (
+            {displayCards.map((index) => (
               <div className={homeStyles.card} key={index}>
+                <p className="font-poppins font-[700]">{index}</p>
                 <img
                   src="assets/images/happy-girl.svg"
                   alt="Putri Azzahra"
@@ -76,7 +94,9 @@ const index = () => {
                   </div>
                   <div className={homeStyles.tag_role}>
                     <img src="assets/images/user-role.svg" />
-                    <span className={homeStyles.tag_role_txt}>Psychotherapist</span>
+                    <span className={homeStyles.tag_role_txt}>
+                      Psychotherapist
+                    </span>
                   </div>
                 </div>
                 <button className={homeStyles.session_primary_button}>
@@ -85,6 +105,9 @@ const index = () => {
               </div>
             ))}
           </div>
+        </div>
+        <div className={styles.pagination_container}>
+          <Pagination pageCount={pageCount} handlePageClick={handlePageClick} />
         </div>
       </section>
     </>
