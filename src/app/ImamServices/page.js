@@ -7,7 +7,7 @@ import SearchBox from "@/components/ImamServices/SearchBox";
 import ServiceProviders from "@/components/ImamServices/ServiceProviders";
 const page = () => {
   return (
-    <div className="overflow-x-hidden">
+    <div className="relative overflow-x-hidden">
       <Header />
       <Intro />
       <SearchBox />

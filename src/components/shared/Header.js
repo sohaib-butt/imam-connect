@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import styles from "../../styles/homepage.module.scss";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import Image from "next/image";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -115,13 +116,32 @@ const Header = () => {
             />
           </div>
 
-          <div className={styles.buttons_div}>
+          {/* <div className={styles.buttons_div}>
             <button type="button" className={styles.primary_button}>
               Register
             </button>
             <button type="button" className={styles.primary_outline_button}>
               Sign in
             </button>
+          </div> */}
+          <div className={`${styles.buttons_div} relative`}>
+            <button type="button" className={styles.primary_button}>
+              Book a Service Now
+            </button>
+            <Image
+              src="assets/images/arrow.svg"
+              width={10}
+              height={9}
+              className="absolute top-[16px] right-[84px]"
+            />
+            <div className="flex justify-start items-center">
+              <Image
+                src="assets/images/profile-icon.svg"
+                width={30}
+                height={30}
+              />
+              <Image src="assets/images/cart-icon.svg" width={30} height={30} />
+            </div>
           </div>
         </div>
       </div>

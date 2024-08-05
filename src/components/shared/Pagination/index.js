@@ -12,8 +12,8 @@ const index = ({ pageCount, handlePageClick }) => {
         nextLabel={"»"}
         breakLabel={"..."}
         pageCount={pageCount}
-        marginPagesDisplayed={2}
-        pageRangeDisplayed={5}
+        marginPagesDisplayed={1}
+        pageRangeDisplayed={3}
         onPageChange={handlePageClick}
         containerClassName={styles.pagination}
         activeClassName={styles.active}
