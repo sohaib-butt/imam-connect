@@ -105,7 +105,7 @@ const index = () => {
             ))}
           </div>
         </div>
-        <Pagination pageCount={pageCount} handlePageClick={handlePageClick} />
+        <Pagination currentPage={currentPage} pageCount={pageCount} handlePageClick={handlePageClick} />
       </section>
     </>
   );
