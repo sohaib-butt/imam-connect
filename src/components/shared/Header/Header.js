@@ -13,7 +13,7 @@ const Header = () => {
   const menuItems = [
     { route: "/", title: "Home" },
     { route: "/aboutus", title: "About Us" },
-    { route: "/ImamServices", title: "Services" },
+    { route: "/imamServices", title: "Services" },
     { route: "/testimonials", title: "Testimonials" },
   ];
   useEffect(() => {
@@ -23,7 +23,7 @@ const Header = () => {
       setSelectedMenuItem("Home");
     } else if (path === "/aboutus") {
       setSelectedMenuItem("About Us");
-    } else if (path === "/ImamServices") {
+    } else if (path === "/imamServices") {
       setSelectedMenuItem("Services");
     } else if (path === "/testimonials") {
       setSelectedMenuItem("Testimonials");
