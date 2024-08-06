@@ -1256,6 +1256,13 @@
   justify-content: center;
   // padding: 80px 105px 40px 105px;
   padding-bottom: 40px;
+  @media (max-width: 640px) {
+    padding: 40px 24px 40px 24px;
+  }
+
+  @media (min-width: 641px) and (max-width: 1024px) {
+    padding: 40px 24px 40px 24px;
+  }
 }
 
 .get_started_card {
@@ -1322,7 +1329,7 @@
   }
 
   @media (min-width: 641px) and (max-width: 1024px) {
-    font-size: 48px;
+    font-size: 42px;
     line-height: 48px;
   }
 }
