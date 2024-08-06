@@ -1,5 +1,5 @@
 import React from "react";
-import Header from "@/components/shared/Header";
+import Header from "@/components/shared/Header/Header";
 import Footer from "@/components/shared/Footer";
 import GettingStarted from "@/components/shared/GettingStarted";
 

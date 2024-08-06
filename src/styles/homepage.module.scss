@@ -1254,15 +1254,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 80px 105px 40px 105px;
-
-  @media (max-width: 640px) {
-    padding: 40px 24px 40px 24px;
-  }
-
-  @media (min-width: 641px) and (max-width: 1024px) {
-    padding: 40px 24px 40px 24px;
-  }
+  // padding: 80px 105px 40px 105px;
+  padding-bottom: 40px;
 }
 
 .get_started_card {
@@ -1297,7 +1290,7 @@
   }
 
   @media (min-width: 641px) and (max-width: 1024px) {
-    width: 100%;
+    width: 80%;
   }
 }
 
@@ -1310,7 +1303,7 @@
   }
 
   @media (min-width: 641px) and (max-width: 1024px) {
-    width: 100%;
+    width: 80%;
   }
 }
 
