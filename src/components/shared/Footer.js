@@ -1,7 +1,10 @@
+"use client"
 import React from "react";
+import { useRouter } from 'next/navigation'
 import styles from "../../styles/homepage.module.scss";
 
 const Footer = () => {
+  const router = useRouter();
   return (
     <section className={styles.footer}>
       <div className={styles.footer_first_box}>
@@ -41,7 +44,7 @@ const Footer = () => {
             <span className={styles.footer_imamconnect_heading}>NEWS</span>
             <div className={styles.footer_imamconnect}>
               <span className={styles.footer_imamconnect_content}>Guides</span>
-              <span className={styles.footer_imamconnect_content}>
+              <span className={styles.footer_imamconnect_content} onClick={() => router.push("/inthemedia")}>
                 In the media
               </span>
               <span className={styles.footer_imamconnect_content}>
