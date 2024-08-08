@@ -5,8 +5,7 @@ import Link from "next/link";
 
 const MobileSidebar = ({
   menuItems,
-  selectedMenuItem,
-  handleMenuItemClick,
+  pathname
 }) => {
   const [menuOpen, setMenuOpen] = useState(false);
   const toggleMenu = () => {
@@ -45,7 +44,7 @@ const MobileSidebar = ({
               <Link
                 href={m?.route}
                 className={`${styles.sub_menu_item} ${
-                  selectedMenuItem === m?.title ? styles.selected : ""
+                  pathname === m?.route ? styles.selected : ""
                 }`}
                 onClick={() => handleMenuItemClick(m?.title)}
               >

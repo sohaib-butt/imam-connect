@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React from "react";
 import styles from "../../../styles/homepage.module.scss";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -7,7 +7,6 @@ import Image from "next/image";
 import MobileSidebar from "./MobileSidebar";
 
 const Header = () => {
-  const [selectedMenuItem, setSelectedMenuItem] = useState("");
   const pathname = usePathname();
 
   const menuItems = [
@@ -16,23 +15,6 @@ const Header = () => {
     { route: "/imamServices", title: "Services" },
     { route: "/testimonials", title: "Testimonials" },
   ];
-  useEffect(() => {
-    const path = pathname;
-    console.log("Router path:", path);
-    if (path === "/") {
-      setSelectedMenuItem("Home");
-    } else if (path === "/aboutus") {
-      setSelectedMenuItem("About Us");
-    } else if (path === "/imamServices") {
-      setSelectedMenuItem("Services");
-    } else if (path === "/testimonials") {
-      setSelectedMenuItem("Testimonials");
-    }
-  }, [pathname]);
-
-  const handleMenuItemClick = (menuItem) => {
-    setSelectedMenuItem(menuItem);
-  };
 
   return (
     <div className={styles.header}>
@@ -44,9 +26,8 @@ const Header = () => {
               <Link
                 href={m?.route}
                 className={`${styles.sub_menu_item} ${
-                  selectedMenuItem === m?.title ? styles.selected : ""
+                  pathname === m?.route ? styles.selected : ""
                 }`}
-                onClick={() => handleMenuItemClick(m?.title)}
               >
                 {m?.title}
               </Link>
@@ -113,11 +94,7 @@ const Header = () => {
           )}
         </div>
       </div>
-      <MobileSidebar
-        menuItems={menuItems}
-        selectedMenuItem={selectedMenuItem}
-        handleMenuItemClick={handleMenuItemClick}
-      />
+      <MobileSidebar menuItems={menuItems} pathname={pathname} />
     </div>
   );
 };
