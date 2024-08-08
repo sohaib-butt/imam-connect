@@ -27,16 +27,7 @@ const index = () => {
           Search result “Pshycotherapist” showed 172 results
         </span>
         <div className={styles.mb_cards_container}>
-          <div
-            style={{
-              display: "flex",
-              width: "100%",
-              justifyContent: "start",
-              alignItems: "center",
-              gap: "95px",
-              flexWrap: "wrap",
-            }}
-          >
+          <div className="w-full flex justify-center md:justify-start items-center gap-[95px] flex-wrap">
             {displayCards.map((index) => (
               <div className={homeStyles.card} key={index}>
                 <img
@@ -105,7 +96,11 @@ const index = () => {
             ))}
           </div>
         </div>
-        <Pagination currentPage={currentPage} pageCount={pageCount} handlePageClick={handlePageClick} />
+        <Pagination
+          currentPage={currentPage}
+          pageCount={pageCount}
+          handlePageClick={handlePageClick}
+        />
       </section>
     </>
   );

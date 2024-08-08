@@ -4,7 +4,9 @@ import Footer from "@/components/shared/Footer";
 import RegisterNow from "@/components/shared/RegisterNow";
 import VideoPlayer from "@/components/shared/VideoPlayer";
 import WorksVideos from "@/components/IntheMedia/WorksVideos";
-import Galleries from "@/components/IntheMedia/Galleries"
+import Galleries from "@/components/IntheMedia/Galleries";
+import WorkImages from "@/components/IntheMedia/WorksImages";
+
 const page = () => {
   return (
     <div className="relative overflow-x-hidden">
@@ -23,6 +25,7 @@ const page = () => {
         />
       </div>
       <WorksVideos />
+      <WorkImages />
       <Galleries />
       <RegisterNow />
       <Footer />

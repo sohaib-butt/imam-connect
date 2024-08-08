@@ -14,11 +14,11 @@ const index = () => {
           visualize your next big things.
         </span>
       </div>
-      <div className="flex flex-wrap justify-start items-center gap-3">
+      <div className="flex flex-wrap justify-center md:justify-start items-center gap-3">
         {videoCards?.map((v, index) => (
           <div
             key={index}
-            className="rounded-[11px] md:rounded-[12px] w-[312px] md:w-[360px] h-[277px] md:h-[320px] relative"
+            className="rounded-[11px] md:rounded-[12px] w-[312px] md:w-[360px] border-4 border-[#F9F9F9] h-[277px] md:h-[320px] relative"
           >
             <VideoPlayer
               videoUrl={

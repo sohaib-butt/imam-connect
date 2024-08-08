@@ -11,7 +11,7 @@ const index = () => {
           List of galleries
         </span>
       </div>
-      <div className="flex flex-wrap justify-start items-center gap-3">
+      <div className="flex flex-wrap justify-center md:justify-start items-center gap-3">
         {galleryCards?.map((g, index) => (
           <div
             key={index}

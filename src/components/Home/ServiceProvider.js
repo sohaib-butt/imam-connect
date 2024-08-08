@@ -68,16 +68,7 @@ const ServiceProvider = () => {
           <span className={styles.view_all}>View all</span>
         </div>
         <div className={styles.cards_container}>
-          <div
-            style={{
-              display: "flex",
-              width: "100%",
-              justifyContent: "start",
-              alignItems: "center",
-              gap: "95px",
-              flexWrap: "wrap",
-            }}
-          >
+          <div className="w-full flex justify-center md:justify-start items-center gap-[95px] flex-wrap">
             {cards.map((index) => (
               <div className={styles.card} key={index}>
                 <img
