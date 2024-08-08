@@ -24,7 +24,7 @@ const index = () => {
               videoUrl={
                 "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4"
               }
-              playIcon={"assets/images/play_icon.svg"}
+              playIcon={"assets/images/play-button.svg"}
             />
             <div className="absolute p-[14px] md:p-[16px] bottom-0 w-full rounded-bl-[11px] rounded-br-[11px] md:rounded-bl-[12px] md:rounded-br-[12px] bg-[#2A282F] opacity-80 flex flex-col justify-start items-start">
               <span className="font-poppins text-[13px] md:text-[14px] font-[600] text-white opacity-50 tracking-[-4%]">
