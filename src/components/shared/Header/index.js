@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 import Image from "next/image";
 import MobileSidebar from "./MobileSidebar";
 
-const Header = () => {
+const index = () => {
   const pathname = usePathname();
 
   const menuItems = [
@@ -99,4 +99,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default index;

@@ -1,11 +1,6 @@
 import React from "react";
-import Header from "@/components/shared/Header/Header";
-import Footer from "@/components/shared/Footer";
-import RegisterNow from "@/components/shared/RegisterNow";
-import VideoPlayer from "@/components/shared/VideoPlayer";
-import WorksVideos from "@/components/IntheMedia/WorksVideos";
-import Galleries from "@/components/IntheMedia/Galleries";
-import WorkImages from "@/components/IntheMedia/WorksImages";
+import { Header, Footer, RegisterNow, VideoPlayer } from "@/components/shared";
+import { WorksVideos, Galleries, WorksImages } from "@/components/IntheMedia";
 
 const page = () => {
   return (
@@ -25,7 +20,7 @@ const page = () => {
         />
       </div>
       <WorksVideos />
-      <WorkImages />
+      <WorksImages />
       <Galleries />
       <RegisterNow />
       <Footer />
