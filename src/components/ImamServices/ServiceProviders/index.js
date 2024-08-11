@@ -1,12 +1,13 @@
 "use client";
 import React, { useState } from "react";
+import { useRouter } from 'next/navigation'
 import styles from "./serviceproviders.module.scss";
 import homeStyles from "../../../styles/homepage.module.scss";
 import { Cost, Pagination, Recommended, Tags } from "@/components/shared";
 
 const index = () => {
   const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18];
-
+  const router = useRouter();
   const [currentPage, setCurrentPage] = useState(0);
   const cardsPerPage = 3;
   const pageCount = Math.ceil(cards.length / cardsPerPage);
@@ -29,7 +30,7 @@ const index = () => {
         <div className={styles.mb_cards_container}>
           <div className="w-full flex justify-center md:justify-start items-center gap-[95px] flex-wrap">
             {displayCards.map((c, index) => (
-              <div className={homeStyles.card} key={index}>
+              <div className={homeStyles.card} key={index} onClick={() => router.push("/listing")}>
                 <img
                   src="assets/images/happy-girl.svg"
                   alt="Putri Azzahra"
