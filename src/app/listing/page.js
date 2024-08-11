@@ -1,12 +1,11 @@
 import React from "react";
-import Header from "@/components/shared/Header";
-import Footer from "@/components/shared/Footer";
-import RegisterNow from "@/components/shared/RegisterNow";
-
+import { Header, Footer, RegisterNow } from "@/components/shared";
+import { ProfileInfo } from "@/components/Listing";
 const page = () => {
   return (
     <div className="relative overflow-x-hidden">
       <Header />
+      <ProfileInfo />
       <RegisterNow />
       <Footer />
     </div>
