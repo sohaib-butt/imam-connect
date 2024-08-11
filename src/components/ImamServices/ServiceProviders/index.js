@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import styles from "./serviceproviders.module.scss";
 import homeStyles from "../../../styles/homepage.module.scss";
-import Pagination from "../../shared/Pagination";
+import { Cost, Pagination, Tags } from "@/components/shared";
 
 const index = () => {
   const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18];
@@ -64,9 +64,7 @@ const index = () => {
                 </div>
 
                 <div className={homeStyles.price_rating}>
-                  <div className={homeStyles.price_div}>
-                    <span className={homeStyles.price}>$10.00</span>
-                  </div>
+                  <Cost price={"$10.00"} />
                   <div
                     style={{
                       display: "flex",
@@ -77,18 +75,7 @@ const index = () => {
                   <img src="assets/images/rating.svg" />
                   <span className={homeStyles.rating}>(372 reviews)</span>
                 </div>
-                <div className={homeStyles.tags}>
-                  <div className={homeStyles.tag_voice}>
-                    <img src="assets/images/user-voice.svg" />
-                    <span className={homeStyles.tag_voice_txt}>Arabic</span>
-                  </div>
-                  <div className={homeStyles.tag_role}>
-                    <img src="assets/images/user-role.svg" />
-                    <span className={homeStyles.tag_role_txt}>
-                      Psychotherapist
-                    </span>
-                  </div>
-                </div>
+                <Tags />
                 <button className={homeStyles.session_primary_button}>
                   5 Sessions For $80
                 </button>

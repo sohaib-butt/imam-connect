@@ -6,6 +6,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
+import { Cost, Tags } from "../shared";
 
 const ServiceProvider = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -105,9 +106,7 @@ const ServiceProvider = () => {
                 </div>
 
                 <div className={styles.price_rating}>
-                  <div className={styles.price_div}>
-                    <span className={styles.price}>$10.00</span>
-                  </div>
+                  <Cost price={"$10.00"} />
                   <div
                     style={{
                       display: "flex",
@@ -118,16 +117,7 @@ const ServiceProvider = () => {
                   <img src="assets/images/rating.svg" />
                   <span className={styles.rating}>(372 reviews)</span>
                 </div>
-                <div className={styles.tags}>
-                  <div className={styles.tag_voice}>
-                    <img src="assets/images/user-voice.svg" />
-                    <span className={styles.tag_voice_txt}>Arabic</span>
-                  </div>
-                  <div className={styles.tag_role}>
-                    <img src="assets/images/user-role.svg" />
-                    <span className={styles.tag_role_txt}>Psychotherapist</span>
-                  </div>
-                </div>
+                <Tags />
                 <button className={styles.session_primary_button}>
                   5 Sessions For $80
                 </button>
@@ -201,9 +191,7 @@ const ServiceProvider = () => {
                 <span className={styles.name}>Putri Azzahra</span>
               </div>
               <div className={styles.price_rating}>
-                <div className={styles.price_div}>
-                  <span className={styles.price}>$10.00</span>
-                </div>
+                <Cost price={"$10.00"} />
                 <div
                   style={{
                     display: "flex",
@@ -214,16 +202,7 @@ const ServiceProvider = () => {
                 <img src="assets/images/rating.svg" />
                 <span className={styles.rating}>(372 reviews)</span>
               </div>
-              <div className={styles.tags}>
-                <div className={styles.tag_voice}>
-                  <img src="assets/images/user-voice.svg" />
-                  <span className={styles.tag_voice_txt}>Arabic</span>
-                </div>
-                <div className={styles.tag_role}>
-                  <img src="assets/images/user-role.svg" />
-                  <span className={styles.tag_role_txt}>Psychotherapist</span>
-                </div>
-              </div>
+              <Tags />
               <button className={styles.session_primary_button}>
                 5 Sessions For $80
               </button>

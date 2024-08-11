@@ -1,6 +1,7 @@
 import React from "react";
 import ImageSwiper from "./ImageSwiper";
 import BasicInfo from "./BasicInfo";
+import ServiceSection from "./ServicesSection";
 
 const index = () => {
   return (
@@ -8,7 +9,9 @@ const index = () => {
       <div className="w-[70%] flex flex-col justify-center items-center gap-4">
         <ImageSwiper />
         <BasicInfo />
+        <ServiceSection />
       </div>
+      <div className="w-[30%]"></div>
     </div>
   );
 };
