@@ -12,7 +12,7 @@ const index = () => {
   ];
 
   return (
-    <div className="relative py-[32px] px-[16px] border border-[#DCDCDC] rounded-[18px] md:rounded-[20px] w-full flex flex-col justify-start items-start gap-2">
+    <div className="relative py-[32px] px-[16px] border border-[#DCDCDC] rounded-[18px] md:rounded-[20px] w-full flex flex-col justify-start items-start gap-4">
       <Image
         src="assets/images/heart.svg"
         width={27}
@@ -28,18 +28,18 @@ const index = () => {
         <span className="font-poppins font-[600] text-[16px] tracking-[2%] text-[#442D87]">
           In service from 2018
         </span>
-        <span className="h-[26px] py-[4px] px-[16px] rounded-[13px] font-poppins font-[700] text-[12px] bg-[#E0D6FF] text-[#442D87]">
+        <span className="h-[26px] py-[4px] px-[16px] rounded-[13px] font-poppins font-[700] text-[12px] bg-[#E0D6FF] text-[#442D87] whitespace-nowrap">
           Level 1
         </span>
       </div>
       <span className="font-poppins font-[400] text-[14.6px] md:text-[16px] tracking-[2%] text-[#25335C]">
         Speaking language:
       </span>
-      <div className="flex justify-start items-center gap-1">
+      <div className="flex flex-wrap justify-start items-center gap-1">
         {languages?.map((l, index) => (
           <div
             key={index}
-            className="h-[40px] border border-[#442D87] px-[24px] flex justify-center items-center rounded-[100px]"
+            className="h-[40px] border border-[#442D87] px-5 flex justify-center items-center rounded-[100px]"
           >
             <span className="font-poppins font-[400] text-[14.6px] md:text-[16px] tracking-[2%] text-[#25335C]">
               {l}
@@ -75,13 +75,13 @@ const index = () => {
       <div className="w-full flex flex-col justify-center items-center gap-2">
         <button
           type="button"
-          className="w-full rounded-[8px] py-[12px] px-[30px] h-[68px] text-center bg-[#00BAC2] text-white font-poppins font-[700] text-[16px] md:text-[20px]"
+          className="w-full rounded-[8px] py-[12px] px-[30px] h-[68px] text-center bg-[#00BAC2] text-white font-poppins font-[700] text-[16px] lg:text-[20px]"
         >
           Book My Service
         </button>
         <button
           type="button"
-          className="w-full rounded-[8px] py-[12px] px-[30px] h-[68px] text-center bg-white text-[#00BAC2] font-poppins font-[700] text-[16px] md:text-[20px] border border-[#00BAC2]"
+          className="w-full rounded-[8px] py-[12px] px-[30px] h-[68px] text-center bg-white text-[#00BAC2] font-poppins font-[700] text-[16px] lg:text-[20px] border border-[#00BAC2]"
         >
           Send me a message
         </button>

@@ -70,7 +70,7 @@ const ServiceProvider = () => {
         </div>
         <div className={styles.cards_container}>
           <div className="w-full flex justify-center md:justify-start items-center gap-[95px] flex-wrap">
-            {cards.map((index) => (
+            {cards.map((c, index) => (
               <div className={styles.card} key={index}>
                 <img
                   src="assets/images/happy-girl.svg"
@@ -151,7 +151,7 @@ const ServiceProvider = () => {
             },
           }}
         >
-          {cards.map((index) => (
+          {cards.map((c, index) => (
             <SwiperSlide key={index} className={styles.card}>
               <img
                 src="assets/images/happy-girl.svg"

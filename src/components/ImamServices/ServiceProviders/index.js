@@ -28,7 +28,7 @@ const index = () => {
         </span>
         <div className={styles.mb_cards_container}>
           <div className="w-full flex justify-center md:justify-start items-center gap-[95px] flex-wrap">
-            {displayCards.map((index) => (
+            {displayCards.map((c, index) => (
               <div className={homeStyles.card} key={index}>
                 <img
                   src="assets/images/happy-girl.svg"

@@ -12,8 +12,8 @@ const index = () => {
         className="w-full flex items-center justify-start overflow-x-auto gap-4"
         style={{ scrollbarWidth: "none" }}
       >
-        {serviceCards?.map((s) => (
-          <div className="w-[239px] flex flex-col justify-start items-start border-[0.65px] border-[#D7D7D7] rounded-[12px]">
+        {serviceCards?.map((s, index) => (
+          <div key={index} className="w-[239px] flex flex-col justify-start items-start border-[0.65px] border-[#D7D7D7] rounded-[12px]">
             <div className="w-full flex flex-col justify-start gap-2 p-[16px]">
               <span className="font-poppins font-[600] text-[16px] tracking-[-4%] text-[#2A282F]">
                 I Offer - Counselling session for 30 mins
