@@ -4,7 +4,7 @@ import React from "react";
 const index = () => {
   const serviceCards = [1, 2, 3];
   return (
-    <div className="w-full flex flex-col justify-start items-start">
+    <div className="w-full flex flex-col justify-start items-start gap-4">
       <span className="font-poppins font-[700] text-[28px] tracking-[2%] text-[#442D87]">
         Services
       </span>

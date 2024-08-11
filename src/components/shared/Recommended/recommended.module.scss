@@ -1,0 +1,34 @@
+@import "../../../styles/variables";
+
+.recommendation_div {
+  width: 100%;
+  height: 34px;
+  margin-top: 10px;
+  border-radius: 1666px;
+  padding: 8px 16px 8px 16px;
+  background-color: #442d87;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 8%;
+
+  @media (max-width: 640px) {
+    width: 100%;
+    height: 34px;
+    justify-content: center;
+  }
+
+  @media (min-width: 641px) and (max-width: 1024px) {
+    width: 100%;
+    height: 34px;
+    justify-content: center;
+  }
+
+  .recommendation {
+    color: $white-color;
+    font-family: $font-poppins;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 18px;
+  }
+}

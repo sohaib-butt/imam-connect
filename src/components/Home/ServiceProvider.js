@@ -6,7 +6,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
-import { Cost, Tags } from "../shared";
+import { Cost, Recommended, Tags } from "../shared";
 
 const ServiceProvider = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -80,15 +80,10 @@ const ServiceProvider = () => {
                 <span className={styles.level}>Level 1</span>
                 <img
                   src="assets/images/heart.svg"
-                  alt="Putri Azzahra"
+                  alt="Heart"
                   className={styles.heart_icon}
                 />
-                <div className={styles.recommendation_div}>
-                  <img src="assets/images/like-icon.svg" />
-                  <span className={styles.recommendation}>
-                    Recommended by ImamConnect
-                  </span>
-                </div>
+                <Recommended />
                 <div className={styles.location_div}>
                   <img src="assets/images/location-icon.svg" />
                   <span className={styles.location}>London, UK</span>
@@ -169,12 +164,7 @@ const ServiceProvider = () => {
                 alt="Putri Azzahra"
                 className={styles.heart_icon}
               />
-              <div className={styles.recommendation_div}>
-                <img src="assets/images/like-icon.svg" />
-                <span className={styles.recommendation}>
-                  Recommended by ImamConnect
-                </span>
-              </div>
+              <Recommended />
               <div className={styles.location_div}>
                 <img src="assets/images/location-icon.svg" />
                 <span className={styles.location}>London, UK</span>

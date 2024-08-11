@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import styles from "./serviceproviders.module.scss";
 import homeStyles from "../../../styles/homepage.module.scss";
-import { Cost, Pagination, Tags } from "@/components/shared";
+import { Cost, Pagination, Recommended, Tags } from "@/components/shared";
 
 const index = () => {
   const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18];
@@ -41,12 +41,7 @@ const index = () => {
                   alt="Putri Azzahra"
                   className={homeStyles.heart_icon}
                 />
-                <div className={homeStyles.recommendation_div}>
-                  <img src="assets/images/like-icon.svg" />
-                  <span className={homeStyles.recommendation}>
-                    Recommended by ImamConnect
-                  </span>
-                </div>
+                <Recommended />
                 <div className={homeStyles.location_div}>
                   <img src="assets/images/location-icon.svg" />
                   <span className={homeStyles.location}>London, UK</span>
