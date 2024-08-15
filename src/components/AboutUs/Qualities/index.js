@@ -1,5 +1,6 @@
 import React from "react";
 import QualityItem from "./QualityItem";
+import MobileQualities from "./MobileQualities";
 
 const index = () => {
   const qualities = [
@@ -25,18 +26,22 @@ const index = () => {
       imgFirst: true,
     },
   ];
+
   return (
-    <div className="w-full p-[24px] md:py-[40px] md:px-[80px] lg:py-[60px] lg:px-[100px] bg-white flex flex-col justify-between items-center gap-16">
-      {qualities?.map((q, index) => (
-        <QualityItem
-          key={index}
-          img={q?.img}
-          heading={q?.heading}
-          content={q?.content}
-          imgFirst={q?.imgFirst}
-        />
-      ))}
-    </div>
+    <>
+      <div className="hidden md:w-full md:py-[40px] md:px-[80px] lg:py-[60px] lg:px-[100px] bg-white md:flex md:flex-col justify-between items-center gap-16">
+        {qualities?.map((q, index) => (
+          <QualityItem
+            key={index}
+            img={q?.img}
+            heading={q?.heading}
+            content={q?.content}
+            imgFirst={q?.imgFirst}
+          />
+        ))}
+      </div>
+      <MobileQualities qualities={qualities}/>
+    </>
   );
 };
 
