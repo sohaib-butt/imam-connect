@@ -7,3 +7,4 @@ export {default as GettingStarted} from './GettingStarted';
 export {default as Cost} from './Cost';
 export {default as Tags} from './Tags';
 export {default as Recommended} from './Recommended';
+export {default as TeamMateCard} from './TeamMateCard';

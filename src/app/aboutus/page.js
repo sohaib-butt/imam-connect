@@ -1,7 +1,6 @@
 import React from "react";
 import { Header, Footer, RegisterNow, VideoPlayer } from "@/components/shared";
-import { WorksVideos, Galleries, WorksImages } from "@/components/IntheMedia";
-import { Qualities } from "@/components/AboutUs";
+import { Qualities, Team } from "@/components/AboutUs";
 
 const page = () => {
   return (
@@ -21,6 +20,7 @@ const page = () => {
         />
       </div>
       <Qualities />
+      <Team />
       <RegisterNow />
       <Footer />
     </div>
