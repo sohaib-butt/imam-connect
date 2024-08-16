@@ -1,13 +1,15 @@
-import React from 'react'
+import React from "react";
+import SearchSection from "./SearchSection";
 
 const index = () => {
   return (
-    <div className="">
-      <span className="font-poppins font-[700] text-[#442D87] text-[32px] md:text-[36px] lg:text-[40px] text-start">
+    <div className="w-full text-center p-[24px] md:py-[40px] md:px-[80px] lg:px-[160px]">
+      <span className="font-poppins font-[700] text-[#442D87] text-[32px] md:text-[36px] lg:text-[40px]">
         Blogs
       </span>
+      <SearchSection />
     </div>
-  )
-}
+  );
+};
 
-export default index
+export default index;
