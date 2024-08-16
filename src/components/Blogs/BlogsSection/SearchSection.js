@@ -18,7 +18,7 @@ const SearchSection = () => {
           className="absolute top-[15px] right-[8%] md:right-[30%] xl:right-[28%]"
         />
         <button
-          className={` ${styles.primary_button} !text-[16px] !font-[700] !w-[30%] !h-[56px] text-center !hidden md:!block`}
+          className={`${styles.primary_button} !text-[16px] !font-[700] !w-[30%] !h-[56px] text-center !hidden md:!block`}
         >
           Search
         </button>

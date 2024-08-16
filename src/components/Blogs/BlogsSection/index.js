@@ -1,5 +1,6 @@
 import React from "react";
 import SearchSection from "./SearchSection";
+import Tags from "./Tags";
 
 const index = () => {
   return (
@@ -8,6 +9,7 @@ const index = () => {
         Blogs
       </span>
       <SearchSection />
+      <Tags />
     </div>
   );
 };
