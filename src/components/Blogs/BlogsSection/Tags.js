@@ -15,7 +15,7 @@ const Tags = () => {
 
   const [activeIndex, setActiveIndex] = useState(0);
   return (
-    <div className="hidden w-full md:flex flex-wrap justify-start items-center gap-3">
+    <div className="hidden w-full md:flex flex-wrap justify-start items-center gap-3 mt-3">
       {tags?.map((t, index) => (
         <div
           key={index}

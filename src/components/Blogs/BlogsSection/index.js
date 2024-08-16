@@ -1,6 +1,7 @@
 import React from "react";
 import SearchSection from "./SearchSection";
 import Tags from "./Tags";
+import TrendingTopic from "./TrendingTopic";
 
 const index = () => {
   return (
@@ -10,6 +11,7 @@ const index = () => {
       </span>
       <SearchSection />
       <Tags />
+      <TrendingTopic />
     </div>
   );
 };
