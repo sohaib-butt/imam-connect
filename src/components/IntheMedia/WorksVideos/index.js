@@ -21,6 +21,7 @@ const index = () => {
             className="rounded-[11px] md:rounded-[12px] w-[312px] md:w-[360px] border-4 border-[#F9F9F9] h-[277px] md:h-[320px] relative"
           >
             <VideoPlayer
+              className="rounded-[11px] md:rounded-[12px]"
               videoUrl={
                 "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4"
               }

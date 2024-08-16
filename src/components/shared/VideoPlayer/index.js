@@ -4,7 +4,7 @@ import React, { useRef, useState } from "react";
 import styles from "./videoplayer.module.scss";
 import Image from "next/image";
 
-const VideoPlayer = ({ videoUrl, playIcon }) => {
+const VideoPlayer = ({ className, videoUrl, playIcon }) => {
   const videoRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(false);
 
@@ -19,7 +19,7 @@ const VideoPlayer = ({ videoUrl, playIcon }) => {
     <>
       <video
         ref={videoRef}
-        className={styles.video}
+        className={`${styles.video} + "" + ${className}`}
         width="600"
         controls={isPlaying}
         onPlay={() => setIsPlaying(true)}
