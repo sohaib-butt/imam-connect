@@ -2,6 +2,7 @@ import React from "react";
 import SearchSection from "./SearchSection";
 import Tags from "./Tags";
 import TrendingTopic from "./TrendingTopic";
+import LatestTopics from "./LatestTopics";
 
 const index = () => {
   return (
@@ -12,6 +13,7 @@ const index = () => {
       <SearchSection />
       <Tags />
       <TrendingTopic />
+      <LatestTopics />
     </div>
   );
 };
