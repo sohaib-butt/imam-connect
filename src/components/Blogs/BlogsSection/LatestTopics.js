@@ -1,8 +1,11 @@
+"use client";
 import Image from "next/image";
 import React from "react";
 import styles from "../../../styles/homepage.module.scss";
+import { useRouter } from "next/navigation";
 
 const LatestTopics = () => {
+  const router = useRouter();
   const latestTopics = [
     {
       title: "Family services",
@@ -42,7 +45,8 @@ const LatestTopics = () => {
         {latestTopics?.map((l, index) => (
           <div
             key={index}
-            className="flex flex-col justify-start items-start w-full gap-2"
+            className="flex flex-col justify-start items-start w-full gap-2 cursor-pointer"
+            onClick={() => router.push("/detailblog")}
           >
             <span className="font-poppins font-[400] text-[12px] text-[#999999] text-start tracking-[-0.5px]">
               {l?.title}

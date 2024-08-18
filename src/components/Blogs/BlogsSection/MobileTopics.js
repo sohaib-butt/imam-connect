@@ -1,8 +1,10 @@
+"use client"
 import Image from "next/image";
 import React from "react";
-import styles from "../../../styles/homepage.module.scss";
+import { useRouter } from 'next/navigation'
 
 const MobileTopics = () => {
+  const router = useRouter();
   const allTopics = [
     {
       img: "assets/images/latest-img.svg",
@@ -43,13 +45,14 @@ const MobileTopics = () => {
       {allTopics?.map((l, index) => (
         <div
           key={index}
-          className="flex-none w-[260px] flex flex-col justify-start items-start gap-2"
+          className="flex-none w-[260px] flex flex-col justify-start items-start gap-2 cursor-pointer"
+          onClick={() => router.push("/detailblog")}
         >
           <Image
             src={l?.img}
             width={260}
             height={165}
-            className=" border border-[#E7E9ED] rounded-[12px]"
+            className="border border-[#E7E9ED] rounded-[12px]"
           />
           <span className="font-poppins font-[500] text-[20px] text-[#161C2D] text-start tracking-[-0.38px]">
             {l?.heading}
