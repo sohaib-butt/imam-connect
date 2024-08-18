@@ -3,6 +3,7 @@ import SearchSection from "./SearchSection";
 import Tags from "./Tags";
 import TrendingTopic from "./TrendingTopic";
 import LatestTopics from "./LatestTopics";
+import MobileTopics from "./MobileTopics";
 
 const index = () => {
   return (
@@ -14,6 +15,7 @@ const index = () => {
       <Tags />
       <TrendingTopic />
       <LatestTopics />
+      <MobileTopics />
     </div>
   );
 };

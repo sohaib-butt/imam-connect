@@ -20,14 +20,14 @@ const LatestTopics = () => {
     },
     {
       title: "Development services",
-      img: "assets/images/latest-img.svg",
+      img: "assets/images/latest-img2.svg",
       heading: "Classes, Training & Services",
       content:
         "With lots of unique blocks, you can easily build a page without coding. Build your next landing page.",
     },
     {
       title: "Support services",
-      img: "assets/images/latest-img.svg",
+      img: "assets/images/latest-img3.svg",
       heading: "Counselling & Support",
       content:
         "With lots of unique blocks, you can easily build a page without coding. Build your next landing page.",
