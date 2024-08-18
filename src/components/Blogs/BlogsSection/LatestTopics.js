@@ -38,16 +38,16 @@ const LatestTopics = () => {
       <span className="font-poppins font-[700] text-[32px] text-[#202124] text-start">
         Latest topics
       </span>
-      <div className="w-full flex flex-wrap justify-between items-start gap-3">
+      <div className="w-full grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3">
         {latestTopics?.map((l, index) => (
           <div
             key={index}
-            className="flex flex-col justify-start items-start w-[25%] lg:w-[24%] gap-2"
+            className="flex flex-col justify-start items-start w-full gap-2"
           >
             <span className="font-poppins font-[400] text-[12px] text-[#999999] text-start tracking-[-0.5px]">
               {l?.title}
             </span>
-            <div className="w-[260px] h-[165px] relative">
+            <div className="w-full h-[165px] relative">
               <Image
                 src={l?.img}
                 fill

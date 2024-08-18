@@ -50,13 +50,16 @@ const Footer = () => {
               <span className={styles.footer_imamconnect_content}>
                 Specials
               </span>
+              <span className={styles.footer_imamconnect_content} onClick={() => router.push("/blogs")}>
+                Blogs
+              </span>
             </div>
           </div>
           <div className={styles.footer_imamconnect}>
             <span className={styles.footer_imamconnect_heading}>Support</span>
             <div className={styles.footer_imamconnect}>
               <span className={styles.footer_imamconnect_content}>
-                Code of Conduc
+                Code of Conduct
               </span>
               <span className={styles.footer_imamconnect_content}>FAQ</span>
               <span className={styles.footer_imamconnect_content}>
