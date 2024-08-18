@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React from "react";
+import RelatedServices from "./RelatedServices";
 
 const index = () => {
   const contents = [
@@ -15,7 +16,7 @@ const index = () => {
     },
   ];
   return (
-    <div className="w-full text-center p-[24px] md:py-[40px] md:px-[80px] lg:px-[160px] flex justify-between items-start">
+    <div className="w-full text-center p-[24px] md:py-[40px] md:px-[80px] lg:px-[160px] flex flex-col md:flex-row justify-between items-start">
       <div className="w-full md:w-[60%] flex flex-col justify-start items-start gap-8">
         <span className="font-poppins font-[600] text-[#442D87] text-[24px] md:text-[28px] lg:text-[32px]">
           Classes, Training & Support
@@ -43,6 +44,7 @@ const index = () => {
           </div>
         ))}
       </div>
+      <RelatedServices />
     </div>
   );
 };
