@@ -32,8 +32,8 @@ const Footer = () => {
               IMAMCONNECT
             </span>
             <div className={styles.footer_imamconnect}>
-              <span className={styles.footer_imamconnect_content}>About</span>
-              <span className={styles.footer_imamconnect_content}>Team</span>
+              <span className={styles.footer_imamconnect_content} onClick={() => router.push("/aboutus")}>About</span>
+              <span className={styles.footer_imamconnect_content} onClick={() => router.push("/team")}>Team</span>
               <span className={styles.footer_imamconnect_content}>
                 Privacy Policy
               </span>
