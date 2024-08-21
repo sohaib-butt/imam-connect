@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 
 const index = () => {
@@ -40,9 +41,7 @@ const index = () => {
 
   return (
     <div className="w-full px-[24px] md:py-0 md:px-[80px] lg:px-[150px] bg-white">
-      <div
-        className="w-full h-[1250px] overflow-y-hidden relative"
-      >
+      <div className="w-full h-[1250px] overflow-y-hidden relative">
         <span className="font-poppins font-[400] text-[16px] text-[#000000] text-left leading-[32px] tracking-[-0.94px]">
           {privacyText?.intro}
         </span>
@@ -80,19 +79,19 @@ const index = () => {
         </ul>
         <span className="font-poppins font-[400] text-[16px] text-[#000000] text-left leading-[32px] tracking-[-0.94px]">
           {privacyText?.readCarefully}
-        </span><br/>
+        </span>
+        <br />
         <span className="font-poppins font-[400] text-[16px] text-[#000000] text-left leading-[32px] tracking-[-0.94px]">
           {privacyText?.update}
         </span>
         <div className="sticky bottom-0 w-full bg-gradient-to-t from-[#FFFFFF] to-[#FFFFFF00] z-50 h-[313px] flex justify-center items-end pb-10 md:pb-20">
-          <button className="w-[60%] md:w-[40%] lg:w-[30%] border-[8px] border-[#00BAC2] rounded-[8px] font-poppins font-[700] text-white text-[16px] text-center h-[56px] bg-[#00BAC2]">
-            {/* <a
-              href=""
-              download
-            > */}
+          <a
+            href="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf"
+            download
+            className="w-[60%] md:w-[40%] lg:w-[30%] border-[8px] border-[#00BAC2] rounded-[8px] font-poppins font-[700] text-white text-[16px] flex justify-center items-center h-[56px] bg-[#00BAC2]"
+          >
             Download PDF
-            {/* </a> */}
-          </button>
+          </a>
         </div>
       </div>
     </div>
