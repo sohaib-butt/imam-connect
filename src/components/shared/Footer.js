@@ -37,7 +37,7 @@ const Footer = () => {
               <span className={styles.footer_imamconnect_content} onClick={() => router.push("/privacypolicy")}>
                 Privacy Policy
               </span>
-              <span className={styles.footer_imamconnect_content}>Terms</span>
+              <span className={styles.footer_imamconnect_content} onClick={() => router.push("/termsofuse")}>Terms</span>
             </div>
           </div>
           <div className={styles.footer_imamconnect}>
