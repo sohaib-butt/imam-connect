@@ -86,9 +86,10 @@ const index = () => {
         </span>
         <div className="sticky bottom-0 w-full bg-gradient-to-t from-[#FFFFFF] to-[#FFFFFF00] z-50 h-[313px] flex justify-center items-end pb-10 md:pb-20">
           <a
-            href="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf"
-            download
+            href=""
+            download="privacy-policy.pdf"
             className="w-[60%] md:w-[40%] lg:w-[30%] border-[8px] border-[#00BAC2] rounded-[8px] font-poppins font-[700] text-white text-[16px] flex justify-center items-center h-[56px] bg-[#00BAC2]"
+            target="_blank"
           >
             Download PDF
           </a>
