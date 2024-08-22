@@ -15,7 +15,10 @@ const Tags = () => {
 
   const [activeIndex, setActiveIndex] = useState(0);
   return (
-    <div className="hidden w-full md:flex flex-wrap justify-start items-center gap-3 mt-3">
+    <div
+      className="w-full flex flex-none md:flex-wrap justify-start items-center gap-3 mt-3 overflow-x-auto"
+      style={{ scrollbarWidth: "none" }}
+    >
       {tags?.map((t, index) => (
         <div
           key={index}

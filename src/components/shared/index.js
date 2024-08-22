@@ -8,3 +8,5 @@ export {default as Cost} from './Cost';
 export {default as Tags} from './Tags';
 export {default as Recommended} from './Recommended';
 export {default as TeamMateCard} from './TeamMateCard';
+export {default as BlogTags} from './BlogTags';
+export {default as SearchSection} from './SearchSection';

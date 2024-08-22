@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import styles from "../../../styles/homepage.module.scss";
+import styles from "../../styles/homepage.module.scss";
 
 const SearchSection = () => {
   return (
