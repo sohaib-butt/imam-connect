@@ -1,6 +1,6 @@
 import React from "react";
 import { Header, Footer, RegisterNow, VideoPlayer } from "@/components/shared";
-import { WorksVideos, Galleries, WorksImages } from "@/components/IntheMedia";
+import { WorksVideos, Galleries, WorksImages } from "@/components/Videos&Galleries";
 
 const page = () => {
   return (

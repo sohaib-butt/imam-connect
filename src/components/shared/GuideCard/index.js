@@ -2,9 +2,13 @@ import Image from "next/image";
 import React from "react";
 import styles from "../../../styles/homepage.module.scss";
 
-const index = ({ isBtn }) => {
+const index = ({ isBtn, isTag, isHover }) => {
   return (
-    <div className="flex-none w-[312px] md:w-[358px] rounded-[18px] border border-[#D7D7D7]">
+    <div
+      className={`flex-none w-[312px] md:w-[358px] rounded-[18px] border border-[#D7D7D7] cursor-pointer ${
+        isHover === true ? "hover:border-[5px] hover:border-[#442D87]" : ""
+      }`}
+    >
       <div className="w-full h-[173px] relative">
         <Image
           src="assets/images/guide-img.svg"
@@ -13,7 +17,7 @@ const index = ({ isBtn }) => {
           alt="Guide Image"
           className="rounded-tl-[18px] rounded-tr-[18px]"
         />
-        {isBtn === true && (
+        {isTag === true && (
           <div className="absolute z-10 top-3 right-4 h-[40px] py-0 px-[24px] flex justify-center items-center rounded-[100px] bg-[#442D87]">
             <span className="font-poppins text-[16px] text-white font-[700]">
               News

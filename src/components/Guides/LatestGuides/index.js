@@ -14,7 +14,7 @@ const index = () => {
         style={{ scrollbarWidth: "none" }}
       >
         {[1, 2, 3, 4, 5, 6]?.map((i, index) => (
-          <GuideCard key={index} isBtn={true} />
+          <GuideCard key={index} isBtn={true} isTag={true} isHover={false}/>
         ))}
       </div>
     </>
