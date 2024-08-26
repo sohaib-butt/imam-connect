@@ -47,7 +47,7 @@ const Footer = () => {
               <span className={styles.footer_imamconnect_content} onClick={() => router.push("/inthemedia")}>
                 In the media
               </span>
-              <span className={styles.footer_imamconnect_content}>
+              <span className={styles.footer_imamconnect_content} onClick={() => router.push("/specials")}>
                 Specials
               </span>
               <span className={styles.footer_imamconnect_content} onClick={() => router.push("/blogs")}>
