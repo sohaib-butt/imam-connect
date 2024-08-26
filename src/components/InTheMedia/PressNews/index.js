@@ -10,7 +10,7 @@ const index = () => {
         </span>
       </div>
       <div
-        className="flex flex-none md:flex-wrap justify-start items-start gap-5 overflow-x-auto pb-[24px] px-[24px] md:pb-[40px] md:px-[80px] lg:px-[160px]"
+        className="flex flex-none md:flex-wrap justify-start md:justify-center items-start md:items-center gap-5 overflow-x-auto pb-[24px] px-[24px] md:pb-[40px] md:px-[80px] lg:px-[160px]"
         style={{ scrollbarWidth: "none" }}
       >
         {[1, 2, 3, 4, 5, 6]?.map((i, index) => (
