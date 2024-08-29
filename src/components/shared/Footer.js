@@ -61,7 +61,7 @@ const Footer = () => {
               <span className={styles.footer_imamconnect_content} onClick={() => router.push("/codeofconduct")}>
                 Code of Conduct
               </span>
-              <span className={styles.footer_imamconnect_content}>FAQ</span>
+              <span className={styles.footer_imamconnect_content} onClick={() => router.push("/faqs")}>FAQ</span>
               <span className={styles.footer_imamconnect_content}>
                 Contact us
               </span>
