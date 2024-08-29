@@ -105,3 +105,41 @@ export const faqs = [
     answer: `Absolutely. Once you join ImamConnect, your online dashboard will guide you  through the different sections of your profile, allowing you to act as both a  customer and an approved provider. Choose the one you need and start connecting.`,
   },
 ];
+
+export const UsersAgreeTo = [
+  {
+    img: "assets/images/respectful.svg",
+    text: "Be respectful in their contact with Service Providers. This includes the use of appropriate language and maintaining all communication on the ImamConnect platform. Harrasment of any type will not be tolerated.",
+  },
+  {
+    img: "assets/images/honest.svg",
+    text: "Be honest with the information and details they provide in regards to their needs. This ensures the Service Provider is able to provide the best possible solutions.",
+  },
+  {
+    img: "assets/images/contact.svg",
+    text: "Contact ImamConnect Customer Service directly in order to solve any issues or complaints they may have.",
+  },
+];
+
+export const SPAgreeTo = [
+  {
+    img: "assets/images/uphold.svg",
+    text: "Uphold exemplary behaviour in all ImamConnect interactions. This includes honestly, reliability and accountability as well as providing fair service in appropriate language.",
+  },
+  {
+    img: "assets/images/supportive.svg",
+    text: "Be inclusive and support Users of all backgrounds and identities without discrimination.",
+  },
+  {
+    img: "assets/images/confidential.svg",
+    text: "Maintain the highest level of confidentiality at all times, except when professionally mandated not to for reasons of safe-guarding.",
+  },
+  {
+    img: "assets/images/professional.svg",
+    text: "Be professional and empathetic. This includes adhering to Professional Codes of Coduct from their own industries and governing institutes.",
+  },
+  {
+    img: "assets/images/ambassador.svg",
+    text: "Be an ambassador and do nothing that would bring into disrepute themselves, ImamConnect Users or ImamConnect platform.",
+  },
+];

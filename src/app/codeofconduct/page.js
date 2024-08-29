@@ -1,6 +1,10 @@
 import React from "react";
 import { Header, Footer, RegisterNow } from "@/components/shared";
-import { IntroSection, PlatformSection } from "@/components/CodeOfConduct";
+import {
+  IntroSection,
+  PlatformSection,
+  AgreeSection,
+} from "@/components/CodeOfConduct";
 
 const page = () => {
   return (
@@ -8,6 +12,7 @@ const page = () => {
       <Header />
       <IntroSection />
       <PlatformSection />
+      <AgreeSection />
       <RegisterNow />
       <Footer />
     </div>
