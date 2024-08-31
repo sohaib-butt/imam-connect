@@ -5,7 +5,7 @@ import styles from "../../../styles/homepage.module.scss";
 
 const index = () => {
   return (
-    <section className="w-full bg-white flex flex-col item-center justify-center p-[24px] md:py-[40px] md:px-[80px] lg:px-[100px] xl:px-[160px]">
+    <div className="w-full bg-white flex flex-col item-center justify-center p-[24px] md:py-[40px] md:px-[80px] lg:px-[100px] xl:px-[160px]">
       <PurpleCard
         parentDivClass="p-[24px] lg:p-[30px] gap-5 md:gap-2 mb-8"
         secondDiv={
@@ -22,10 +22,10 @@ const index = () => {
         content="We are ready for you 24/7. Please feel free to reach us!"
         textDivClass="md:w-[50%] gap-3"
         btnDiv={
-          <div className="w-full md:w-[40%] text-center md:text-start">
+          <div className="w-full md:w-[55%] lg:w-[40%] text-center md:text-start">
             <button
               type="button"
-              className={`${styles.primary_button} !font-[700] flex justify-center items-center !h-[56px] !text-[16px] gap-4`}
+              className={`${styles.primary_button} !font-[700] flex justify-center items-center !h-[56px] !text-[16px] gap-4 px-2 lg:px-0`}
             >
               Go to Stripe
               <Image
@@ -55,10 +55,10 @@ const index = () => {
         content="We are ready for you 24/7. Please feel free to reach us!"
         textDivClass="md:w-[50%] gap-3"
         btnDiv={
-          <div className="w-full md:w-[40%] text-center md:text-start">
+          <div className="w-full md:w-[55%] lg:w-[40%] text-center md:text-start">
             <button
               type="button"
-              className={`${styles.primary_button} !font-[700] flex justify-center items-center !h-[56px] !text-[16px] gap-4`}
+              className={`${styles.primary_button} !font-[700] flex justify-center items-center !h-[56px] !text-[16px] gap-4 px-2 lg:px-0`}
             >
               Go to Paypal
               <Image
@@ -72,7 +72,7 @@ const index = () => {
           </div>
         }
       />
-    </section>
+    </div>
   );
 };
 
