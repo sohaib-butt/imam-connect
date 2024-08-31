@@ -70,8 +70,8 @@ const index = () => {
                 <Image
                   src="assets/images/arrow.svg"
                   alt="Arrow"
-                  width={10}
-                  height={9}
+                  width={14}
+                  height={12}
                   className="!font-[700]"
                 />
               </button>

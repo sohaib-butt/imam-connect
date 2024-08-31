@@ -1,6 +1,6 @@
-"use client"
+"use client";
 import React from "react";
-import { useRouter } from 'next/navigation'
+import { useRouter } from "next/navigation";
 import styles from "../../styles/homepage.module.scss";
 
 const Footer = () => {
@@ -32,25 +32,57 @@ const Footer = () => {
               IMAMCONNECT
             </span>
             <div className={styles.footer_imamconnect}>
-              <span className={styles.footer_imamconnect_content} onClick={() => router.push("/aboutus")}>About</span>
-              <span className={styles.footer_imamconnect_content} onClick={() => router.push("/team")}>Team</span>
-              <span className={styles.footer_imamconnect_content} onClick={() => router.push("/privacypolicy")}>
+              <span
+                className={styles.footer_imamconnect_content}
+                onClick={() => router.push("/aboutus")}
+              >
+                About
+              </span>
+              <span
+                className={styles.footer_imamconnect_content}
+                onClick={() => router.push("/team")}
+              >
+                Team
+              </span>
+              <span
+                className={styles.footer_imamconnect_content}
+                onClick={() => router.push("/privacypolicy")}
+              >
                 Privacy Policy
               </span>
-              <span className={styles.footer_imamconnect_content} onClick={() => router.push("/termsofuse")}>Terms</span>
+              <span
+                className={styles.footer_imamconnect_content}
+                onClick={() => router.push("/termsofuse")}
+              >
+                Terms
+              </span>
             </div>
           </div>
           <div className={styles.footer_imamconnect}>
             <span className={styles.footer_imamconnect_heading}>NEWS</span>
             <div className={styles.footer_imamconnect}>
-              <span className={styles.footer_imamconnect_content} onClick={() => router.push("/guides")}>Guides</span>
-              <span className={styles.footer_imamconnect_content} onClick={() => router.push("/inthemedia")}>
+              <span
+                className={styles.footer_imamconnect_content}
+                onClick={() => router.push("/guides")}
+              >
+                Guides
+              </span>
+              <span
+                className={styles.footer_imamconnect_content}
+                onClick={() => router.push("/inthemedia")}
+              >
                 In the media
               </span>
-              <span className={styles.footer_imamconnect_content} onClick={() => router.push("/specials")}>
+              <span
+                className={styles.footer_imamconnect_content}
+                onClick={() => router.push("/specials")}
+              >
                 Specials
               </span>
-              <span className={styles.footer_imamconnect_content} onClick={() => router.push("/blogs")}>
+              <span
+                className={styles.footer_imamconnect_content}
+                onClick={() => router.push("/blogs")}
+              >
                 Blogs
               </span>
             </div>
@@ -58,14 +90,27 @@ const Footer = () => {
           <div className={styles.footer_imamconnect}>
             <span className={styles.footer_imamconnect_heading}>Support</span>
             <div className={styles.footer_imamconnect}>
-              <span className={styles.footer_imamconnect_content} onClick={() => router.push("/codeofconduct")}>
+              <span
+                className={styles.footer_imamconnect_content}
+                onClick={() => router.push("/codeofconduct")}
+              >
                 Code of Conduct
               </span>
-              <span className={styles.footer_imamconnect_content} onClick={() => router.push("/faqs")}>FAQ</span>
+              <span
+                className={styles.footer_imamconnect_content}
+                onClick={() => router.push("/faqs")}
+              >
+                FAQ
+              </span>
               <span className={styles.footer_imamconnect_content}>
                 Contact us
               </span>
-              <span className={styles.footer_imamconnect_content}>Payment</span>
+              <span
+                className={styles.footer_imamconnect_content}
+                onClick={() => router.push("/payment")}
+              >
+                Payment
+              </span>
             </div>
           </div>
         </div>

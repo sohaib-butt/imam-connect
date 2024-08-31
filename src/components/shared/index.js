@@ -11,3 +11,4 @@ export {default as TeamMateCard} from './TeamMateCard';
 export {default as BlogTags} from './BlogTags';
 export {default as SearchSection} from './SearchSection';
 export {default as GuideCard} from './GuideCard';
+export {default as PurpleCard} from './PurpleCard';
