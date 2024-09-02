@@ -102,7 +102,7 @@ const Footer = () => {
               >
                 FAQ
               </span>
-              <span className={styles.footer_imamconnect_content}>
+              <span className={styles.footer_imamconnect_content} onClick={() => router.push("/contactus")}>
                 Contact us
               </span>
               <span
