@@ -1,6 +1,7 @@
 import { PurpleCard } from "@/components/shared";
 import Image from "next/image";
 import React from "react";
+import ContactForm from "./ContactForm";
 
 const index = () => {
   return (
@@ -14,7 +15,7 @@ const index = () => {
         </span>
       </div>
       <div className="w-full flex flex-col md:flex-row gap-4 md:gap-20 justify-start items-start md:justify-between md:items-start">
-        <div className="h-[680px] w-full md:w-[70%] rounded-[16px] p-[24px] border border-[#D7D7D7]"></div>
+        <ContactForm/>
         <div className="w-full md:w-[30%] flex flex-col gap-6 justify-start items-start">
           <div className="flex flex-col justify-start items-start">
             <span className="font-poppins font-[600] text-[24px] text-[#202124] text-start tracking-[2%]">
