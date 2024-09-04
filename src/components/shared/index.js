@@ -12,3 +12,5 @@ export {default as BlogTags} from './BlogTags';
 export {default as SearchSection} from './SearchSection';
 export {default as GuideCard} from './GuideCard';
 export {default as PurpleCard} from './PurpleCard';
+export {default as CreateAccPopup} from './CreateAccPopup';
+export {default as AccCreatedPopup} from './AccCreatedPopup';
