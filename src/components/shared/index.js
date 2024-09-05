@@ -15,3 +15,4 @@ export {default as PurpleCard} from './PurpleCard';
 export {default as CreateAccPopup} from './CreateAccPopup';
 export {default as AccCreatedPopup} from './AccCreatedPopup';
 export {default as OrderSummary} from './OrderSummary';
+export {default as CheckoutServiceCard} from './CheckoutServiceCard';

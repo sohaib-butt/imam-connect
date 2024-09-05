@@ -4,22 +4,22 @@ import styles from "../../styles/homepage.module.scss";
 const OrderSummary = () => {
   return (
     <div className="w-full border border-[#D7D7D7] rounded-[8px] p-[24px] flex flex-col items-start justify-start gap-3">
-      <span className="text-[#442D87] font-poppins font-[700] tracking-[-0.94px] text-[16px] md:text-[18px] lg:text-[20px] border-b-[1px] border-b-[#D7D7D7] w-full pb-2">
+      <span className="text-[#442D87] font-poppins font-[700] text-[16px] md:text-[18px] lg:text-[20px] border-b-[1px] border-b-[#D7D7D7] w-full pb-2">
         Order summary
       </span>
       <div className="w-full flex flex-col justify-start items-start gap-2">
-        <span class="block text-[16px] md:text-[18px] lg:text-[20px] font-[500] text-[#161C2D] text-start font-poppins tracking-[-0.38px]">
+        <span class="block text-[16px] md:text-[18px] lg:text-[20px] font-[500] text-[#161C2D] text-start font-poppins">
           Marriage and Family Services
         </span>
-        <span class="block text-[14px] lg:text-[16px] font-[500] font-poppins text-[#999999] text-start tracking-[-0.38px]">
+        <span class="block text-[14px] lg:text-[16px] font-[500] font-poppins text-[#999999] text-start">
           25 hour x $10/h
         </span>
       </div>
       <div className="w-full flex justify-between items-center">
-        <span class="block text-[14px] md:text-[16px] font-[700] text-[#442D87] text-start font-poppins tracking-[-0.94px]">
+        <span class="block text-[14px] md:text-[16px] font-[700] text-[#442D87] text-start font-poppins">
           Total
         </span>
-        <span class="block text-[16px] md:text-[20px] lg:text-[24px] font-[700] font-poppins text-[#442D87] text-start tracking-[-0.38px]">
+        <span class="block text-[16px] md:text-[20px] lg:text-[24px] font-[700] font-poppins text-[#442D87] text-start">
           $250.00
         </span>
       </div>
