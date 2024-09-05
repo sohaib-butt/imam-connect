@@ -14,3 +14,4 @@ export {default as GuideCard} from './GuideCard';
 export {default as PurpleCard} from './PurpleCard';
 export {default as CreateAccPopup} from './CreateAccPopup';
 export {default as AccCreatedPopup} from './AccCreatedPopup';
+export {default as OrderSummary} from './OrderSummary';

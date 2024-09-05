@@ -2,12 +2,13 @@
 import React from "react";
 import styles from "../../../styles/homepage.module.scss";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import Image from "next/image";
 import MobileSidebar from "./MobileSidebar";
 
 const index = () => {
   const pathname = usePathname();
+  const router = useRouter();
 
   const menuItems = [
     { route: "/", title: "Home" },
@@ -88,6 +89,8 @@ const index = () => {
                   alt="Cart"
                   width={30}
                   height={30}
+                  className="cursor-pointer"
+                  onClick={() => router.push("/cart")}
                 />
               </div>
             </div>
