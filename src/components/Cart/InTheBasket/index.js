@@ -16,7 +16,7 @@ const index = () => {
           ))}
         </div>
         <div className="w-full md:w-[50%] flex flex-col justify-center items-center gap-4">
-          <OrderSummary />
+          <OrderSummary success={false} user={"guest"}/>
           <CheckoutServiceCard />
         </div>
       </div>

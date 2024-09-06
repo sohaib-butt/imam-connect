@@ -4,7 +4,7 @@ import styles from "../../styles/homepage.module.scss";
 import { useRouter } from "next/navigation";
 import { CreditCardPopUp } from "../Checkout";
 
-const OrderSummary = ({ success }) => {
+const OrderSummary = ({ success, user }) => {
   const [checkoutClicked, setCheckoutClicked] = useState(false);
   const router = useRouter();
   return (
@@ -43,8 +43,16 @@ const OrderSummary = ({ success }) => {
               success ? setCheckoutClicked(true) : router.push("/checkout");
             }}
           >
-            Proceed to Checkout
+            {user == "user" ? "Proceed to Checkout" : "Signup"}
           </button>
+          {user === "guest" && (
+            <button
+              type="button"
+              className={`w-full font-[700] flex justify-center items-center h-[44px] text-[14px] lg:text-[16px] text-[#00BAC2] text-center bg-white`}
+            >
+              Proceed Checkout as Guest
+            </button>
+          )}
         </div>
       </div>
       {checkoutClicked == true && (
