@@ -1,6 +1,8 @@
 "use client";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import AdminProfile from '../../../../public/assets/images/admin-profile.svg'
+import Image from "next/image";
 
 const Sidebar = () => {
   const router = useRouter();
@@ -17,10 +19,12 @@ const Sidebar = () => {
       }}
     >
       <div className="flex items-center mb-6">
-        <img
-          src="assets/images/admin-profile.svg"
+        <Image
+          src={AdminProfile.src}
+          width={52}
+          height={52}
           alt="Admin"
-          className="w-12 h-12 rounded-full"
+          className="rounded-full"
         />
         <div className="ml-3">
           <p

@@ -1,12 +1,13 @@
 "use client";
 import React, { useState } from "react";
 import styles from "../../../styles/homepage.module.scss";
+import Image from "next/image";
 import Link from "next/link";
+import HamburgerIcon from "../../../../public/assets/images/hamburger_button.svg";
+import ImamLogo from "../../../../public/assets/images/imamLogo.svg";
+import CloseIcon from "../../../../public/assets/images/close_icon.svg";
 
-const MobileSidebar = ({
-  menuItems,
-  pathname
-}) => {
+const MobileSidebar = ({ menuItems, pathname }) => {
   const [menuOpen, setMenuOpen] = useState(false);
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
@@ -17,7 +18,7 @@ const MobileSidebar = ({
         className={`${styles.hamburger_button} cursor-pointer`}
         onClick={toggleMenu}
       >
-        <img src="assets/images/hamburger_button.svg" />
+        <Image src={HamburgerIcon.src} width={24} height={24} />
       </div>
 
       <div
@@ -32,9 +33,11 @@ const MobileSidebar = ({
               alignItems: "center",
             }}
           >
-            <img src="assets/images/imamLogo.svg" />
-            <img
-              src="assets/images/close_icon.svg"
+            <Image src={ImamLogo.src} width={168} height={34} />
+            <Image
+              src={CloseIcon.src}
+              width={12}
+              height={12}
               className="cursor-pointer"
               onClick={toggleMenu}
             />
