@@ -5,6 +5,11 @@ import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import Image from "next/image";
 import MobileSidebar from "./MobileSidebar";
+import ImamLogo from "../../../../public/assets/images/imamLogo.svg";
+import SearchIcon from "../../../../public/assets/images/searchIcon.svg";
+import ProfileIcon from "../../../../public/assets/images/profile-icon.svg";
+import CartIcon from "../../../../public/assets/images/cart-icon.svg";
+import ArrowIcon from "../../../../public/assets/images/arrow.svg";
 
 const index = () => {
   const pathname = usePathname();
@@ -19,7 +24,7 @@ const index = () => {
 
   return (
     <div className={styles.header}>
-      <img src="assets/images/imamLogo.svg" alt="Imam Logo" />
+      <Image src={ImamLogo.src} alt="Imam Logo" width={168} height={34} />
       <div className={styles.navigation_menu}>
         <div className={styles.menu_items_div}>
           {menuItems?.map((m, index) => (
@@ -45,9 +50,11 @@ const index = () => {
               className={styles.header_search_div}
               placeholder="Search"
             />
-            <img
-              src="assets/images/searchIcon.svg"
+            <Image
+              src={SearchIcon.src}
               alt="search"
+              width={15.45}
+              height={15.47}
               className={styles.header_search_icon}
             />
           </div>
@@ -69,7 +76,7 @@ const index = () => {
               >
                 Book a Service Now
                 <Image
-                  src="assets/images/arrow.svg"
+                  src={ArrowIcon.src}
                   alt="Arrow"
                   width={14}
                   height={12}
@@ -79,19 +86,12 @@ const index = () => {
 
               <div className="w-[25%] flex justify-start items-center gap-2">
                 <Image
-                  src="assets/images/profile-icon.svg"
+                  src={ProfileIcon.src}
                   alt="Profile Icon"
                   width={30}
                   height={30}
                 />
-                <Image
-                  src="assets/images/cart-icon.svg"
-                  alt="Cart"
-                  width={30}
-                  height={30}
-                  className="cursor-pointer"
-                  onClick={() => router.push("/cart")}
-                />
+                <Image src={CartIcon.src} alt="Cart" width={30} height={30} />
               </div>
             </div>
           )}
