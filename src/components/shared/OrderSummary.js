@@ -1,7 +1,10 @@
+"use client";
 import React from "react";
 import styles from "../../styles/homepage.module.scss";
+import { useRouter } from "next/navigation";
 
-const OrderSummary = () => {
+const OrderSummary = ({ success }) => {
+  const router = useRouter();
   return (
     <div className="w-full border border-[#D7D7D7] rounded-[8px] p-[24px] flex flex-col items-start justify-start gap-3">
       <span className="text-[#442D87] font-poppins font-[700] text-[16px] md:text-[18px] lg:text-[20px] border-b-[1px] border-b-[#D7D7D7] w-full pb-2">
@@ -33,6 +36,7 @@ const OrderSummary = () => {
         <button
           type="button"
           className={`${styles.primary_button} !font-[700] flex justify-center items-center !h-[48px] !text-[14px] lg:!text-[16px]`}
+          onClick={() => router.push(success ? "": "/checkout")}
         >
           Proceed to Checkout
         </button>
