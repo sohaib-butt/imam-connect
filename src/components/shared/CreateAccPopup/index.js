@@ -16,7 +16,7 @@ const index = ({
   return (
     <div className={styles.popup_container}>
       <div
-        className={`${styles.popup} w-[90%] md:w-[70%] lg:w-[50%] flex flex-col items-center bg-white rounded-[12px] relative p-[24px] gap-3 ${popupClassName}`}
+        className={`${styles.popup} w-[90%] sm:w-[70%] md:w-[70%] lg:w-[50%] flex flex-col items-center bg-white rounded-[12px] relative p-[24px] gap-3 ${popupClassName}`}
       >
         <div className="w-full flex flex-col justify-start items-start gap-2">
           <span className="text-[20px] md:text-[22px] lg:text-[24px] font-[600] font-poppins text-[#101828] text-start">

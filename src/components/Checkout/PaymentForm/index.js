@@ -31,121 +31,126 @@ const index = () => {
           <span className="font-poppins font-[700] text-[16px] md:text-[20px] lg:text-[24px] tracking-[-0.94px] text-center text-[#161616]">
             Fill information
           </span>
-          <form className="space-y-10">
-            <div className="relative">
+          <form className="space-y-5">
+            <div className="relative flex flex-col justify-start items-start border border-[#DEDEDE] h-[52px] p-2 rounded-[8px]">
+              <label
+                htmlFor="country"
+                className="font-[400] transition-all text-[#707070] text-[12px]"
+              >
+                Country/Region
+              </label>
               <select
                 id="country"
                 name="country"
-                className="peer h-8 w-full bg-transparent focus:outline-none focus:ring-0 transition-all appearance-none cursor-pointer border-b border-[#DEDEDE] font-[400] text-[14px] text-[#000000]"
+                className="w-full bg-transparent focus:outline-none focus:ring-0 transition-all appearance-none font-[400] text-[14px] text-[#000000] cursor-pointer"
               >
                 <option value="" disabled selected></option>
                 <option value="canada">Canada</option>
                 <option value="usa">USA</option>
                 <option value="uk">United Kingdom</option>
-                {/* Add more countries as needed */}
               </select>
-              <label
-                htmlFor="country"
-                className="text-[14px] font-[400] absolute left-0 top-3 text-[#707070] transition-all peer-placeholder-shown:top-3 peer-placeholder-shown:text-[#707070] peer-focus:top-[-1rem] peer-focus:text-[12px] peer-valid:top-[-1rem] peer-valid:text-[12px] peer-valid:text-[#000000]"
-              >
-                Country/Region
-              </label>
               <Image
                 src="assets/images/chevronRight.svg"
                 width={10}
                 height={10}
-                className="absolute right-2 top-3 rotate-90"
+                className="absolute right-2 top-5 rotate-90"
               />
             </div>
 
             <div className="grid grid-cols-2 gap-4">
-              <div className="relative">
+              <div className="flex flex-col justify-start items-start border border-[#DEDEDE] h-[52px] p-2 rounded-[8px]">
+                <label
+                  htmlFor="firstName"
+                  className="font-[400] transition-all text-[#707070] text-[12px]"
+                >
+                  First Name
+                </label>
                 <input
                   type="text"
                   id="firstName"
                   name="firstName"
-                  className="peer h-8 w-full bg-transparent focus:outline-none focus:ring-0 transition-all appearance-none cursor-pointer border-b border-[#DEDEDE] font-[400] text-[14px] text-[#000000]"
-                  placeholder=" " // Keeps the placeholder hidden but used to trigger the peer interactions
+                  className="w-full bg-transparent focus:outline-none focus:ring-0 transition-all appearance-none font-[400] text-[14px] text-[#000000]"
+                  placeholder="First Name"
                 />
-                <label
-                  htmlFor="firstName"
-                  className="text-[14px] font-[400] absolute left-0 top-3 text-[#707070] transition-all peer-placeholder-shown:top-3 peer-placeholder-shown:text-[#707070] peer-focus:top-[-1rem] peer-focus:text-[12px] peer-valid:top-[-1rem] peer-valid:text-[12px] peer-valid:text-[#000000]"
-                >
-                  First Name (optional)
-                </label>
               </div>
 
-              <div className="relative">
+              <div className="flex flex-col justify-start items-start border border-[#DEDEDE] h-[52px] p-2 rounded-[8px]">
+                <label
+                  htmlFor="lastName"
+                  className="font-[400] transition-all text-[#707070] text-[12px]"
+                >
+                  Last Name
+                </label>
                 <input
                   type="text"
                   id="lastName"
                   name="lastName"
-                  className="peer h-8 w-full bg-transparent focus:outline-none focus:ring-0 transition-all appearance-none cursor-pointer border-b border-[#DEDEDE] font-[400] text-[14px] text-[#000000]"
-                  placeholder=" "
+                  className="w-full bg-transparent focus:outline-none focus:ring-0 transition-all appearance-none font-[400] text-[14px] text-[#000000]"
+                  placeholder="Last Name"
                 />
-                <label
-                  htmlFor="lastName"
-                  className="text-[14px] font-[400] absolute left-0 top-3 text-[#707070] transition-all peer-placeholder-shown:top-3 peer-placeholder-shown:text-[#707070] peer-focus:top-[-1rem] peer-focus:text-[12px] peer-valid:top-[-1rem] peer-valid:text-[12px] peer-valid:text-[#000000]"
-                >
-                  Last Name
-                </label>
               </div>
             </div>
 
-            <div className="relative">
-              <input
-                type="email"
-                id="email"
-                name="email"
-                className="peer h-8 w-full bg-transparent focus:outline-none focus:ring-0 transition-all appearance-none cursor-pointer border-b border-[#DEDEDE] font-[400] text-[14px] text-[#000000]"
-                placeholder=" "
-              />
+            <div className="flex flex-col justify-start items-start border border-[#DEDEDE] h-[52px] p-2 rounded-[8px]">
               <label
                 htmlFor="email"
-                className="text-[14px] font-[400] absolute left-0 top-3 text-[#707070] transition-all peer-placeholder-shown:top-3 peer-placeholder-shown:text-[#707070] peer-focus:top-[-1rem] peer-focus:text-[12px] peer-valid:top-[-1rem] peer-valid:text-[12px] peer-valid:text-[#000000]"
+                className="font-[400] transition-all text-[#707070] text-[12px]"
               >
-                Email Address
+                Email
               </label>
+              <input
+                type="text"
+                id="email"
+                name="email"
+                className="w-full bg-transparent focus:outline-none focus:ring-0 transition-all appearance-none font-[400] text-[14px] text-[#000000]"
+                placeholder="Email"
+              />
             </div>
 
-            <div className="relative">
+            <div className="flex flex-col justify-start items-start border border-[#DEDEDE] h-[52px] p-2 rounded-[8px]">
+              <label
+                htmlFor="unit"
+                className="font-[400] transition-all text-[#707070] text-[12px]"
+              >
+                Apartment, Suite, etc. (optional)
+              </label>
               <input
                 type="text"
                 id="unit"
                 name="unit"
-                className="peer h-8 w-full bg-transparent focus:outline-none focus:ring-0 transition-all appearance-none cursor-pointer border-b border-[#DEDEDE] font-[400] text-[14px] text-[#000000]"
-                placeholder=" "
+                className="w-full bg-transparent focus:outline-none focus:ring-0 transition-all appearance-none font-[400] text-[14px] text-[#000000]"
+                placeholder="Apartment, Suite, etc. (optional)"
               />
-              <label
-                htmlFor="unit"
-                className="text-[14px] font-[400] absolute left-0 top-3 text-[#707070] transition-all peer-placeholder-shown:top-3 peer-placeholder-shown:text-[#707070] peer-focus:top-[-1rem] peer-focus:text-[12px] peer-valid:top-[-1rem] peer-valid:text-[12px] peer-valid:text-[#000000]"
-              >
-                Apartment, Suite, etc. (optional)
-              </label>
             </div>
 
             <div className="grid grid-cols-3 gap-4">
-              <div className="relative">
+              <div className="flex flex-col justify-start items-start border border-[#DEDEDE] h-[52px] p-2 rounded-[8px]">
+                <label
+                  htmlFor="city"
+                  className="font-[400] transition-all text-[#707070] text-[12px]"
+                >
+                  City
+                </label>
                 <input
                   type="text"
                   id="city"
                   name="city"
-                  className="peer h-8 w-full bg-transparent focus:outline-none focus:ring-0 transition-all appearance-none cursor-pointer border-b border-[#DEDEDE] font-[400] text-[14px] text-[#000000]"
-                  placeholder=" "
+                  className="w-full bg-transparent focus:outline-none focus:ring-0 transition-all appearance-none font-[400] text-[14px] text-[#000000]"
+                  placeholder="City"
                 />
-                <label
-                  htmlFor="city"
-                  className="text-[14px] font-[400] absolute left-0 top-3 text-[#707070] transition-all peer-placeholder-shown:top-3 peer-placeholder-shown:text-[#707070] peer-focus:top-[-1rem] peer-focus:text-[12px] peer-valid:top-[-1rem] peer-valid:text-[12px] peer-valid:text-[#000000]"
-                >
-                  City
-                </label>
               </div>
 
-              <div className="relative">
+              <div className="relative flex flex-col justify-start items-start border border-[#DEDEDE] h-[52px] p-2 rounded-[8px]">
+                <label
+                  htmlFor="province"
+                  className="font-[400] transition-all text-[#707070] text-[12px]"
+                >
+                  Province
+                </label>
                 <select
                   id="province"
                   name="province"
-                  className="peer h-8 w-full bg-transparent focus:outline-none focus:ring-0 transition-all appearance-none cursor-pointer border-b border-[#DEDEDE] font-[400] text-[14px] text-[#000000]"
+                  className="w-full bg-transparent focus:outline-none focus:ring-0 transition-all appearance-none font-[400] text-[14px] text-[#000000] cursor-pointer"
                 >
                   <option value="" disabled selected></option>
                   <option value="ontario">Ontario</option>
@@ -153,51 +158,45 @@ const index = () => {
                   <option value="alberta">Alberta</option>
                   <option value="bc">British Columbia</option>
                 </select>
-                <label
-                  htmlFor="province"
-                  className="text-[14px] font-[400] absolute left-0 top-3 text-[#707070] transition-all peer-placeholder-shown:top-3 peer-placeholder-shown:text-[#707070] peer-focus:top-[-1rem] peer-focus:text-[12px] peer-valid:top-[-1rem] peer-valid:text-[12px] peer-valid:text-[#000000]"
-                >
-                  Province
-                </label>
                 <Image
                   src="assets/images/chevronRight.svg"
                   width={10}
                   height={10}
-                  className="absolute right-2 top-3 rotate-90"
+                  className="absolute right-2 top-5 rotate-90"
                 />
               </div>
 
-              <div className="relative">
+              <div className="flex flex-col justify-start items-start border border-[#DEDEDE] h-[52px] p-2 rounded-[8px]">
+                <label
+                  htmlFor="postalCode"
+                  className="font-[400] transition-all text-[#707070] text-[12px]"
+                >
+                  Postal Code
+                </label>
                 <input
                   type="text"
                   id="postalCode"
                   name="postalCode"
-                  className="peer h-8 w-full bg-transparent focus:outline-none focus:ring-0 transition-all appearance-none cursor-pointer border-b border-[#DEDEDE] font-[400] text-[14px] text-[#000000]"
-                  placeholder=" "
+                  className="w-full bg-transparent focus:outline-none focus:ring-0 transition-all appearance-none font-[400] text-[14px] text-[#000000]"
+                  placeholder="Postal Code"
                 />
-                <label
-                  htmlFor="postalCode"
-                  className="text-[14px] font-[400] absolute left-0 top-3 text-[#707070] transition-all peer-placeholder-shown:top-3 peer-placeholder-shown:text-[#707070] peer-focus:top-[-1rem] peer-focus:text-[12px] peer-valid:top-[-1rem] peer-valid:text-[12px] peer-valid:text-[#000000]"
-                >
-                  Postal Code
-                </label>
               </div>
             </div>
 
-            <div className="relative">
+            <div className="flex flex-col justify-start items-start border border-[#DEDEDE] h-[52px] p-2 rounded-[8px]">
+              <label
+                htmlFor="address"
+                className="font-[400] transition-all text-[#707070] text-[12px]"
+              >
+                Address
+              </label>
               <input
                 type="text"
                 id="address"
                 name="address"
-                className="peer h-8 w-full bg-transparent focus:outline-none focus:ring-0 transition-all appearance-none cursor-pointer border-b border-[#DEDEDE] font-[400] text-[14px] text-[#000000]"
-                placeholder=" "
+                className="w-full bg-transparent focus:outline-none focus:ring-0 transition-all appearance-none font-[400] text-[14px] text-[#000000]"
+                placeholder="Address"
               />
-              <label
-                htmlFor="address"
-                className="text-[14px] font-[400] absolute left-0 top-3 text-[#707070] transition-all peer-placeholder-shown:top-3 peer-placeholder-shown:text-[#707070] peer-focus:top-[-1rem] peer-focus:text-[12px] peer-valid:top-[-1rem] peer-valid:text-[12px] peer-valid:text-[#000000]"
-              >
-                Address
-              </label>
             </div>
           </form>
         </div>

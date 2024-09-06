@@ -29,20 +29,20 @@ const index = ({ success }) => {
       <div className="w-full flex flex-col justify-center items-center gap-2">
         {success && (
           <div
-            className={`w-full font-[700] flex justify-center items-center h-[62px] text-[16px] md:text-[18px] lg:text-[20px] text-[#442D87] text-center bg-[#E0D6FF] rounded-[8px] border border-[#00BAC2] mb-3`}
+            className={`w-full sm:w-[50%] lg:w-[30%] font-[700] flex justify-center items-center h-[62px] text-[16px] md:text-[18px] lg:text-[20px] text-[#442D87] text-center bg-[#E0D6FF] rounded-[8px] border border-[#00BAC2] mb-3`}
           >
             Your order number: #283283299328
           </div>
         )}
         <button
           type="button"
-          className={`${styles.primary_button} !font-[700] flex justify-center items-center !h-[48px] !text-[14px] lg:!text-[16px]`}
+          className={`${styles.primary_button} sm:!w-[50%] lg:!w-[30%] !font-[700] flex justify-center items-center !h-[48px] !text-[14px] lg:!text-[16px]`}
         >
           {success == true ? "Continue Shopping" : "Try another method"}
         </button>
         <button
           type="button"
-          className={`w-full font-[700] flex justify-center items-center h-[48px] text-[14px] lg:text-[16px] text-[#00BAC2] text-center bg-white rounded-[8px] border border-[#00BAC2]`}
+          className={`w-full sm:w-[50%] lg:w-[30%] font-[700] flex justify-center items-center h-[48px] text-[14px] lg:text-[16px] text-[#00BAC2] text-center bg-white rounded-[8px] border border-[#00BAC2]`}
         >
           {success == true ? "Return to home" : "Contact support"}
         </button>
