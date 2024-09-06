@@ -36,7 +36,7 @@ const OrderSummary = ({ success }) => {
         <button
           type="button"
           className={`${styles.primary_button} !font-[700] flex justify-center items-center !h-[48px] !text-[14px] lg:!text-[16px]`}
-          onClick={() => router.push(success ? "": "/checkout")}
+          onClick={() => router.push(success ? "/checkout-feedback": "/checkout")}
         >
           Proceed to Checkout
         </button>

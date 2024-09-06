@@ -203,7 +203,7 @@ const index = () => {
         </div>
       </div>
       <div className="w-full md:w-[40%]">
-        <OrderSummary />
+        <OrderSummary success={true} />
       </div>
     </div>
   );
