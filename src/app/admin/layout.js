@@ -1,5 +1,5 @@
 import { Footer, Header } from "@/components/shared";
-import Sidebar from "@/components/AdminDashboard/Sidebar";
+import Sidebar from "@/components/shared/Sidebar";
 
 export default function Layout({ children }) {
   return (
