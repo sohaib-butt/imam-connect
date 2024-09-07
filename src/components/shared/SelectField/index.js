@@ -1,6 +1,9 @@
 "use client";
 import Image from "next/image";
 import { useState } from "react";
+import CloseIcon from "../../../../public/assets/images/x-close.svg";
+import ArrowDown from "../../../../public/assets/images/arrowDown.svg";
+import SearchIcon from "../../../../public/assets/images/search-icon.svg";
 
 const index = ({ label, placeholder, options, multiple }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -37,7 +40,7 @@ const index = ({ label, placeholder, options, multiple }) => {
   );
 
   return (
-    <div className="relative flex flex-col gap-[8px]">
+    <div className="flex flex-col gap-[8px]">
       <span className="font-poppins text-[16px] font-[400] text-[#666666] leading-[20px]">
         {label}
       </span>
@@ -61,7 +64,7 @@ const index = ({ label, placeholder, options, multiple }) => {
                       {selectedOption}
                     </span>
                     <Image
-                      src="assets/images/x-close.svg"
+                      src={CloseIcon.src}
                       width={12}
                       height={12}
                       className="cursor-pointer text-[#202124]"
@@ -85,14 +88,14 @@ const index = ({ label, placeholder, options, multiple }) => {
           </div>
         </div>
         <div className="absolute right-[16px] top-[50%] transform -translate-y-[50%] pointer-events-none">
-          <Image src="assets/images/Caret_Down_MD.svg" width={24} height={24} />
+          <Image src={ArrowDown.src} width={24} height={24} />
         </div>
 
         {isOpen && (
           <div className="absolute z-10 mt-1 w-full bg-white border border-[#E7E7E7] rounded-[8px] shadow-lg p-[24px]">
             <div className="px-[16px] border border-[#E7E7E7] rounded-[8px] flex gap-[8px] h-[48px] mb-[24px]">
               <Image
-                src="assets/images/Search_Magnifying_Glass.svg"
+                src={SearchIcon.src}
                 height={20}
                 width={20}
               />

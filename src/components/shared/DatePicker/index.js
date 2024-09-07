@@ -5,9 +5,9 @@ import Image from "next/image";
 import "antd/dist/reset.css";
 import dayjs from "dayjs";
 import "./datepicker.scss";
+import CalendarIcon from "../../../../public/assets/images/calendar.svg";
 
-const index = (props) => {
-  const { label, placeholder } = props;
+const index = ({ label, placeholder }) => {
   const [date, setDate] = useState(null);
 
   const handleChange = (date, dateString) => {
@@ -22,13 +22,13 @@ const index = (props) => {
       <div>
         <DatePicker
           className="w-full px-[16px] border border-[#E7E7E7] rounded-[12px] h-[56px] placeholder-[#999999] focus:outline-none focus:border-none cursor-pointer"
-          dateFormat="yyyy-MM-dd"
-          placeholder=""
+          format="DD MMMM YYYY"
+          placeholder={placeholder}
           name="date"
           value={date ? dayjs(date) : null}
           onChange={handleChange}
           suffixIcon={
-            <Image src="assets/images/calendar.svg" width={24} height={24} />
+            <Image src={CalendarIcon.src} width={24} height={24} />
           }
         />
       </div>
