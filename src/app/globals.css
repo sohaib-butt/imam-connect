@@ -31,23 +31,3 @@ body {
   background-color: #c3c3c3; /* color of the scrollbar thumb on hover */
 }
 
-/* Custom Focus Styles */
-input:focus,
-textarea:focus,
-select:focus {
-  border-color: #00BAC2 !important; /* Apply your focus color */
-  outline: none; /* Remove default outline */
-  box-shadow: 0 0 0 2px rgba(0, 186, 194, 0.3); /* Optional: add shadow effect */
-}
-
-/* Apply border-radius to input fields and text areas */
-input,
-textarea,
-select {
-  border-radius: 8px !important; /* Border radius */
-}
-
-/* Prevent text areas from expanding */
-textarea {
-  resize: none; /* Prevent resizing */
-}
