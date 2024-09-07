@@ -59,6 +59,7 @@ const DashboardStats = () => {
   ];
 
   return (
+    <div className="flex flex-col p-4">
     <div className="space-y-6">
       <div>
         <h1 className="text-2xl font-bold text-gray-800">Dashboard</h1>
@@ -136,6 +137,7 @@ const DashboardStats = () => {
         </div>
         <CanvasJSChartComponent />
       </div>
+    </div>
     </div>
   );
 };

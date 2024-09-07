@@ -31,3 +31,10 @@ body {
   background-color: #c3c3c3; /* color of the scrollbar thumb on hover */
 }
 
+/* Custom styles for Ant Design Switch */
+
+.ant-switch-checked {
+  background-color: #00BAC2 !important;
+}
+
+
