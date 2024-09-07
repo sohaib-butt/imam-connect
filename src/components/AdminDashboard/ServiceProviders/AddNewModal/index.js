@@ -1,4 +1,3 @@
-"use client";
 import React from "react";
 
 const AddNewModal = ({ isOpen, onClose }) => {
@@ -109,9 +108,7 @@ const AddNewModal = ({ isOpen, onClose }) => {
                 className="border border-gray-300 p-2 rounded w-full mt-1 focus:ring-0 focus:border-[#00BAC2]"
               >
                 <option value="">Select</option>
-                <option value="denom1">Denomination 1</option>
-                <option value="denom2">Denomination 2</option>
-                <option value="denom3">Denomination 3</option>
+                {/* Add options here */}
               </select>
             </div>
           </div>
@@ -120,54 +117,45 @@ const AddNewModal = ({ isOpen, onClose }) => {
               htmlFor="language"
               className="block font-poppins text-[16px] font-normal leading-[20px] tracking-wide text-[#666666]"
             >
-              Language
+              Languages
             </label>
             <select
               id="language"
+              multiple
               className="border border-gray-300 p-2 rounded w-full mt-1 focus:ring-0 focus:border-[#00BAC2]"
             >
-              <option value="">Select</option>
-              <option value="english">English</option>
-              <option value="spanish">Spanish</option>
-              <option value="french">French</option>
-              <option value="german">German</option>
+              {/* Add options here */}
             </select>
           </div>
-          <div className="mb-4">
-            <label
-              htmlFor="country"
-              className="block font-poppins text-[16px] font-normal leading-[20px] tracking-wide text-[#666666]"
-            >
-              Country
-            </label>
-            <select
-              id="country"
-              className="border border-gray-300 p-2 rounded w-full mt-1 focus:ring-0 focus:border-[#00BAC2]"
-            >
-              <option value="">Select</option>
-              <option value="usa">United States</option>
-              <option value="canada">Canada</option>
-              <option value="uk">United Kingdom</option>
-              <option value="australia">Australia</option>
-            </select>
-          </div>
-          <div className="mb-4">
-            <label
-              htmlFor="city"
-              className="block font-poppins text-[16px] font-normal leading-[20px] tracking-wide text-[#666666]"
-            >
-              City
-            </label>
-            <select
-              id="city"
-              className="border border-gray-300 p-2 rounded w-full mt-1 focus:ring-0 focus:border-[#00BAC2]"
-            >
-              <option value="">Select</option>
-              <option value="nyc">New York City</option>
-              <option value="la">Los Angeles</option>
-              <option value="sf">San Francisco</option>
-              <option value="chicago">Chicago</option>
-            </select>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+            <div>
+              <label
+                htmlFor="country"
+                className="block font-poppins text-[16px] font-normal leading-[20px] tracking-wide text-[#666666]"
+              >
+                Country
+              </label>
+              <input
+                type="text"
+                id="country"
+                placeholder="Country"
+                className="border border-gray-300 p-2 rounded w-full mt-1 focus:ring-0 focus:border-[#00BAC2]"
+              />
+            </div>
+            <div>
+              <label
+                htmlFor="city"
+                className="block font-poppins text-[16px] font-normal leading-[20px] tracking-wide text-[#666666]"
+              >
+                City
+              </label>
+              <input
+                type="text"
+                id="city"
+                placeholder="City"
+                className="border border-gray-300 p-2 rounded w-full mt-1 focus:ring-0 focus:border-[#00BAC2]"
+              />
+            </div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
             <div>
