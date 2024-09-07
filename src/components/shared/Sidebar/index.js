@@ -1,11 +1,21 @@
 "use client";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
-import AdminProfile from '../../../../public/assets/images/admin-profile.svg'
+import { usePathname } from "next/navigation";
+import AdminProfile from "../../../../public/assets/images/admin-profile.svg";
 import Image from "next/image";
 
 const Sidebar = () => {
-  const router = useRouter();
+  const pathname = usePathname();
+
+  const navLinks = [
+    { href: "/admin/dashboard", label: "Dashboard" },
+    { href: "/admin/serviceproviders", label: "Service Providers" },
+    { href: "/admin/inbox", label: "Inbox" },
+    { href: "/admin/order-lists", label: "Order Lists" },
+    { href: "/admin/payments", label: "Payments" },
+    { href: "/admin/users", label: "Users" },
+    { href: "/admin/refund", label: "Refund" },
+  ];
 
   return (
     <nav
@@ -49,8 +59,12 @@ const Sidebar = () => {
         <ul className="list-none p-0">
           <li>
             <Link
-              href="/admin/notifications"
-              className="block py-2 px-4 text-[#202224] hover:bg-[#00BAC2] hover:text-[#FFFFFF] rounded "
+              href="/admin/notificationcenter"
+              className={`block py-2 px-4 text-[#202224] hover:bg-[#00BAC2] hover:text-[#FFFFFF] rounded ${
+                pathname === "/admin/notificationcenter"
+                  ? "bg-[#00BAC2] text-[#FFFFFF]"
+                  : ""
+              }`}
               style={{ fontSize: "14px" }}
             >
               Notification Center
@@ -67,20 +81,12 @@ const Sidebar = () => {
           Dashboard
         </h2>
         <ul className="list-none p-0">
-          {[
-            { href: "/admin/dashboard", label: "Dashboard" },
-            { href: "/admin/serviceproviders", label: "Service Providers" },
-            { href: "/admin/inbox", label: "Inbox" },
-            { href: "/admin/order-lists", label: "Order Lists" },
-            { href: "/admin/payments", label: "Payments" },
-            { href: "/admin/users", label: "Users" },
-            { href: "/admin/refund", label: "Refund" },
-          ].map(({ href, label }) => (
+          {navLinks.map(({ href, label }) => (
             <li key={href}>
               <Link
                 href={href}
-                className={`block py-2 px-4 text-[#202224] hover:bg-[#00BAC2] hover:text-[#FFFFFF] rounded  ${
-                  router.pathname === href ? "bg-[#00BAC2] text-[#FFFFFF]" : ""
+                className={`block py-2 px-4 text-[#202224] hover:bg-[#00BAC2] hover:text-[#FFFFFF] rounded ${
+                  pathname.startsWith(href) ? "bg-[#00BAC2] text-[#FFFFFF]" : ""
                 }`}
                 style={{ fontSize: "14px" }}
               >
@@ -101,9 +107,9 @@ const Sidebar = () => {
         <ul className="list-none p-0">
           <li>
             <Link
-              href="/admin/team-members"
-              className={`block py-2 px-4 text-[#202224] hover:bg-[#00BAC2] hover:text-[#FFFFFF] rounded  ${
-                router.pathname === "/admin/team-members"
+              href="/admin/teammembers"
+              className={`block py-2 px-4 text-[#202224] hover:bg-[#00BAC2] hover:text-[#FFFFFF] rounded ${
+                pathname === "/admin/team-members"
                   ? "bg-[#00BAC2] text-[#FFFFFF]"
                   : ""
               }`}
@@ -132,8 +138,8 @@ const Sidebar = () => {
             <li key={href}>
               <Link
                 href={href}
-                className={`block py-2 px-4 text-[#202224] hover:bg-[#00BAC2] hover:text-[#FFFFFF] rounded  ${
-                  router.pathname === href ? "bg-[#00BAC2] text-[#FFFFFF]" : ""
+                className={`block py-2 px-4 text-[#202224] hover:bg-[#00BAC2] hover:text-[#FFFFFF] rounded ${
+                  pathname.startsWith(href) ? "bg-[#00BAC2] text-[#FFFFFF]" : ""
                 }`}
                 style={{ fontSize: "14px" }}
               >
@@ -156,7 +162,7 @@ const Sidebar = () => {
             <Link
               href="/admin/settings"
               className={`block py-2 px-4 text-[#202224] hover:bg-[#00BAC2] hover:text-[#FFFFFF] rounded ${
-                router.pathname === "/admin/dashboard/settings"
+                pathname === "/admin/settings"
                   ? "bg-[#00BAC2] text-[#FFFFFF]"
                   : ""
               }`}

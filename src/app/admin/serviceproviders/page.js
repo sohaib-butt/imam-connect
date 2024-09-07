@@ -1,10 +1,11 @@
 import React from "react";
+import {
+  ServiceProviders
+} from "@/components/AdminDashboard";
 
 const page = () => {
   return (
-    <div className="relative overflow-x-hidden">
-     I'm service provider
-    </div>
+     <ServiceProviders/>
   );
 };
 
