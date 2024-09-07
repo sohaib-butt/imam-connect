@@ -107,7 +107,7 @@ const Sidebar = () => {
         <ul className="list-none p-0">
           <li>
             <Link
-              href="/admin/team-members"
+              href="/admin/teammembers"
               className={`block py-2 px-4 text-[#202224] hover:bg-[#00BAC2] hover:text-[#FFFFFF] rounded ${
                 pathname === "/admin/team-members"
                   ? "bg-[#00BAC2] text-[#FFFFFF]"
