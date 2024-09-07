@@ -19,3 +19,4 @@ export {default as CheckoutServiceCard} from './CheckoutServiceCard';
 export { default as InputField } from "./InputField";
 export { default as SelectField } from "./SelectField";
 export { default as DatePicker } from "./DatePicker";
+export { default as Dropzone } from "./Dropzone";
