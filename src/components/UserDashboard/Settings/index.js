@@ -2,7 +2,7 @@ import styles from "../../../styles/homepage.module.scss";
 import AdditionalInfo from "./AdditionalInfo";
 import BasicInfo from "./BasicInfo"
 
-const page = () => {
+const index = () => {
   return (
     <div className="w-full flex flex-col justify-center items-center gap-4">
       <div className="w-full flex justify-between items-center">
@@ -24,4 +24,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default index;

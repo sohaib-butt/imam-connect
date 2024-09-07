@@ -2,7 +2,7 @@ import Image from "next/image";
 import styles from "../../../styles/homepage.module.scss";
 import SearchIcon from "../../../../public/assets/images/searchIcon.svg";
 import FavServices from "./FavServices";
-const page = () => {
+const index = () => {
   return (
     <div className="w-full flex flex-col justify-center items-center gap-4">
       <div className="w-full flex flex-col justify-start items-start gap-6">
@@ -32,4 +32,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default index;
