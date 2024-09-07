@@ -9,16 +9,6 @@ const index = ({ label, placeholder, options, multiple }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedOptions, setSelectedOptions] = useState([]);
-  const dummyOptions = [
-    "Aqiqah",
-    "Birth: Circumcision",
-    "Birth: Doula & Mother’s Help",
-    "Funerals",
-    "Gravestone Engraving",
-    "Support: Grief Counselling",
-    "Visiting the Sick",
-    "Wills & Inheritance",
-  ];
 
   const toggleDropdown = () => setIsOpen(!isOpen);
 
@@ -35,13 +25,13 @@ const index = ({ label, placeholder, options, multiple }) => {
     }
   };
 
-  const filteredOptions = dummyOptions.filter((option) =>
+  const filteredOptions = options?.filter((option) =>
     option.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
   return (
-    <div className="flex flex-col gap-[8px]">
-      <span className="font-poppins text-[16px] font-[400] text-[#666666] leading-[20px]">
+    <div className="w-full flex flex-col gap-[8px]">
+      <span className="font-poppins text-[14px] lg:text-[16px] font-[400] text-[#666666] leading-[20px]">
         {label}
       </span>
       <div className="relative">
@@ -60,7 +50,7 @@ const index = ({ label, placeholder, options, multiple }) => {
                     key={selectedOption}
                     className="w-auto pl-[10px] pr-[12.61px] h-[21px] flex gap-[4.2px] bg-[#F8F8F8] rounded-[52.53px]"
                   >
-                    <span className="font-poppins text-[12px] font-[400] leading-[20px] text-[#202124]">
+                    <span className="font-poppins text-[14px] font-[400] leading-[20px] text-[#202124]">
                       {selectedOption}
                     </span>
                     <Image
@@ -79,7 +69,7 @@ const index = ({ label, placeholder, options, multiple }) => {
                 placeholder
               )
             ) : selectedOptions.length > 0 ? (
-              <span className="font-poppins text-[12px] font-[400] leading-[20px] text-[#202124]">
+              <span className="font-poppins text-[14px] lg:text-[16px] font-[400] leading-[20px] text-[#202124]">
                 {selectedOptions[0]}
               </span>
             ) : (
@@ -101,7 +91,7 @@ const index = ({ label, placeholder, options, multiple }) => {
               />
               <input
                 type="text"
-                className="w-full  focus:outline-none"
+                className="w-full focus:outline-none text-[14px] lg:text-[16px] placeholder:text-[14px] placeholder:lg:text-[16px]"
                 placeholder="Search"
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
@@ -118,7 +108,7 @@ const index = ({ label, placeholder, options, multiple }) => {
                 >
                   <input
                     type="checkbox"
-                    className="mr-2 h-[24px] w-[24px] border border-[#D9D9D9] rounded-[4px]"
+                    className="mr-2 h-[20px] w-[20px] border border-[#D9D9D9] rounded-[4px]"
                     checked={selectedOptions.includes(option)}
                     onChange={() => handleOptionChange(option)}
                   />

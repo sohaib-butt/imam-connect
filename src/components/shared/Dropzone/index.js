@@ -105,7 +105,7 @@ function DropZone(props) {
 
   return (
     <div className="w-full flex flex-col gap-[8px]">
-      <span className="font-poppins text-[16px] font-[400] text-[#666666] leading-[20px]">
+      <span className="font-poppins text-[14px] lg:text-[16px] font-[400] text-[#666666] leading-[20px]">
         {props.label}
       </span>
       <div className="h-full w-full border border-[#E7E7E7] p-[16px] rounded-[12px] cursor-pointer">
@@ -132,13 +132,13 @@ function DropZone(props) {
                       alt="upload"
                     />
                     <div className="flex flex-col items-center justify-center gap-3">
-                      <span className="text-[14px] font-[400] text-[#999999] mb-1 font-poppins">
+                      <span className="text-[14px] font-[400] text-[#999999] mb-1 font-poppins text-center">
                         <span className="text-[#36BBCA] text-[14px] font-[700]">
                           Click to upload
                         </span>{" "}
                         or drag and drop
                       </span>
-                      <span className="text-[14px] font-[400] text-[#999999] font-poppins">
+                      <span className="text-[14px] font-[400] text-[#999999] font-poppins text-center">
                         SVG, PNG, JPG or GIF (max. 800x400px)
                       </span>
                     </div>

@@ -15,13 +15,13 @@ const index = ({ label, placeholder }) => {
   };
 
   return (
-    <div className="relative flex flex-col gap-[8px]">
-      <span className="font-poppins text-[16px] font-[400] text-[#666666] leading-[20px]">
+    <div className="w-full relative flex flex-col gap-[8px]">
+      <span className="font-poppins text-[14px] lg:text-[16px] font-[400] text-[#666666] leading-[20px]">
         {label}
       </span>
       <div>
         <DatePicker
-          className="w-full px-[16px] border border-[#E7E7E7] rounded-[12px] h-[56px] placeholder-[#999999] focus:outline-none focus:border-none cursor-pointer"
+          className="w-full px-[16px] text-[14px] lg:text-[16px] placeholder:text-[14px] placeholder:lg:text-[16px] border border-[#E7E7E7] rounded-[12px] h-[56px] placeholder-[#999999] focus:outline-none focus:border-none cursor-pointer"
           format="DD MMMM YYYY"
           placeholder={placeholder}
           name="date"
