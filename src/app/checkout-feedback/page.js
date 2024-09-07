@@ -7,7 +7,7 @@ const page = () => {
     <div className="relative overflow-x-hidden">
       <Header />
       <IntroSection />
-      <Success success={false}/>
+      <Success success={true}/>
       <Footer />
     </div>
   );

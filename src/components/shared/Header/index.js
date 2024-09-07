@@ -91,7 +91,14 @@ const index = () => {
                   width={30}
                   height={30}
                 />
-                <Image src={CartIcon.src} alt="Cart" width={30} height={30} />
+                <Image
+                  src={CartIcon.src}
+                  alt="Cart"
+                  width={30}
+                  height={30}
+                  className="cursor-pointer"
+                  onClick={() => router.push("/cart")}
+                />
               </div>
             </div>
           )}
