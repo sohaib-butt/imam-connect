@@ -109,7 +109,7 @@ const DashboardStats = () => {
 
       {/* Stats Graph */}
       <div
-        className="bg-white border border-gray-200 rounded-[12px] p-6 shadow"
+        className="bg-white rounded-[12px] p-6 shadow"
         style={{
           boxShadow: "5.25px 5.25px 47.22px 0px #0000000D", // Apply the box-shadow here
         }}
