@@ -1,11 +1,10 @@
 import {
   DatePicker,
   InputField,
-  PurpleCard,
   SelectField,
+  TextAreaField,
 } from "@/components/shared";
 import DropZone from "@/components/shared/Dropzone";
-import Image from "next/image";
 import React from "react";
 
 const index = () => {
@@ -39,7 +38,7 @@ const index = () => {
         />
       </div>
       <div className="w-full">
-        <InputField label={"Address Line"} placeholder={"Enter your address"} />
+        <TextAreaField label={"Address Line"} placeholder={"Enter your address"} areaClass={"h-[87px]"}/>
       </div>
       <div className="w-full flex flex-col md:flex-row justify-center md:justify-between items-center gap-4">
         <SelectField
