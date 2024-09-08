@@ -3,7 +3,7 @@ import { TeamMembers } from "@/components/AdminDashboard";
 
 const page = () => {
   return (
-    <div className="relative overflow-x-hidden">
+    <div className="relative">
       <TeamMembers />
     </div>
   );

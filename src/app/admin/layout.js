@@ -43,14 +43,14 @@ export default function Layout({ children }) {
 
   return (
     <div className="min-h-screen">
-      <Header />
+      {/* <Header /> */}
       <div className="flex flex-col md:flex-row flex-1">
         {/* Sidebar: hidden below md and takes 20% width on md and larger */}
         <div className="hidden md:flex md:w-[20%]">
           <Sidebar navLinks={adminLinks} />
         </div>
         {/* Main content area: takes remaining width */}
-        <main className="flex-1 p-6">
+        <main className="flex-1 p-6 overflow-x-auto">
           {children}
         </main>
       </div>
