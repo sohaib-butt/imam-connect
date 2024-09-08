@@ -1,8 +1,5 @@
 import React from "react";
 import ManagementTable from "./ManagementTable";
-import styles from "../../../styles/homepage.module.scss";
-import PlusIcon from "../../../../public/assets/images/plus-icon.svg";
-import Image from "next/image";
 
 const index = () => {
   return (
