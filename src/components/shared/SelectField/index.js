@@ -31,7 +31,7 @@ const index = ({ label, placeholder, options, multiple }) => {
 
   return (
     <div className="w-full flex flex-col gap-[8px]">
-      <span className="font-poppins text-[14px] lg:text-[16px] font-[400] text-[#666666] leading-[20px]">
+      <span className="text-[14px] lg:text-[16px] font-[400] text-[#666666] leading-[20px]">
         {label}
       </span>
       <div className="relative">
@@ -50,7 +50,7 @@ const index = ({ label, placeholder, options, multiple }) => {
                     key={selectedOption}
                     className="w-auto pl-[10px] pr-[12.61px] h-[21px] flex gap-[4.2px] bg-[#F8F8F8] rounded-[52.53px]"
                   >
-                    <span className="font-poppins text-[14px] font-[400] leading-[20px] text-[#202124]">
+                    <span className=" text-[14px] font-[400] leading-[20px] text-[#202124]">
                       {selectedOption}
                     </span>
                     <Image
@@ -69,7 +69,7 @@ const index = ({ label, placeholder, options, multiple }) => {
                 placeholder
               )
             ) : selectedOptions.length > 0 ? (
-              <span className="font-poppins text-[14px] lg:text-[16px] font-[400] leading-[20px] text-[#202124]">
+              <span className=" text-[14px] lg:text-[16px] font-[400] leading-[20px] text-[#202124]">
                 {selectedOptions[0]}
               </span>
             ) : (
@@ -112,7 +112,7 @@ const index = ({ label, placeholder, options, multiple }) => {
                     checked={selectedOptions.includes(option)}
                     onChange={() => handleOptionChange(option)}
                   />
-                  <span className="text-[16px] text-[#161616] font-poppins font-[400]">
+                  <span className="text-[16px] text-[#161616]  font-[400]">
                     {option}
                   </span>
                 </label>

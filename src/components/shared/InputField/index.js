@@ -8,7 +8,7 @@ const index = ({ label, placeholder, type }) => {
         type == "password" ? "relative" : ""
       }`}
     >
-      <span className="font-poppins text-[14px] lg:text-[16px] font-[400] text-[#666666] leading-[20px]">
+      <span className="text-[14px] lg:text-[16px] font-[400] text-[#666666] leading-[20px]">
         {label}
       </span>
       <input

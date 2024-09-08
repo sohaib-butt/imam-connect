@@ -16,7 +16,7 @@ const index = ({ label, placeholder, pickerClassName }) => {
 
   return (
     <div className="w-full relative flex flex-col gap-[8px]">
-      <span className="font-poppins text-[14px] lg:text-[16px] font-[400] text-[#666666] leading-[20px]">
+      <span className="text-[14px] lg:text-[16px] font-[400] text-[#666666] leading-[20px]">
         {label}
       </span>
       <div>
