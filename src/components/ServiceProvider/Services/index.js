@@ -1,5 +1,7 @@
 import React from "react";
-import BasicInfo from "./BasicInfo"
+import BasicInfo from "./BasicInfo";
+import ServiceImage from "./ServiceImage";
+import Areas from "./Areas";
 
 const index = () => {
   return (
@@ -13,7 +15,9 @@ const index = () => {
           are optional
         </span>
       </div>
-      <BasicInfo/>
+      <BasicInfo />
+      <ServiceImage />
+      <Areas />
     </div>
   );
 };

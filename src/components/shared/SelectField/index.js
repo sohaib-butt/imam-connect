@@ -104,7 +104,7 @@ const index = ({ label, placeholder, options, multiple }) => {
               {filteredOptions.map((option, idx) => (
                 <label
                   key={idx}
-                  className="flex items-center p-2 cursor-pointer hover:bg-gray-100"
+                  className="flex items-start p-2 cursor-pointer hover:bg-gray-100"
                 >
                   <input
                     type="checkbox"
