@@ -13,7 +13,7 @@ const index = () => {
   const links = [
     { href: "/serviceprovider/personalinfo", label: "Personal Information" },
     { href: "/serviceprovider/services", label: "Services" },
-    { href: "/serviceprovider/customer", label: "Customer Management" },
+    { href: "/serviceprovider/customers", label: "Customer Management" },
     { href: "/serviceprovider/orders", label: "Orders" },
     { href: "/serviceprovider/payments", label: "Payments" },
     { href: "/serviceprovider/inbox", label: "Inbox" },
