@@ -21,8 +21,8 @@ const index = () => {
     { href: "/serviceprovider/calendar", label: "Calendar" },
   ];
   return (
-    <div className="w-[45%] lg:w-[40%] 2xl:w-[30%] border border-[#E7E7E7] p-[24px] rounded-[12px] md:flex flex-col justify-start items-start gap-4 hidden">
-      <div className="w-full flex justify-start items-center mb-4">
+    <div className="w-[45%] lg:w-[40%] xl:w-[35%] 2xl:w-[30%] border border-[#E7E7E7] p-[24px] rounded-[12px] md:flex flex-col justify-start items-start gap-4 hidden">
+      <div className="w-full flex flex-col lg:flex-row justify-start items-start lg:items-center mb-4 gap-4 lg:gap-2">
         <Image
           src={AdminProfile.src}
           width={52}
@@ -30,7 +30,7 @@ const index = () => {
           alt="Admin"
           className="rounded-full"
         />
-        <div className="ml-2 flex flex-col justify-start items-start gap-2">
+        <div className="flex flex-col justify-start items-start gap-2">
           <span className="font-[400] text-[#0D0C22] text-[14px]">
             Putri Azizah /{" "}
             <span className="font-[700]">Detail Information</span>
@@ -53,7 +53,7 @@ const index = () => {
           </Link>
         ))}
       </div>
-      <div className="w-[70%] mt-4">
+      <div className="w-full lg:w-[70%] mt-4">
         <button
           type="button"
           className={`${styles.primary_button} !font-[700] flex justify-center items-center gap-2 px-1 !h-[40px] !text-[16px] !bg-[#F43F5E]`}

@@ -1,8 +1,8 @@
-import { Settings } from "@/components/ServiceProvider";
+import { Services } from "@/components/ServiceProvider";
 import React from "react";
 
 const page = () => {
-  return <Settings />;
+  return <Services />;
 };
 
 export default page;
