@@ -8,13 +8,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
-  margin: 0%;
+  margin: 0;
+  padding: 0;
 }
 
 /* Customize scrollbars for webkit browsers */
 ::-webkit-scrollbar {
   width: 8px; /* width of the scrollbar */
+  height: 8px; /* width of the scrollbar */
 }
 
 ::-webkit-scrollbar-track {

@@ -1,3 +1,4 @@
+// Layout.jsx
 import { Footer, Header } from "@/components/shared";
 import Sidebar from "@/components/shared/Sidebar";
 
@@ -39,12 +40,19 @@ export default function Layout({ children }) {
       links: [{ href: "/admin/settings", label: "Settings" }],
     },
   ];
+
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="min-h-screen">
       <Header />
-      <div className="flex flex-1">
-        <Sidebar navLinks={adminLinks} />
-        <main className="flex-1 p-6">{children}</main>
+      <div className="flex flex-col md:flex-row flex-1">
+        {/* Sidebar: hidden below md and takes 20% width on md and larger */}
+        <div className="hidden md:flex md:w-[20%]">
+          <Sidebar navLinks={adminLinks} />
+        </div>
+        {/* Main content area: takes remaining width */}
+        <main className="flex-1 p-6">
+          {children}
+        </main>
       </div>
       <Footer />
     </div>
