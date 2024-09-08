@@ -7,7 +7,7 @@ const index = () => {
     <div className="w-full flex flex-col justify-center items-center gap-4">
       <div className="w-full flex flex-col justify-start items-start gap-6">
         <span className="text-[18px] md:text-[22px] lg:text-[24px] font-[700] text-[#161616] font-poppins">
-          Favorite
+          Favourite
         </span>
         <div
           style={{ position: "relative" }}

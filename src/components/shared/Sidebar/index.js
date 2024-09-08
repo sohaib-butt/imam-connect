@@ -4,31 +4,12 @@ import { usePathname } from "next/navigation";
 import AdminProfile from "../../../../public/assets/images/admin-profile.svg";
 import Image from "next/image";
 
-const Sidebar = () => {
+const Sidebar = ({ navLinks }) => {
   const pathname = usePathname();
 
-  const navLinks = [
-    { href: "/admin/dashboard", label: "Dashboard" },
-    { href: "/admin/serviceproviders", label: "Service Providers" },
-    { href: "/admin/inbox", label: "Inbox" },
-    { href: "/admin/order-lists", label: "Order Lists" },
-    { href: "/admin/payments", label: "Payments" },
-    { href: "/admin/users", label: "Users" },
-    { href: "/admin/refund", label: "Refund" },
-  ];
-
   return (
-    <nav
-      className="px-10 py-6 md:w-1/5 hidden md:block border-r border-[#E7E7E7]"
-      style={{
-        paddingTop: "24px",
-        paddingRight: "40px",
-        paddingBottom: "80px",
-        paddingLeft: "40px",
-        borderRight: "1px solid #E7E7E7",
-      }}
-    >
-      <div className="flex items-center mb-6">
+    <nav className="md:w-1/5 hidden md:block pt-[24px] pb-[80px] md:px-[20px] lg:px-[40px] border-r border-[#E7E7E7]">
+      <div className="w-full flex items-center mb-6">
         <Image
           src={AdminProfile.src}
           width={52}
@@ -49,130 +30,29 @@ const Sidebar = () => {
         </div>
       </div>
 
-      <div className="mb-6">
-        <h2
-          className="text-lg font-semibold mb-2 text-gray-400"
-          style={{ fontSize: "14px" }}
-        >
-          Notification
-        </h2>
-        <ul className="list-none p-0">
-          <li>
-            <Link
-              href="/admin/notificationcenter"
-              className={`block py-2 px-4 text-[#202224] hover:bg-[#00BAC2] hover:text-[#FFFFFF] rounded ${
-                pathname === "/admin/notificationcenter"
-                  ? "bg-[#00BAC2] text-[#FFFFFF]"
-                  : ""
-              }`}
-              style={{ fontSize: "14px" }}
-            >
-              Notification Center
-            </Link>
-          </li>
-        </ul>
-      </div>
-
-      <div className="mb-6">
-        <h2
-          className="text-lg font-semibold mb-2 text-gray-400"
-          style={{ fontSize: "14px" }}
-        >
-          Dashboard
-        </h2>
-        <ul className="list-none p-0">
-          {navLinks.map(({ href, label }) => (
-            <li key={href}>
-              <Link
-                href={href}
-                className={`block py-2 px-4 text-[#202224] hover:bg-[#00BAC2] hover:text-[#FFFFFF] rounded ${
-                  pathname.startsWith(href) ? "bg-[#00BAC2] text-[#FFFFFF]" : ""
-                }`}
-                style={{ fontSize: "14px" }}
-              >
-                {label}
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </div>
-
-      <div className="mb-6">
-        <h2
-          className="text-lg font-semibold mb-2 text-gray-400"
-          style={{ fontSize: "14px" }}
-        >
-          Team
-        </h2>
-        <ul className="list-none p-0">
-          <li>
-            <Link
-              href="/admin/teammembers"
-              className={`block py-2 px-4 text-[#202224] hover:bg-[#00BAC2] hover:text-[#FFFFFF] rounded ${
-                pathname === "/admin/team-members"
-                  ? "bg-[#00BAC2] text-[#FFFFFF]"
-                  : ""
-              }`}
-              style={{ fontSize: "14px" }}
-            >
-              Team Members
-            </Link>
-          </li>
-        </ul>
-      </div>
-
-      <div className="mb-6">
-        <h2
-          className="text-lg font-semibold mb-2 text-gray-400"
-          style={{ fontSize: "14px" }}
-        >
-          Website
-        </h2>
-        <ul className="list-none p-0">
-          {[
-            { href: "/admin/pages", label: "Pages" },
-            { href: "/admin/blogs", label: "Blogs" },
-            { href: "/admin/guides", label: "Guides" },
-            { href: "/admin/media", label: "Media" },
-          ].map(({ href, label }) => (
-            <li key={href}>
-              <Link
-                href={href}
-                className={`block py-2 px-4 text-[#202224] hover:bg-[#00BAC2] hover:text-[#FFFFFF] rounded ${
-                  pathname.startsWith(href) ? "bg-[#00BAC2] text-[#FFFFFF]" : ""
-                }`}
-                style={{ fontSize: "14px" }}
-              >
-                {label}
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </div>
-
-      <div>
-        <h2
-          className="text-lg font-semibold mb-2 text-gray-400"
-          style={{ fontSize: "14px" }}
-        >
-          Utility
-        </h2>
-        <ul className="list-none p-0">
-          <li>
-            <Link
-              href="/admin/settings"
-              className={`block py-2 px-4 text-[#202224] hover:bg-[#00BAC2] hover:text-[#FFFFFF] rounded ${
-                pathname === "/admin/settings"
-                  ? "bg-[#00BAC2] text-[#FFFFFF]"
-                  : ""
-              }`}
-              style={{ fontSize: "14px" }}
-            >
-              Settings
-            </Link>
-          </li>
-        </ul>
-      </div>
+      {navLinks?.map((a, index) => (
+        <div key={index} className="mb-6">
+          <h2 className="text-lg font-semibold mb-2 text-gray-400 text-[14px]">
+            {a?.title}
+          </h2>
+          <ul className="list-none p-0">
+            {a?.links?.map((l, index) => (
+              <li key={index}>
+                <Link
+                  href={l?.href}
+                  className={`block py-2 px-4 text-[#202224] hover:bg-[#00BAC2] hover:text-[#FFFFFF] rounded text-[14px] ${
+                    pathname.startsWith(l?.href)
+                      ? "bg-[#00BAC2] text-[#FFFFFF]"
+                      : ""
+                  }`}
+                >
+                  {l?.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
     </nav>
   );
 };

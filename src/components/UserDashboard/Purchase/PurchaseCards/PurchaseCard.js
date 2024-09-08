@@ -9,7 +9,7 @@ const PurchaseCard = () => {
   return (
     <div className="w-full flex flex-col justify-start items-start gap-3 border border-[#E7E7E7] rounded-[12px] p-[16px]">
       <div className="w-full flex justify-between items-center gap-3">
-        <div className="flex flex-col justify-start items-start md:flex-row md:items-center md:justify-between gap-2">
+        <div className="md:w-[60%] flex flex-col justify-start items-start md:flex-row lg:flex-col 2xl:flex-row md:items-center lg:items-start 2xl:items-center md:justify-between gap-2">
           <div className="flex items-center">
             <Image
               src={AdminProfile.src}
@@ -38,7 +38,7 @@ const PurchaseCard = () => {
               src={InProgress.src}
               width={65}
               height={15}
-              className="hidden md:block"
+              className="hidden md:block lg:hidden 2xl:block"
             />
           </div>
         </div>
@@ -47,7 +47,7 @@ const PurchaseCard = () => {
             src={InProgress.src}
             width={65}
             height={15}
-            className="block md:hidden"
+            className="block md:hidden lg:block 2xl:hidden"
           />
           <div className="flex justify-start items-center gap-1">
             <Image src={FileDownload.src} width={22} height={22} />
