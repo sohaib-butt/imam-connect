@@ -1,9 +1,10 @@
+import { WebsiteBlogs } from "@/components/AdminDashboard";
 import React from "react";
-
 
 const page = () => {
   return (
-    <div className="relative overflow-x-hidden">
+    <div className="relative">
+      <WebsiteBlogs />
     </div>
   );
 };
