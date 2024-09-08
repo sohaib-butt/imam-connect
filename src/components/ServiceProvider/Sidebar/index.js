@@ -46,7 +46,7 @@ const index = () => {
             key={index}
             href={l?.href}
             className={`block text-[#0D0C22] hover:text-[#442D87] text-[15px] font-[400] ${
-              pathname.startsWith(l?.href) ? "text-[#442D87] font-[700]" : ""
+              pathname.startsWith(l?.href) ? "!text-[#442D87] font-[700]" : ""
             }`}
           >
             {l?.label}
