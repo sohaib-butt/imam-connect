@@ -43,7 +43,7 @@ export default function Layout({ children }) {
 
   return (
     <div className="min-h-screen">
-      {/* <Header /> */}
+      <Header />
       <div className="flex flex-col md:flex-row flex-1">
         {/* Sidebar: hidden below md and takes 20% width on md and larger */}
         <div className="hidden md:flex md:w-[20%]">

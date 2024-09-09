@@ -3,6 +3,8 @@
 import React, { useState, useMemo } from "react";
 import Image from "next/image";
 import ArrowDownIcon from "../../../../../../public/assets/images/arrow-down.svg";
+import ContactIcon from "../../../../../../public/assets/images/phone.svg"; // Add path to your contact icon
+
 
 // Function to create data objects for each row
 function createData(
@@ -183,8 +185,14 @@ export default function RefundRequestTable() {
                 <td className="px-6 py-6">{row.refundReason}</td>
                 <td className="px-6 py-6">{row.requestDate}</td>
                 <td className="px-6 py-6">
-                  <button className="bg-[#00BAC2] w-[134px] h-[40px] text-white font-bold py-2 px-4 rounded">
-                    {row.contactSP}
+                <button className="bg-[#00BAC2] w-[134px] h-[40px] text-white font-bold py-2 px-4 rounded flex items-center justify-center space-x-2">
+                    <Image
+                      src={ContactIcon.src}
+                      width={16}
+                      height={16}
+                      alt="Contact icon"
+                    />
+                    <span>{row.contactSP}</span>
                   </button>
                 </td>
                 <td className="px-6 py-6 flex space-x-2">

@@ -1,6 +1,23 @@
+"use client"
+
+import React, { useState } from "react";
 import UsersManagementTable from "./UsersManagementTable";
+import  EditUsersModal from './EditUsersModal';
 
 const UsersManagement = () => {
+  const [isModalOpen, setModalOpen] = useState(false);
+  const [selectedUser, setSelectedUser] = useState(null);
+
+  const openModal = (user) => {
+    setSelectedUser(user);
+    setModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setSelectedUser(null);
+    setModalOpen(false);
+  };
+
   return (
     <div className="flex flex-col p-4">
       {/* Header Section */}
@@ -23,8 +40,16 @@ const UsersManagement = () => {
 
       {/* Users Management Table */}
       <div className="pt-4 md:pt-6">
-        <UsersManagementTable />
+        <UsersManagementTable onEditUser={openModal} />
       </div>
+
+       
+      {/* Edit User Modal */}
+      <EditUsersModal
+        isOpen={isModalOpen}
+        onClose={closeModal}
+        user={selectedUser}
+      />
     </div>
   );
 };
