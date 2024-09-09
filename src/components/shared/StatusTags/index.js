@@ -1,8 +1,8 @@
 "use client";
 import React, { useState } from "react";
 
-const index = () => {
-  const tags = ["Completed", "On-process", "Pending", "Rejected"];
+const index = ({numberOfTags}) => {
+  const tags = numberOfTags === 3 ? ["Completed", "Pending", "Rejected"]: ["Completed", "On-process", "Pending", "Rejected"];
 
   const [activeIndex, setActiveIndex] = useState(0);
   return (

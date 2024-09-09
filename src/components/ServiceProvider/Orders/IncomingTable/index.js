@@ -1,6 +1,5 @@
 "use client";
 import React, { useState, useMemo } from "react";
-import Image from "next/image";
 import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
 import TableCell from "@mui/material/TableCell";
@@ -8,7 +7,6 @@ import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import TableSortLabel from "@mui/material/TableSortLabel";
-import purpleEyeIcon from "../../../../../public/assets/images/purple-eye.svg";
 
 // Function to create data objects for each row
 function createData(customerName, requestedOn, action) {

@@ -2,7 +2,7 @@ import Image from "next/image";
 import styles from "../../../styles/homepage.module.scss";
 import SearchIcon from "../../../../public/assets/images/searchIcon.svg";
 import { DatePicker } from "@/components/shared";
-import StatusTags from "./StatusTags";
+import StatusTags from "../../shared/StatusTags";
 import PurchaseCards from "./PurchaseCards";
 const index = () => {
   return (

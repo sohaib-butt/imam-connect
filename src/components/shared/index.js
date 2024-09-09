@@ -21,3 +21,4 @@ export { default as SelectField } from "./SelectField";
 export { default as DatePicker } from "./DatePicker";
 export { default as Dropzone } from "./Dropzone";
 export { default as TextAreaField } from "./TextAreaField";
+export { default as StatusTags } from "./StatusTags";
