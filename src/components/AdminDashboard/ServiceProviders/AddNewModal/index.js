@@ -1,4 +1,6 @@
+"use client";
 import React from "react";
+import DropZone from "@/components/shared/Dropzone";
 
 const AddNewModal = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
@@ -22,7 +24,7 @@ const AddNewModal = ({ isOpen, onClose }) => {
           <h2 className="text-2xl font-bold">Add New Service Provider</h2>
         </div>
         <form className="pt-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
             <div>
               <label
                 htmlFor="firstName"
@@ -168,7 +170,7 @@ const AddNewModal = ({ isOpen, onClose }) => {
               <textarea
                 id="experience"
                 placeholder="Tell us about your story!"
-                className="border border-gray-300 p-2 rounded w-full mt-1 focus:ring-0 focus:border-[#00BAC2]"
+                className="border border-gray-300 p-2 rounded w-full mt-1 focus:ring-0 focus:border-[#00BAC2] h-40 resize-none"
                 rows="4"
               />
             </div>
@@ -179,11 +181,7 @@ const AddNewModal = ({ isOpen, onClose }) => {
               >
                 Qualifications and Certificates
               </label>
-              <input
-                type="file"
-                id="qualifications"
-                className="border border-gray-300 p-2 rounded w-full mt-1 focus:ring-0 focus:border-[#00BAC2]"
-              />
+              <DropZone className="h-40" />
             </div>
           </div>
           <div className="mb-4">
@@ -196,7 +194,7 @@ const AddNewModal = ({ isOpen, onClose }) => {
             <textarea
               id="description"
               placeholder="Tell us about your story!"
-              className="border border-gray-300 p-2 rounded w-full mt-1 focus:ring-0 focus:border-[#00BAC2]"
+              className="border border-gray-300 p-2 rounded w-full mt-1 focus:ring-0 focus:border-[#00BAC2] h-48 resize-none"
               rows="6"
             />
           </div>

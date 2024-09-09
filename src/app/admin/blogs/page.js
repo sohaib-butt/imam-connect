@@ -1,10 +1,10 @@
+import { WebsiteBlogs } from "@/components/AdminDashboard";
 import React from "react";
-import { TeamMembers } from "@/components/AdminDashboard";
 
 const page = () => {
   return (
     <div className="relative">
-      <TeamMembers />
+      <WebsiteBlogs />
     </div>
   );
 };

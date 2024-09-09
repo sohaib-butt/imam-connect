@@ -59,6 +59,7 @@ const DashboardStats = () => {
   ];
 
   return (
+    <div className="flex flex-col p-4">
     <div className="space-y-6">
       <div>
         <h1 className="text-2xl font-bold text-gray-800">Dashboard</h1>
@@ -108,7 +109,7 @@ const DashboardStats = () => {
 
       {/* Stats Graph */}
       <div
-        className="bg-white border border-gray-200 rounded-[12px] p-6 shadow"
+        className="bg-white rounded-[12px] p-6 shadow"
         style={{
           boxShadow: "5.25px 5.25px 47.22px 0px #0000000D", // Apply the box-shadow here
         }}
@@ -136,6 +137,7 @@ const DashboardStats = () => {
         </div>
         <CanvasJSChartComponent />
       </div>
+    </div>
     </div>
   );
 };

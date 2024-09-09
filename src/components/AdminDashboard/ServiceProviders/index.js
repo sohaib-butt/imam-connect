@@ -10,7 +10,8 @@ const ServiceProviders = () => {
   const closeModal = () => setModalOpen(false);
 
   return (
-    <>
+    <div className="flex flex-col p-4">
+
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center space-y-4 md:space-y-0">
         {/* Left Side */}
         <div className="flex flex-col space-y-2">
@@ -46,7 +47,7 @@ const ServiceProviders = () => {
 
       {/* Modal Component */}
       <AddNewModal isOpen={isModalOpen} onClose={closeModal} />
-    </>
+    </div>
   );
 };
 

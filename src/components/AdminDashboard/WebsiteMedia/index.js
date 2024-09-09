@@ -4,10 +4,14 @@ import MediaImage from "../../../../public/assets/images/Media.svg";
 import GridViewIcon from "../../../../public/assets/images/grid-view-icon.svg";
 import ListViewIcon from "../../../../public/assets/images/list-view-icon.svg";
 import Image from "next/image";
+import AddMediaModal from "./AddMediaModal";
+
 
 const WebsiteMedia = () => {
   const [view, setView] = useState("grid"); 
   const [searchTerm, setSearchTerm] = useState(""); 
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
 
   // Define a single media item for demonstration
   const mediaItem = {
@@ -38,7 +42,7 @@ const WebsiteMedia = () => {
 
         {/* Right Side Buttons */}
         <div className="flex flex-col md:flex-row md:ml-auto space-y-4 md:space-y-0 md:space-x-4 w-full md:w-auto">
-          <button className="w-full md:w-[224px] h-[56px] bg-[#00BAC2] text-white font-bold text-[14px] rounded-lg hover:bg-[#00a6a6]">
+          <button onClick={() => setIsModalOpen(true)} className="w-full md:w-[224px] h-[56px] bg-[#00BAC2] text-white font-bold text-[14px] rounded-lg hover:bg-[#00a6a6]">
             + Add New Media
           </button>
         </div>
@@ -101,6 +105,7 @@ const WebsiteMedia = () => {
           <div className="col-span-full text-center text-gray-500">No media found</div>
         )}
       </div>
+      <AddMediaModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </div>
   );
 };

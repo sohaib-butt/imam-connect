@@ -1,10 +1,10 @@
 import React from "react";
-import { TeamMembers } from "@/components/AdminDashboard";
+import { RefundList } from "@/components/AdminDashboard";
 
 const page = () => {
   return (
     <div className="relative">
-      <TeamMembers />
+      <RefundList />
     </div>
   );
 };

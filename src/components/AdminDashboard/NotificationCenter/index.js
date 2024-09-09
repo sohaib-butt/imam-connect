@@ -2,9 +2,13 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import MediaImage from "../../../../public/assets/images/Media.svg";
+import ServiceProviderAcceptModal from "./ServiceProviderModal";
+import ServiceProviderRejectModal from "./ServiceProviderRejectModal";
 
 const NotificationCenter = () => {
   const [selectedTab, setSelectedTab] = useState("ServiceProvider");
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isRejectModalOpen, setIsRejectModalOpen] = useState(false);
 
   // Updated notifications with showPriceChange flag
   const notifications = [
@@ -61,7 +65,7 @@ const NotificationCenter = () => {
       oldPrice: null,
       newPrice: null,
       time: "Today at 10:15 am",
-      showPriceChange: false, 
+      showPriceChange: false,
     },
     {
       id: 6,
@@ -72,8 +76,9 @@ const NotificationCenter = () => {
       oldPrice: null,
       newPrice: null,
       time: "Today at 10:15 am",
-      showPriceChange: false, 
-    },  {
+      showPriceChange: false,
+    },
+    {
       id: 7,
       imageSrc: MediaImage.src,
       name: "Jane Smith",
@@ -82,8 +87,9 @@ const NotificationCenter = () => {
       oldPrice: null,
       newPrice: null,
       time: "Today at 10:15 am",
-      showPriceChange: false, 
-    },  {
+      showPriceChange: false,
+    },
+    {
       id: 8,
       imageSrc: MediaImage.src,
       name: "Jane Smith",
@@ -92,7 +98,7 @@ const NotificationCenter = () => {
       oldPrice: null,
       newPrice: null,
       time: "Today at 10:15 am",
-      showPriceChange: false, 
+      showPriceChange: false,
     },
     {
       id: 9,
@@ -103,7 +109,7 @@ const NotificationCenter = () => {
       oldPrice: null,
       newPrice: null,
       time: "Today at 10:15 am",
-      showPriceChange: false, 
+      showPriceChange: false,
     },
     {
       id: 10,
@@ -114,11 +120,17 @@ const NotificationCenter = () => {
       oldPrice: null,
       newPrice: null,
       time: "Today at 10:15 am",
-      showPriceChange: false, 
-    }
-
-  
+      showPriceChange: false,
+    },
   ];
+
+  const handleAcceptClick = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleRejectClick = () => {
+    setIsRejectModalOpen(true);
+  };
 
   return (
     <div className="flex flex-col p-4">
@@ -238,10 +250,16 @@ const NotificationCenter = () => {
 
                   {/* Action Buttons */}
                   <div className="flex mt-2 space-x-2">
-                    <button className="bg-[#22C55E] w-[98px] h-[40px] text-white font-bold rounded">
+                    <button
+                      className="bg-[#22C55E] w-[98px] h-[40px] text-white font-bold rounded"
+                      onClick={handleAcceptClick}
+                    >
                       Accept
                     </button>
-                    <button className="bg-white w-[98px] h-[40px] text-[#F43F5E] font-bold border border-[#F43F5E] rounded">
+                    <button
+                      className="bg-white w-[98px] h-[40px] text-[#F43F5E] font-bold border border-[#F43F5E] rounded "
+                      onClick={handleRejectClick}
+                    >
                       Reject
                     </button>
                   </div>
@@ -306,6 +324,15 @@ const NotificationCenter = () => {
           </div>
         )}
       </div>
+      {/* Modal */}
+      <ServiceProviderAcceptModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+      />
+      <ServiceProviderRejectModal
+        isOpen={isRejectModalOpen}
+        onClose={() => setIsRejectModalOpen(false)}
+      />
     </div>
   );
 };
