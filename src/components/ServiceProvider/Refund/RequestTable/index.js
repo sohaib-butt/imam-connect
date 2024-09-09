@@ -1,16 +1,9 @@
 "use client";
 import React, { useState, useMemo } from "react";
 import Image from "next/image";
-import Table from "@mui/material/Table";
-import TableBody from "@mui/material/TableBody";
-import TableCell from "@mui/material/TableCell";
-import TableContainer from "@mui/material/TableContainer";
-import TableHead from "@mui/material/TableHead";
-import TableRow from "@mui/material/TableRow";
-import TableSortLabel from "@mui/material/TableSortLabel";
 import phoneIcon from "../../../../../public/assets/images/phone-icon.svg";
-import styles from "../../../../styles/homepage.module.scss"
-
+import styles from "../../../../styles/homepage.module.scss";
+import ArrowDownIcon from "../../../../../public/assets/images/arrow-down.svg";
 // Function to create data objects for each row
 function createData(requestedDate, orderNumber, refundReason, contact) {
   return {
@@ -83,89 +76,83 @@ export default function index() {
   }, [order, orderBy]);
 
   return (
-    <div style={{ width: "100%", overflowX: "auto" }}>
-      <TableContainer
-        sx={{ maxHeight: 440, overflowX: "auto", overflowY: "auto" }}
-        className="rounded-lg border border-[#EAECF0]"
-        style={{ width: "100%" }} // Ensure it takes full width of its parent
-      >
-        <Table aria-label="sticky table" sx={{ minWidth: 300 }}>
-          <TableHead className="bg-[#FCFCFD]">
-            <TableRow>
-              <TableCell className="font-bold text-[#667085] text-[12px] border-[#EAECF0]">
-                <TableSortLabel
-                  active={orderBy === "requestedDate"}
-                  direction={orderBy === "requestedDate" ? order : "asc"}
-                  onClick={() => handleRequestSort("requestedDate")}
+    <div className="border border-[#EAECF0] rounded-lg overflow-x-auto pb-2 w-full">
+      <div className="overflow-x-auto">
+        <table className="min-w-full bg-white border border-[#EAECF0] rounded-lg">
+          <thead className="bg-[#FCFCFD] text-[#667085] text-[12px] font-[700] font-Poppins border-b border-[#EAECF0]">
+            <tr>
+              {[
+                "Requested Date",
+                "Order Number",
+                "Refund Reason",
+                "Contact SP",
+              ].map((header) => (
+                <th
+                  key={header}
+                  className="px-6 py-3 cursor-pointer text-left hover:bg-[#F5F5F5]"
+                  onClick={() => handleRequestSort(header)}
                 >
-                  Requested Date
-                </TableSortLabel>
-              </TableCell>
-              <TableCell className="font-bold text-[#667085] text-[12px] border-[#EAECF0]">
-                <TableSortLabel
-                  active={orderBy === "orderNumber"}
-                  direction={orderBy === "orderNumber" ? order : "asc"}
-                  onClick={() => handleRequestSort("orderNumber")}
-                >
-                  Order Number
-                </TableSortLabel>
-              </TableCell>
-              <TableCell className="font-bold text-[#667085] text-[12px] border-[#EAECF0]">
-                <TableSortLabel
-                  active={orderBy === "refundReason"}
-                  direction={orderBy === "refundReason" ? order : "asc"}
-                  onClick={() => handleRequestSort("refundReason")}
-                >
-                  Refund Reason
-                </TableSortLabel>
-              </TableCell>
-              <TableCell className="font-bold text-[#667085] text-[12px] border-[#EAECF0]">
-                <TableSortLabel
-                  active={orderBy === "contact"}
-                  direction={orderBy === "contact" ? order : "asc"}
-                  onClick={() => handleRequestSort("contact")}
-                >
-                  Contact SP
-                </TableSortLabel>
-              </TableCell>
-            </TableRow>
-          </TableHead>
-          <TableBody>
-            {sortedRows.map((row) => (
-              <TableRow
-                key={row.orderNumber}
-                className="font-poppins text-[#667085] text-[14px] font-normal"
-              >
-                <TableCell className="text-[#667085] border-[#EAECF0]">
-                  {row.requestedDate}
-                </TableCell>
-                <TableCell className="text-[#667085] border-[#EAECF0]">
-                  {row.orderNumber}
-                </TableCell>
-                <TableCell className="text-[#667085] border-[#EAECF0]">
-                  {row.refundReason}
-                </TableCell>
-                <TableCell className="text-[#667085] border-[#EAECF0]">
-                  <div className="w-full">
-                    <button
-                      type="button"
-                      className={`${styles.primary_button} !font-[700] flex justify-center items-center gap-2 px-1 !h-[48px] !text-[14px]`}
-                    >
-                      <Image
-                        src={phoneIcon.src}
-                        alt="Exit"
-                        width={16}
-                        height={16}
-                      />
-                      Contact admin
-                    </button>
+                  <div className="flex items-center gap-2">
+                    <span>{capitalizeFirstLetter(header)}</span>
+                    <span className="text-[#667085] text-[10px]">
+                      {orderBy === header ? (
+                        <Image
+                          src={ArrowDownIcon.src}
+                          width={16}
+                          height={16}
+                          alt="Sort icon"
+                        />
+                      ) : (
+                        <Image
+                          src={ArrowDownIcon.src}
+                          width={16}
+                          height={16}
+                          alt="Sort icon"
+                        />
+                      )}
+                    </span>
                   </div>
-                </TableCell>
-              </TableRow>
-            ))}
-          </TableBody>
-        </Table>
-      </TableContainer>
+                </th>
+              ))}
+            </tr>
+          </thead>
+          <tbody>
+            {sortedRows.map((row, index) => {
+              return (
+                <tr
+                  key={index}
+                  className="text-[#667085] text-[14px] font-normal border-b border-[#EAECF0]"
+                >
+                  <td className="px-6 py-6">{row.requestedDate}</td>
+                  <td className="px-6 py-6">{row.orderNumber}</td>
+                  <td className="px-6 py-6">{row.refundReason}</td>
+                  <td className="px-6 py-6">
+                    <div className="w-full">
+                      <button
+                        type="button"
+                        className={`${styles.primary_button} !font-[700] flex justify-center items-center gap-2 px-1 !h-[48px] !text-[14px]`}
+                      >
+                        <Image
+                          src={phoneIcon.src}
+                          alt="Exit"
+                          width={16}
+                          height={16}
+                        />
+                        Contact admin
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
+}
+
+// Helper function to capitalize the first letter of the string
+function capitalizeFirstLetter(string) {
+  return string.charAt(0).toUpperCase() + string.slice(1);
 }

@@ -57,7 +57,7 @@ export default function WithdrawHistory() {
         <table className="min-w-full bg-white border border-[#EAECF0] rounded-lg">
           <thead className="bg-[#FCFCFD] text-[#667085] text-[12px] font-[700] font-Poppins border-b border-[#EAECF0]">
             <tr>
-              {["date", "paymentMethod", "withdrawFunds", "status"].map((header) => (
+              {["Date", "Withdraw Payment Method", "Funds Withdraw", "Status"].map((header) => (
                 <th
                   key={header}
                   className="px-6 py-3 cursor-pointer text-left hover:bg-[#F5F5F5]"

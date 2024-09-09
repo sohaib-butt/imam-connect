@@ -1,14 +1,8 @@
 "use client";
 import React, { useState, useMemo } from "react";
 import Image from "next/image";
-import Table from "@mui/material/Table";
-import TableBody from "@mui/material/TableBody";
-import TableCell from "@mui/material/TableCell";
-import TableContainer from "@mui/material/TableContainer";
-import TableHead from "@mui/material/TableHead";
-import TableRow from "@mui/material/TableRow";
-import TableSortLabel from "@mui/material/TableSortLabel";
 import purpleEyeIcon from "../../../../../public/assets/images/purple-eye.svg";
+import ArrowDownIcon from "../../../../../public/assets/images/arrow-down.svg";
 
 // Function to create data objects for each row
 function createData(date, customerName, feedback, location, view) {
@@ -23,11 +17,41 @@ function createData(date, customerName, feedback, location, view) {
 
 // Sample data for the table
 const rows = [
-  createData("28 Dec 2021", "Darlene Robertson", "“I think it’s nice to ha...", "United Kingdom", "View"),
-  createData("29 Dec 2021", "Arlene McCoy", "“I think it’s nice to ha...", "Indonesia", "View"),
-  createData("30 Dec 2021", "Jane Cooper", "“I think it’s nice to ha...", "USA", "View"),
-  createData("01 Jan 2021", "Darrell Steward", "“I think it’s nice to ha...", "Thailand", "View"),
-  createData("02 Jan 2021", "Esther Howard", "“I think it’s nice to ha...", "United Kingdom", "View"),
+  createData(
+    "28 Dec 2021",
+    "Darlene Robertson",
+    "“I think it’s nice to ha...",
+    "United Kingdom",
+    "View"
+  ),
+  createData(
+    "29 Dec 2021",
+    "Arlene McCoy",
+    "“I think it’s nice to ha...",
+    "Indonesia",
+    "View"
+  ),
+  createData(
+    "30 Dec 2021",
+    "Jane Cooper",
+    "“I think it’s nice to ha...",
+    "USA",
+    "View"
+  ),
+  createData(
+    "01 Jan 2021",
+    "Darrell Steward",
+    "“I think it’s nice to ha...",
+    "Thailand",
+    "View"
+  ),
+  createData(
+    "02 Jan 2021",
+    "Esther Howard",
+    "“I think it’s nice to ha...",
+    "United Kingdom",
+    "View"
+  ),
 ];
 
 export default function index() {
@@ -53,87 +77,73 @@ export default function index() {
   }, [order, orderBy]);
 
   return (
-    <div style={{ width: "100%", overflowX: "auto" }}>
-      <TableContainer
-        sx={{ maxHeight: 440, overflowX: "auto", overflowY: "auto" }}
-        className="rounded-lg border border-[#EAECF0]"
-        style={{ width: "100%" }} // Ensure it takes full width of its parent
-      >
-        <Table aria-label="sticky table" sx={{ minWidth: 300 }}>
-          <TableHead className="bg-[#FCFCFD]">
-            <TableRow>
-              <TableCell className="font-bold text-[#667085] text-[12px] border-[#EAECF0]">
-                <TableSortLabel
-                  active={orderBy === "date"}
-                  direction={orderBy === "date" ? order : "asc"}
-                  onClick={() => handleRequestSort("date")}
+    <div className="border border-[#EAECF0] rounded-lg overflow-x-auto pb-2 w-full">
+      <div className="overflow-x-auto">
+        <table className="min-w-full bg-white border border-[#EAECF0] rounded-lg">
+          <thead className="bg-[#FCFCFD] text-[#667085] text-[12px] font-[700] font-Poppins border-b border-[#EAECF0]">
+            <tr>
+              {["Date", "Customer Name", "Feedback", "Location", "View"].map(
+                (header) => (
+                  <th
+                    key={header}
+                    className="px-6 py-3 cursor-pointer text-left hover:bg-[#F5F5F5]"
+                    onClick={() => handleRequestSort(header)}
+                  >
+                    <div className="flex items-center gap-2">
+                      <span>{capitalizeFirstLetter(header)}</span>
+                      <span className="text-[#667085] text-[10px]">
+                        {orderBy === header ? (
+                          <Image
+                            src={ArrowDownIcon.src}
+                            width={16}
+                            height={16}
+                            alt="Sort icon"
+                          />
+                        ) : (
+                          <Image
+                            src={ArrowDownIcon.src}
+                            width={16}
+                            height={16}
+                            alt="Sort icon"
+                          />
+                        )}
+                      </span>
+                    </div>
+                  </th>
+                )
+              )}
+            </tr>
+          </thead>
+          <tbody>
+            {sortedRows.map((row, index) => {
+              return (
+                <tr
+                  key={index}
+                  className="text-[#667085] text-[14px] font-normal border-b border-[#EAECF0]"
                 >
-                  Date
-                </TableSortLabel>
-              </TableCell>
-              <TableCell className="font-bold text-[#667085] text-[12px] border-[#EAECF0]">
-                <TableSortLabel
-                  active={orderBy === "customerName"}
-                  direction={orderBy === "customerName" ? order : "asc"}
-                  onClick={() => handleRequestSort("customerName")}
-                >
-                  Customer Name
-                </TableSortLabel>
-              </TableCell>
-              <TableCell className="font-bold text-[#667085] text-[12px] border-[#EAECF0]">
-                <TableSortLabel
-                  active={orderBy === "feedback"}
-                  direction={orderBy === "feedback" ? order : "asc"}
-                  onClick={() => handleRequestSort("feedback")}
-                >
-                  Feedback
-                </TableSortLabel>
-              </TableCell>
-              <TableCell className="font-bold text-[#667085] text-[12px] border-[#EAECF0]">
-                <TableSortLabel
-                  active={orderBy === "location"}
-                  direction={orderBy === "location" ? order : "asc"}
-                  onClick={() => handleRequestSort("location")}
-                >
-                  Location
-                </TableSortLabel>
-              </TableCell>
-              <TableCell className="font-bold text-[#667085] text-[12px] border-[#EAECF0]">
-                View
-              </TableCell>
-            </TableRow>
-          </TableHead>
-          <TableBody>
-            {sortedRows.map((row) => (
-              <TableRow
-                key={row.customerName}
-                className="font-poppins text-[#667085] text-[14px] font-normal"
-              >
-                <TableCell className="text-[#667085] border-[#EAECF0]">
-                  {row.date}
-                </TableCell>
-                <TableCell className="text-[#667085] border-[#EAECF0]">
-                  {row.customerName}
-                </TableCell>
-                <TableCell className="text-[#667085] border-[#EAECF0]">
-                  {row.feedback}
-                </TableCell>
-                <TableCell className="text-[#667085] border-[#EAECF0]">
-                  {row.location}
-                </TableCell>
-                <TableCell className="text-[#667085] border-[#EAECF0]">
-                  <Image
-                    src={purpleEyeIcon.src}
-                    width={20}
-                    height={20}
-                    className="cursor-pointer"
-                  />
-                </TableCell>
-              </TableRow>
-            ))}
-          </TableBody>
-        </Table>
-      </TableContainer>
+                  <td className="px-6 py-6">{row.date}</td>
+                  <td className="px-6 py-6">{row.customerName}</td>
+                  <td className="px-6 py-6">{row.feedback}</td>
+                  <td className="px-6 py-6">{row.location}</td>
+                  <td className="px-6 py-6">
+                    <Image
+                      src={purpleEyeIcon.src}
+                      width={20}
+                      height={20}
+                      className="cursor-pointer"
+                    />
+                  </td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
+}
+
+// Helper function to capitalize the first letter of the string
+function capitalizeFirstLetter(string) {
+  return string.charAt(0).toUpperCase() + string.slice(1);
 }
