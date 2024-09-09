@@ -9,7 +9,7 @@ $border-radius-small: 8px;
 $performance-bg-color: #f8f9ff;
 $performance_desc-color: #2d2d2d;
 $black-color: #000000;
-$font-poppins: "Poppins", sans-serif;
+$font-poppins: var(--font-poppins);
 $margin-top-small: 1rem;
 $gap-large: 3rem;
 $gap-medium: 30px;

@@ -1,9 +1,11 @@
 import React from "react";
+import { OrderLists } from '@/components/AdminDashboard'
+
 
 const page = () => {
   return (
     <div className="relative overflow-x-hidden">
-     I'm order list
+     <OrderLists/>
     </div>
   );
 };
