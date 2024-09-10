@@ -1,5 +1,4 @@
-import { InputField, PurpleCard } from "@/components/shared";
-import Image from "next/image";
+import { InputField } from "@/components/shared";
 import React from "react";
 
 const index = () => {

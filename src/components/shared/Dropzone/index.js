@@ -108,7 +108,7 @@ function DropZone(props) {
       <span className="text-[14px] lg:text-[16px] font-[400] text-[#666666] leading-[20px]">
         {props.label}
       </span>
-      <div className="h-full w-full border border-[#E7E7E7] p-[16px] rounded-[12px] cursor-pointer">
+      <div className="h-full w-full border border-[#E7E7E7] p-[16px] rounded-[12px] cursor-pointer bg-white">
         {!logoFileImage ? (
           <div {...getRootProps()} className="w-full h-full">
             <input

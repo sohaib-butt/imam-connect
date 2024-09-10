@@ -20,36 +20,31 @@ const rows = [
     "28 Dec 2021",
     "Darlene Robertson",
     "“I think it’s nice to ha...",
-    "United Kingdom",
-    "View"
+    "Contact admin"
   ),
   createData(
     "29 Dec 2021",
     "Arlene McCoy",
     "“I think it’s nice to ha...",
-    "Indonesia",
-    "View"
+    "Contact admin"
   ),
   createData(
     "30 Dec 2021",
     "Jane Cooper",
     "“I think it’s nice to ha...",
-    "USA",
-    "View"
+    "Contact admin"
   ),
   createData(
     "01 Jan 2021",
     "Darrell Steward",
     "“I think it’s nice to ha...",
-    "Thailand",
-    "View"
+    "Contact admin"
   ),
   createData(
     "02 Jan 2021",
     "Esther Howard",
     "“I think it’s nice to ha...",
-    "United Kingdom",
-    "View"
+    "Contact admin"
   ),
 ];
 
@@ -126,21 +121,16 @@ export default function index() {
                   <td className="px-6 py-6">{row.requestedDate}</td>
                   <td className="px-6 py-6">{row.orderNumber}</td>
                   <td className="px-6 py-6">{row.refundReason}</td>
-                  <td className="px-6 py-6">
-                    <div className="w-full">
-                      <button
-                        type="button"
-                        className={`${styles.primary_button} !font-[700] flex justify-center items-center gap-2 px-1 !h-[48px] !text-[14px]`}
-                      >
-                        <Image
-                          src={phoneIcon.src}
-                          alt="Exit"
-                          width={16}
-                          height={16}
-                        />
-                        Contact admin
-                      </button>
-                    </div>
+                  <td className="px-1 md:px-3 lg:px-6 py-6">
+                    <button className="bg-[#00BAC2] w-[180px] h-[40px] text-white font-bold py-2 px-4 rounded-[8px] flex justify-center items-center gap-2">
+                      <Image
+                        src={phoneIcon.src}
+                        alt="Exit"
+                        width={16}
+                        height={16}
+                      />
+                      {row.contact}
+                    </button>
                   </td>
                 </tr>
               );

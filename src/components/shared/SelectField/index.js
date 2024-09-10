@@ -36,7 +36,7 @@ const index = ({ label, placeholder, options, multiple }) => {
       </span>
       <div className="relative">
         <div
-          className="px-[16px] py-[16px] border border-[#E7E7E7] rounded-[12px] min-h-[56px] text-[#999999] focus:outline-none cursor-pointer overflow-y-auto max-h-[80px]"
+          className="px-[16px] py-[16px] border border-[#E7E7E7] rounded-[12px] min-h-[56px] text-[#999999] focus:outline-none cursor-pointer overflow-y-auto max-h-[80px] bg-white"
           onClick={toggleDropdown}
         >
           <div
