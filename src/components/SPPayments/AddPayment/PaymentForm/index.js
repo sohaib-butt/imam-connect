@@ -21,7 +21,7 @@ const index = () => {
   ];
   return (
     <div className="w-full md:w-[60%]">
-      <div className="w-full flex flex-col justify-start items-start gap-4 md:gap-6">
+      <div className="w-full flex flex-col justify-start items-start gap-4">
         <span className="font-poppins font-[700] text-[14px] md:text-[16px] text-center text-[#666666]">
           Complete Registration Payment
         </span>
@@ -63,6 +63,11 @@ const index = () => {
         <div className="w-full flex flex-col lg:flex-row justify-center md:justify-between items-center gap-4">
           <InputField label={"Exp"} placeholder={"12/29"} />
           <InputField label={"CVC"} placeholder={"***"} />
+        </div>
+        <div className="w-full justify-start items-start">
+          <button className="bg-[#00BAC2] w-full md:w-[280px] h-[48px] text-white font-[700] rounded-[8px] flex justify-center items-center text-[14px] md:text-[16px]">
+            Continue
+          </button>
         </div>
       </div>
     </div>
