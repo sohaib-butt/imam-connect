@@ -9,7 +9,7 @@ const PurchaseCard = () => {
   return (
     <div className="w-full flex flex-col justify-start items-start gap-3 border border-[#E7E7E7] rounded-[12px] p-[16px]">
       <div className="w-full flex justify-between items-center gap-3">
-        <div className="md:w-[60%] flex flex-col justify-start items-start md:flex-row lg:flex-col 2xl:flex-row md:items-center lg:items-start 2xl:items-center md:justify-between gap-2">
+        <div className="md:w-[70%] flex flex-col justify-start items-start md:flex-row lg:flex-col 2xl:flex-row md:items-center lg:items-start 2xl:items-center md:justify-between gap-2">
           <div className="flex items-center">
             <Image
               src={AdminProfile.src}
