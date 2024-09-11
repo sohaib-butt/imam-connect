@@ -3,9 +3,12 @@ import React, { useState } from "react";
 import IncomingTable from "./IncomingTable";
 import OngoingTable from "./OngoingTable";
 import AcceptOrderModal from "./AcceptOrderModal";
+import OrderModal from "./OrderModal";
+
 const index = () => {
   const [selectedTab, setSelectedTab] = useState("IncomingOrders");
   const [acceptModal, setAcceptModal] = useState(false);
+  const [viewModal, setViewModal] = useState(false);
   return (
     <>
       <div className="w-full flex flex-col justify-start items-start gap-0">
@@ -45,11 +48,14 @@ const index = () => {
         {selectedTab == "IncomingOrders" ? (
           <IncomingTable setAcceptModal={setAcceptModal} />
         ) : (
-          <OngoingTable />
+          <OngoingTable setViewModal={setViewModal}/>
         )}
       </div>
       {acceptModal == true && (
         <AcceptOrderModal handleClose={() => setAcceptModal(false)} />
+      )}
+      {viewModal == true && (
+        <OrderModal handleClose={() => setViewModal(false)} />
       )}
     </>
   );

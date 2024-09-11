@@ -42,7 +42,7 @@ const rows = [
   ),
 ];
 
-export default function index() {
+export default function index({ setViewModal }) {
   const [order, setOrder] = useState("asc");
   const [orderBy, setOrderBy] = useState("date");
 
@@ -115,6 +115,7 @@ export default function index() {
                       width={20}
                       height={20}
                       className="cursor-pointer"
+                      onClick={() => setViewModal(true)}
                     />
                   </td>
                 </tr>
