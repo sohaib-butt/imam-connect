@@ -54,8 +54,8 @@ const index = ({ popupClassName, handleClose, primaryBtnClick }) => {
             className="absolute cursor-pointer top-5 right-4 z-10"
           />
         )}
-        <div className="w-full flex flex-col md:flex-row md:justify-between justify-start items-start gap-6 pb-6 border-b border-b-[#E7E7E7]">
-          <div className="w-full md:w-[50%] flex flex-col justify-center items-center gap-4 md:pr-4 md:border-r md:border-r-[#E7E7E7]">
+        <div className="w-full flex flex-col md:flex-row md:justify-between justify-start items-start gap-6">
+          <div className="w-full md:w-[70%] flex flex-col justify-center items-center gap-4 md:pr-20 md:border-r md:border-r-[#E7E7E7]">
             <div className="w-full flex flex-col justify-start items-start gap-2 pb-6 border-b border-b-[#E7E7E7]">
               <div className="w-full flex flex-col md:flex-row justify-start items-start md:justify-between md:items-center">
                 <span className="text-[#666666] text-[14px] font-[400] font-poppins">
@@ -106,10 +106,7 @@ const index = ({ popupClassName, handleClose, primaryBtnClick }) => {
               </div>
             </div>
 
-            <div className="w-full flex flex-col justify-start items-start gap-3">
-              <span className="text-[10px] font-[400] text-[#1C1C1C] font-poppins">
-                Customer already paid for this service
-              </span>
+            <div className="w-full flex flex-col justify-start items-start gap-3 pb-4 border-b border-b-[#E7E7E7]">
               <div className="w-full border border-[#E7E7E7] rounded-[12px] p-5">
                 <div className="flex justify-start items-center gap-4">
                   <Image
@@ -168,7 +165,7 @@ const index = ({ popupClassName, handleClose, primaryBtnClick }) => {
               </div>
             </div>
           </div>
-          <div className="w-full md:w-[50%] flex flex-col justify-start items-start gap-6">
+          <div className="w-full md:w-[30%] flex flex-col justify-start items-start gap-6">
             <button
               type="button"
               className={`${styles.primary_button} !font-[700] flex justify-center items-center gap-2 px-1 !h-[48px] !text-[14px]`}
@@ -182,7 +179,7 @@ const index = ({ popupClassName, handleClose, primaryBtnClick }) => {
           </div>
         </div>
         <div className="w-full flex flex-col items-start justify-start gap-3">
-          <div className="w-full flex flex-col justify-start items-start gap-2 border-b-[1px] border-b-[#D7D7D7] pb-2">
+          <div className="w-full flex flex-col justify-start items-start gap-2 border-b-[1px] border-b-[#D7D7D7] pb-4">
             <span className="text-[#442D87] font-poppins font-[700] text-[16px] md:text-[18px] lg:text-[20px]">
               You might be like one of these
             </span>
