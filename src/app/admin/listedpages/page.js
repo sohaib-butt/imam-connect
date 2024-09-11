@@ -1,11 +1,10 @@
 import React from "react";
-import { OrderLists } from '@/components/AdminDashboard'
-
+import { ListedPages } from "@/components/AdminDashboard";
 
 const page = () => {
   return (
     <div className="relative overflow-x-hidden">
-     <OrderLists/>
+      <ListedPages />
     </div>
   );
 };

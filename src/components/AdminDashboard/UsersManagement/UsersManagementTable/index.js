@@ -120,7 +120,7 @@ const rows = [
   // Add more rows as needed
 ];
 
-const UsersManagementTable = () => {
+const UsersManagementTable = ({ onEditUser }) => {
   const [order, setOrder] = useState("desc");
   const [orderBy, setOrderBy] = useState("lastChanged");
 
@@ -251,7 +251,9 @@ const UsersManagementTable = () => {
                 </td>
                 <td className="px-4 py-6" style={{ width: "200px" }}>{row.lastChanged}</td>
                 <td className="px-4 py-6" style={{ width: "100px" }}>
+                <button onClick={() => onEditUser(row)}>
                   <Image src={editIcon.src} width={24} height={24} alt="Edit icon" />
+                  </button>
                 </td>
               </tr>
             ))}

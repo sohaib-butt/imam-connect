@@ -35,9 +35,9 @@ const Sidebar = ({ navLinks }) => {
   <h2 className="text-lg font-semibold mb-2 text-gray-400 text-[14px]">
     {a?.title}
   </h2>
-  <ul className="list-none p-0">
+  <ul className="list-none p-0 ">
     {a?.links?.map((l, index) => (
-      <li key={index}>
+      <li key={index} className="my-2" >
         <Link
           href={l?.href}
           className={`block py-2 px-4 text-[#202224] hover:bg-[#00BAC2] h-[50px] flex items-center justify-center hover:text-[#FFFFFF] rounded text-[14px] ${

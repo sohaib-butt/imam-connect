@@ -1,12 +1,6 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
-@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
 
 *,
 *::before,
@@ -45,4 +39,21 @@ body {
   background-color: #00BAC2 !important;
 }
 
+.ant-input{
+  font-family: var(--font-poppins) !important;
+  font-size: 10.99px !important
+}
 
+.ant-picker-input input{
+  font-family: var(--font-poppins) !important;
+  font-size: 10.99px !important
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.hide-scrollbar{
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
