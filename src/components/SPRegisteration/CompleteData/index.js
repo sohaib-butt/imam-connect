@@ -1,11 +1,13 @@
-"use client"
+"use client";
 import React, { useState } from "react";
 import AreasForm from "./AreasForm";
 import AdditionalForm from "./AdditionalForm";
 import RegisterationInfo from "./RegisterationInfo";
 import HearAbout from "./HearAbout";
+import { useRouter } from "next/navigation";
 
 const index = () => {
+  const router = useRouter();
   const [agree, setAgree] = useState(false);
   return (
     <div className="w-full flex flex-col gap-4 justify-start items-start">
@@ -29,7 +31,10 @@ const index = () => {
         </label>
       </div>
       <div className="w-full">
-        <button className="bg-[#00BAC2] w-full h-[56px] text-white font-[700] rounded-[8px] flex justify-center items-center text-[14px] md:text-[16px]">
+        <button
+          className="bg-[#00BAC2] w-full h-[56px] text-white font-[700] rounded-[8px] flex justify-center items-center text-[14px] md:text-[16px]"
+          onClick={() => router.push("/sp-payment/createpassword")}
+        >
           Continue
         </button>
       </div>

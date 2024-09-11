@@ -1,3 +1,4 @@
+"use client"
 import { InputField } from "@/components/shared";
 import Image from "next/image";
 import React from "react";
@@ -8,8 +9,11 @@ import PayPal from "../../../../../public/assets/images/PayPal.svg";
 import GooglePay from "../../../../../public/assets/images/GooglePay.svg";
 import ApplePay from "../../../../../public/assets/images/ApplePay.svg";
 import Klarna from "../../../../../public/assets/images/Klarna.svg";
+import { useRouter, usePathname } from "next/navigation";
 
 const index = () => {
+  const router = useRouter();
+  const pathname = usePathname();
   const paymentImages = [
     Visa,
     Mastercard,
@@ -65,7 +69,16 @@ const index = () => {
           <InputField label={"CVC"} placeholder={"***"} />
         </div>
         <div className="w-full justify-start items-start">
-          <button className="bg-[#00BAC2] w-full md:w-[280px] h-[48px] text-white font-[700] rounded-[8px] flex justify-center items-center text-[14px] md:text-[16px]">
+          <button
+            className="bg-[#00BAC2] w-full md:w-[280px] h-[48px] text-white font-[700] rounded-[8px] flex justify-center items-center text-[14px] md:text-[16px]"
+            onClick={() => {
+              if (pathname?.includes("addPayment")) {
+                router.push("/sp-payment/paymentAdded");
+              } else {
+                router.push("/sp-payment/registerationcompleted");
+              }
+            }}
+          >
             Continue
           </button>
         </div>

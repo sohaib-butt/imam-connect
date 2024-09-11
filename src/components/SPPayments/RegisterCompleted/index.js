@@ -1,8 +1,11 @@
+"use client";
 import Image from "next/image";
 import React from "react";
 import completedImg from "../../../../public/assets/images/completed-img.svg";
+import { useRouter } from "next/navigation";
 
 const index = () => {
+  const router = useRouter();
   return (
     <div className="w-full flex flex-col justify-center items-center gap-5">
       <Image src={completedImg.src} width={335} height={364} />
@@ -16,7 +19,10 @@ const index = () => {
         </span>
       </div>
       <div className="w-full md:w-[260px] flex justify-center items-center">
-        <button className="bg-[#00BAC2] w-full h-[46px] text-white font-[700] rounded-[8px] flex justify-center items-center text-[14px] md:text-[16px]">
+        <button
+          className="bg-[#00BAC2] w-full h-[46px] text-white font-[700] rounded-[8px] flex justify-center items-center text-[14px] md:text-[16px]"
+          onClick={() => router.push("/")}
+        >
           Explore Now
         </button>
       </div>
