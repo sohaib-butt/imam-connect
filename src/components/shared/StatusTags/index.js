@@ -25,7 +25,7 @@ const index = ({numberOfTags}) => {
             onClick={() => setActiveIndex(index)}
           >
             <span
-              className={`font-poppins text-[16px] whitespace-nowrap ${
+              className={`font-poppins text-[14px] md:text-[16px] whitespace-nowrap ${
                 activeIndex === index
                   ? "text-[#00BAC2] font-[700]"
                   : "text-[#D7D7D7] font-[400]"

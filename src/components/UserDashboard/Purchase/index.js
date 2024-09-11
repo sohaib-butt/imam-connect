@@ -7,9 +7,12 @@ import { DatePicker } from "@/components/shared";
 import StatusTags from "../../shared/StatusTags";
 import PurchaseCards from "./PurchaseCards";
 import TrackModal from "./TrackModal";
+import TransactionDetail from "./TransactionDetail";
 
 const index = () => {
   const [trackModal, setTrackModal] = useState(false);
+  const [detailModal, setDetailModal] = useState(false);
+
   return (
     <>
       <div className="w-full flex flex-col justify-center items-center gap-4">
@@ -41,10 +44,16 @@ const index = () => {
           </div>
         </div>
         <StatusTags />
-        <PurchaseCards setTrackModal={setTrackModal} />
+        <PurchaseCards
+          setTrackModal={setTrackModal}
+          setDetailModal={setDetailModal}
+        />
       </div>
       {trackModal == true && (
         <TrackModal handleClose={() => setTrackModal(false)} />
+      )}
+      {detailModal == true && (
+        <TransactionDetail handleClose={() => setDetailModal(false)} />
       )}
     </>
   );

@@ -5,7 +5,7 @@ import AdminProfile from "../../../../../public/assets/images/admin-profile.svg"
 import Image from "next/image";
 import styles from "../../../../styles/homepage.module.scss";
 
-const PurchaseCard = ({ setTrackModal }) => {
+const PurchaseCard = ({ setTrackModal, setDetailModal }) => {
   return (
     <div className="w-full flex flex-col justify-start items-start gap-3 border border-[#E7E7E7] rounded-[12px] p-[16px]">
       <div className="w-full flex justify-between items-center gap-3">
@@ -75,6 +75,7 @@ const PurchaseCard = ({ setTrackModal }) => {
         <button
           type="button"
           className={`w-full font-[700] flex justify-center items-center h-[40px] text-[12px] text-[#00BAC2] text-center bg-white md:rounded-[8px] md:border md:border-[#00BAC2]`}
+          onClick={() => setDetailModal(true)}
         >
           See detail transaction
         </button>
