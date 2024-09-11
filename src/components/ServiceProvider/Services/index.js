@@ -1,13 +1,16 @@
-"use client"
+"use client";
 import React, { useState } from "react";
 import ServicesTable from "./ServicesTable";
 import styles from "../../../styles/homepage.module.scss";
 import PlusIcon from "../../../../public/assets/images/plus-icon.svg";
 import Image from "next/image";
 import AddServiceModal from "./AddServiceModal";
+import ServiceDetailsModal from "./ServiceDetailsModal";
 
 const index = () => {
   const [addModal, setAddModal] = useState(false);
+  const [detailModal, setDetailModal] = useState(false);
+
   return (
     <>
       <div className="w-full flex flex-col justify-start items-start gap-0">
@@ -32,7 +35,7 @@ const index = () => {
             </button>
           </div>
         </div>
-        <ServicesTable />
+        <ServicesTable setDetailModal={setDetailModal} />
         <div className="w-full mt-4 flex justify-end">
           <button
             type="button"
@@ -44,6 +47,9 @@ const index = () => {
       </div>
       {addModal == true && (
         <AddServiceModal handleClose={() => setAddModal(false)} />
+      )}
+      {detailModal == true && (
+        <ServiceDetailsModal handleClose={() => setDetailModal(false)} />
       )}
     </>
   );
