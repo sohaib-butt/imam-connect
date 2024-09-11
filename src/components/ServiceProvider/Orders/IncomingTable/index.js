@@ -41,7 +41,7 @@ const rows = [
   ),
 ];
 
-export default function index() {
+export default function index({ setAcceptModal }) {
   const [order, setOrder] = useState("asc");
   const [orderBy, setOrderBy] = useState("date");
 
@@ -110,7 +110,10 @@ export default function index() {
                   <td className="px-6 py-6">{row.requestedOn}</td>
                   <td className="px-6 py-6">
                     <div className="flex space-x-2">
-                      <button className="bg-[#22C55E] w-[67px] h-[35px] text-white font-bold rounded-[8px]">
+                      <button
+                        className="bg-[#22C55E] w-[67px] h-[35px] text-white font-bold rounded-[8px]"
+                        onClick={() => setAcceptModal(true)}
+                      >
                         Accept
                       </button>
                       <button className="bg-white w-[67px] h-[35px] text-[#F43F5E] font-bold border border-[#F43F5E] rounded">
