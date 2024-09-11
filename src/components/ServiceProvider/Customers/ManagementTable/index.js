@@ -54,7 +54,7 @@ const rows = [
   ),
 ];
 
-export default function index() {
+export default function index({setViewDetails}) {
   const [order, setOrder] = useState("asc");
   const [orderBy, setOrderBy] = useState("date");
 
@@ -131,6 +131,7 @@ export default function index() {
                       width={20}
                       height={20}
                       className="cursor-pointer"
+                      onClick={() => setViewDetails(true)}
                     />
                   </td>
                 </tr>
