@@ -72,11 +72,19 @@ const CalendarDesign = ({ setSessionModal }) => {
                         width={7}
                         height={7}
                         className="block lg:hidden text-end absolute bottom-4 left-4 cursor-pointer"
-                        onClick={() => setSessionModal(true)}
+                        onClick={() => {
+                          if (setSessionModal) {
+                            setSessionModal(true);
+                          }
+                        }}
                       />
                       <div
                         className="hidden lg:block absolute bottom-3 left-3 right-3 bg-[#E0D6FF] text-[#442D87] font-[500] font-inter text-[12px] rounded-[4px] p-1 cursor-pointer"
-                        onClick={() => setSessionModal(true)}
+                        onClick={() => {
+                          if (setSessionModal) {
+                            setSessionModal(true);
+                          }
+                        }}
                       >
                         Session 1 with Putri Azzahra
                       </div>
@@ -89,11 +97,19 @@ const CalendarDesign = ({ setSessionModal }) => {
                         width={7}
                         height={7}
                         className="block lg:hidden text-end absolute bottom-4 left-4 cursor-pointer"
-                        onClick={() => setSessionModal(true)}
+                        onClick={() => {
+                          if (setSessionModal) {
+                            setSessionModal(true);
+                          }
+                        }}
                       />
                       <div
                         className="hidden lg:block absolute bottom-3 left-3 right-3 bg-[#E0D6FF] text-[#442D87] font-[500] font-inter text-[12px] rounded-[4px] p-1 cursor-pointer"
-                        onClick={() => setSessionModal(true)}
+                        onClick={() => {
+                          if (setSessionModal) {
+                            setSessionModal(true);
+                          }
+                        }}
                       >
                         Session 2 with Putri Azzahra
                       </div>
