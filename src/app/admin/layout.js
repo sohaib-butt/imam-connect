@@ -29,7 +29,7 @@ export default function Layout({ children }) {
     {
       title: "Website",
       links: [
-        { href: "/admin/pages", label: "Pages" },
+        { href: "/admin/listedpages", label: "Pages" },
         { href: "/admin/blogs", label: "Blogs" },
         { href: "/admin/guides", label: "Guides" },
         { href: "/admin/media", label: "Media" },
@@ -50,7 +50,7 @@ export default function Layout({ children }) {
           <Sidebar navLinks={adminLinks} />
         </div>
         {/* Main content area: takes remaining width */}
-        <main className="flex-1 p-6 overflow-x-auto">
+        <main className="flex-1 p-2 md:p-6">
           {children}
         </main>
       </div>

@@ -39,7 +39,15 @@ body {
   background-color: #00BAC2 !important;
 }
 
+.ant-input{
+  font-family: var(--font-poppins) !important;
+  font-size: 10.99px !important
+}
 
+.ant-picker-input input{
+  font-family: var(--font-poppins) !important;
+  font-size: 10.99px !important
+}
 
 .hide-scrollbar::-webkit-scrollbar {
   display: none;
