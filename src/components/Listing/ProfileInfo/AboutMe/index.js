@@ -152,7 +152,7 @@ const index = () => {
           Rewalpindi, Punjab, Pakistan
         </span>
       </div>
-      {openPopup && (
+      {openPopup == true && (
         <CreateAccPopup
           title="It looks like you don’t have account yet."
           titleDesc="To continue chatting with Service Provider, you need to create one."

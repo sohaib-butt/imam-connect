@@ -1,229 +1,93 @@
-"use client";
+import Image from "next/image";
 import React from "react";
+import styles from "../../../styles/homepage.module.scss";
+import { InputField } from "..";
 
-const AddNewModal = ({ isOpen, onClose }) => {
-  if (!isOpen) return null;
-
+const index = ({
+  title,
+  titleDesc,
+  popupClassName,
+  handleClose,
+  question,
+  txt,
+  isForm,
+  primaryBtnClick,
+  mainImg,
+}) => {
   return (
-    <div
-      className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
-      onClick={onClose}
-    >
+    <div className={styles.popup_container}>
       <div
-        className="bg-white p-6 rounded-lg shadow-lg w-full max-w-4xl relative max-h-[90vh] overflow-y-auto"
-        onClick={(e) => e.stopPropagation()}
+        className={`${styles.popup} w-[90%] md:w-[70%] lg:w-[50%] flex flex-col items-center bg-white rounded-[12px] relative p-[24px] gap-10 ${popupClassName}`}
+        // style={{ scrollbarWidth: "none" }}
       >
-        <button
-          className="absolute top-3 right-3 text-gray-500 hover:text-gray-700"
-          onClick={onClose}
-        >
-          &times;
-        </button>
-        <div className="bg-white pb-4 z-10">
-          <h2 className="text-2xl font-bold">Add New Service Provider</h2>
+        <div className="w-full flex flex-col justify-start items-start gap-2">
+          <span className="text-[20px] md:text-[22px] lg:text-[24px] font-[600] font-poppins text-[#101828] text-start">
+            {title}
+          </span>
+          <span className="text-[14px] font-[400] font-poppins text-[#101828] text-start">
+            {titleDesc}
+          </span>
         </div>
-        <form className="pt-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-            <div>
-              <label
-                htmlFor="firstName"
-                className="block font-poppins text-[16px] font-normal leading-[20px] tracking-wide text-[#666666]"
-              >
-                First Name
-              </label>
-              <input
-                type="text"
-                id="firstName"
-                placeholder="First Name"
-                className="border border-gray-300 p-2 rounded w-full mt-1 focus:ring-0 focus:border-[#00BAC2]"
-              />
-            </div>
-            <div>
-              <label
-                htmlFor="lastName"
-                className="block font-poppins text-[16px] font-normal leading-[20px] tracking-wide text-[#666666]"
-              >
-                Last Name
-              </label>
-              <input
-                type="text"
-                id="lastName"
-                placeholder="Last Name"
-                className="border border-gray-300 p-2 rounded w-full mt-1 focus:ring-0 focus:border-[#00BAC2]"
-              />
-            </div>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-            <div>
-              <label
-                htmlFor="email"
-                className="block font-poppins text-[16px] font-normal leading-[20px] tracking-wide text-[#666666]"
-              >
-                Email
-              </label>
-              <input
-                type="email"
-                id="email"
-                placeholder="Email Address"
-                className="border border-gray-300 p-2 rounded w-full mt-1 focus:ring-0 focus:border-[#00BAC2]"
-              />
-            </div>
-            <div>
-              <label
-                htmlFor="phone"
-                className="block font-poppins text-[16px] font-normal leading-[20px] tracking-wide text-[#666666]"
-              >
-                Phone Number
-              </label>
-              <input
-                type="tel"
-                id="phone"
-                placeholder="Phone Number"
-                className="border border-gray-300 p-2 rounded w-full mt-1 focus:ring-0 focus:border-[#00BAC2]"
-              />
-            </div>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-            <div>
-              <label
-                htmlFor="dob"
-                className="block font-poppins text-[16px] font-normal leading-[20px] tracking-wide text-[#666666]"
-              >
-                Date of Birth
-              </label>
-              <input
-                type="date"
-                id="dob"
-                className="border border-gray-300 p-2 rounded w-full mt-1 focus:ring-0 focus:border-[#00BAC2]"
-              />
-            </div>
-            <div>
-              <label
-                htmlFor="denomination"
-                className="block font-poppins text-[16px] font-normal leading-[20px] tracking-wide text-[#666666]"
-              >
-                Denomination
-              </label>
-              <select
-                id="denomination"
-                className="border border-gray-300 p-2 rounded w-full mt-1 focus:ring-0 focus:border-[#00BAC2]"
-              >
-                <option value="">Select</option>
-                <option value="denom1">Denomination 1</option>
-                <option value="denom2">Denomination 2</option>
-                <option value="denom3">Denomination 3</option>
-              </select>
-            </div>
-          </div>
-          <div className="mb-4">
-            <label
-              htmlFor="language"
-              className="block font-poppins text-[16px] font-normal leading-[20px] tracking-wide text-[#666666]"
-            >
-              Language
-            </label>
-            <select
-              id="language"
-              className="border border-gray-300 p-2 rounded w-full mt-1 focus:ring-0 focus:border-[#00BAC2]"
-            >
-              <option value="">Select</option>
-              <option value="english">English</option>
-              <option value="spanish">Spanish</option>
-              <option value="french">French</option>
-              <option value="german">German</option>
-            </select>
-          </div>
-          <div className="mb-4">
-            <label
-              htmlFor="country"
-              className="block font-poppins text-[16px] font-normal leading-[20px] tracking-wide text-[#666666]"
-            >
-              Country
-            </label>
-            <select
-              id="country"
-              className="border border-gray-300 p-2 rounded w-full mt-1 focus:ring-0 focus:border-[#00BAC2]"
-            >
-              <option value="">Select</option>
-              <option value="usa">United States</option>
-              <option value="canada">Canada</option>
-              <option value="uk">United Kingdom</option>
-              <option value="australia">Australia</option>
-            </select>
-          </div>
-          <div className="mb-4">
-            <label
-              htmlFor="city"
-              className="block font-poppins text-[16px] font-normal leading-[20px] tracking-wide text-[#666666]"
-            >
-              City
-            </label>
-            <select
-              id="city"
-              className="border border-gray-300 p-2 rounded w-full mt-1 focus:ring-0 focus:border-[#00BAC2]"
-            >
-              <option value="">Select</option>
-              <option value="nyc">New York City</option>
-              <option value="la">Los Angeles</option>
-              <option value="sf">San Francisco</option>
-              <option value="chicago">Chicago</option>
-            </select>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-            <div>
-              <label
-                htmlFor="experience"
-                className="block font-poppins text-[16px] font-normal leading-[20px] tracking-wide text-[#666666]"
-              >
-                Relevant Work Experience
-              </label>
-              <textarea
-                id="experience"
-                placeholder="Tell us about your story!"
-                className="border border-gray-300 p-2 rounded w-full mt-1 focus:ring-0 focus:border-[#00BAC2]"
-                rows="4"
-              />
-            </div>
-            <div>
-              <label
-                htmlFor="qualifications"
-                className="block font-poppins text-[16px] font-normal leading-[20px] tracking-wide text-[#666666]"
-              >
-                Qualifications and Certificates
-              </label>
-              <input
-                type="file"
-                id="qualifications"
-                className="border border-gray-300 p-2 rounded w-full mt-1 focus:ring-0 focus:border-[#00BAC2]"
-              />
-            </div>
-          </div>
-          <div className="mb-4">
-            <label
-              htmlFor="description"
-              className="block font-poppins text-[16px] font-normal leading-[20px] tracking-wide text-[#666666]"
-            >
-              Description of Yourself
-            </label>
-            <textarea
-              id="description"
-              placeholder="Tell us about your story!"
-              className="border border-gray-300 p-2 rounded w-full mt-1 focus:ring-0 focus:border-[#00BAC2]"
-              rows="6"
+        {handleClose && (
+          <Image
+            src="assets/images/x-close.svg"
+            width={24}
+            height={24}
+            onClick={handleClose}
+            className="absolute cursor-pointer top-5 right-4 z-10"
+          />
+        )}
+        <Image src={mainImg} width={250} height={250} />
+        <div className="w-full flex flex-col justify-center items-center gap-4">
+          <span className="text-[24px] md:text-[28px] lg:text-[32px] font-[700] font-poppins text-[#442D87] text-center">
+            {question}
+          </span>
+          <span className="text-[14px] md:text-[16px] font-[400] font-poppins text-[#442D87] text-center">
+            {txt}
+          </span>
+        </div>
+        {isForm && (
+          <form className="w-full flex flex-col justify-center items-center gap-6">
+            <InputField
+              label={"Email address"}
+              placeholder={"Please Enter your email address"}
             />
-          </div>
-          <div className="flex justify-end mb-4">
+            <div className="w-full flex flex-col gap-2 md:gap-4 md:flex-row justify-center items-center">
+              <InputField
+                label={"Password"}
+                placeholder={"*****************"}
+                type={"password"}
+              />
+              <InputField
+                label={"Confirm Password"}
+                placeholder={"*****************"}
+                type={"password"}
+              />
+            </div>
+          </form>
+        )}
+        <div className="w-full flex flex-col md:flex-row justify-center items-center gap-2 md:gap-4">
+          <div className="w-full md:w-[50%] text-center py-[16px]">
             <button
-              type="submit"
-              className="w-[311px] h-[56px] bg-[#00BAC2] text-white font-bold text-[14px] rounded-lg hover:bg-[#00a6a6]"
+              type="button"
+              className={`w-full font-[700] flex justify-center items-center h-[44px] text-[14px] lg:text-[16px] text-[#00BAC2] text-center bg-white rounded-[8px] drop-shadow-[0_1px_2px_rgba(16,24,40,0.05)]`}
             >
-              + Add New Service Provider
+              I’ll continue as Guest
             </button>
           </div>
-        </form>
+          <div className="w-full md:w-[50%] text-center py-[16px]">
+            <button
+              type="button"
+              className={`${styles.primary_button} !font-[700] flex justify-center items-center !h-[44px] !text-[14px] lg:!text-[16px]`}
+              onClick={primaryBtnClick}
+            >
+              Yes, create account
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   );
 };
 
-export default AddNewModal;
+export default index;
