@@ -1,9 +1,12 @@
-"use client"
+"use client";
 import { useState } from "react";
 import CalendarDesign from "../../shared/CalendarDesign";
 import SetupCalendar from "./SetupCalendar";
+import SessionModal from "./SessionModal";
+
 const index = () => {
   const [integrated, setIntegrated] = useState(false);
+  const [sessionModal, setSessionModal] = useState(false);
   return (
     <>
       <div className="w-full flex flex-col justify-center items-center gap-10">
@@ -18,9 +21,12 @@ const index = () => {
         {integrated == false ? (
           <SetupCalendar setIntegrated={setIntegrated} />
         ) : (
-          <CalendarDesign />
+          <CalendarDesign setSessionModal={setSessionModal} />
         )}
       </div>
+      {sessionModal && (
+        <SessionModal handleClose={() => setSessionModal(false)} />
+      )}
     </>
   );
 };

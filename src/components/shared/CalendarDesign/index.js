@@ -1,11 +1,9 @@
-"use client";
 import DatePicker from "../DatePicker";
-import { useState } from "react";
 import CalendarEclipse from "../../../../public/assets/images/calendar-eclipse.svg";
 import DayLeft from "../../../../public/assets/images/day-left.svg";
 import Image from "next/image";
 
-const CalendarDesign = () => {
+const CalendarDesign = ({ setSessionModal }) => {
   const daysOfWeek = ["SUN", "MON", "TUE", "WED", "THUR", "FRI", "SAT"];
   const dates = [
     [1, 2, 3, 4, 5, 6, 7],
@@ -73,9 +71,13 @@ const CalendarDesign = () => {
                         src={CalendarEclipse.src}
                         width={7}
                         height={7}
-                        className="block lg:hidden text-end absolute bottom-4 left-4"
+                        className="block lg:hidden text-end absolute bottom-4 left-4 cursor-pointer"
+                        onClick={() => setSessionModal(true)}
                       />
-                      <div className="hidden lg:block absolute bottom-3 left-3 right-3 bg-[#E0D6FF] text-[#442D87] font-[500] font-inter text-[12px] rounded-[4px] p-1">
+                      <div
+                        className="hidden lg:block absolute bottom-3 left-3 right-3 bg-[#E0D6FF] text-[#442D87] font-[500] font-inter text-[12px] rounded-[4px] p-1 cursor-pointer"
+                        onClick={() => setSessionModal(true)}
+                      >
                         Session 1 with Putri Azzahra
                       </div>
                     </>
@@ -86,9 +88,13 @@ const CalendarDesign = () => {
                         src={CalendarEclipse.src}
                         width={7}
                         height={7}
-                        className="block lg:hidden text-end absolute bottom-4 left-4"
+                        className="block lg:hidden text-end absolute bottom-4 left-4 cursor-pointer"
+                        onClick={() => setSessionModal(true)}
                       />
-                      <div className="hidden lg:block absolute bottom-3 left-3 right-3 bg-[#E0D6FF] text-[#442D87] font-[500] font-inter text-[12px] rounded-[4px] p-1">
+                      <div
+                        className="hidden lg:block absolute bottom-3 left-3 right-3 bg-[#E0D6FF] text-[#442D87] font-[500] font-inter text-[12px] rounded-[4px] p-1 cursor-pointer"
+                        onClick={() => setSessionModal(true)}
+                      >
                         Session 2 with Putri Azzahra
                       </div>
                     </>

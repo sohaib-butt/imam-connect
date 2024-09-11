@@ -1,7 +1,7 @@
 import Image from "next/image";
 import EyeIcon from "../../../../public/assets/images/eye.svg";
 
-const index = ({ label, placeholder, type }) => {
+const index = ({ label, placeholder, type, inputClass }) => {
   return (
     <div
       className={`w-full flex flex-col gap-[8px] ${
@@ -14,7 +14,7 @@ const index = ({ label, placeholder, type }) => {
       <input
         type={type ? type : "text"}
         placeholder={placeholder}
-        className="px-[16px] border border-[#E7E7E7] text-[14px] lg:text-[16px] placeholder:text-[14px] placeholder:lg:text-[16px] rounded-[12px] h-[56px] placeholder-[#999999] focus:outline-none"
+        className={`px-[16px] border border-[#E7E7E7] text-[14px] lg:text-[16px] placeholder:text-[14px] placeholder:lg:text-[16px] rounded-[12px] h-[56px] placeholder-[#999999] focus:outline-none ${inputClass}`}
       />
       {type == "password" && (
         <Image
