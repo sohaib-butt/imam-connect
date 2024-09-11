@@ -34,7 +34,7 @@ const index = ({ popupClassName, handleClose, primaryBtnClick }) => {
       >
         <div className="w-full">
           <span className="text-[16px] md:text-[18px] lg:text-[20px] font-[600] font-poppins text-[#101828] text-start">
-            Order from Customer
+            Track
           </span>
         </div>
         {handleClose && (
@@ -180,7 +180,6 @@ const index = ({ popupClassName, handleClose, primaryBtnClick }) => {
                         <button
                           type="button"
                           className={`${styles.primary_button} w-full !font-[700] font-poppins flex justify-center items-center !h-[48px] !text-[14px]`}
-                          onClick={primaryBtnClick}
                         >
                           Go to room
                         </button>

@@ -8,10 +8,12 @@ import StatusTags from "../../shared/StatusTags";
 import PurchaseCards from "./PurchaseCards";
 import TrackModal from "./TrackModal";
 import TransactionDetail from "./TransactionDetail";
+import CounselCompleteModal from "./CounselCompleteModal";
 
 const index = () => {
   const [trackModal, setTrackModal] = useState(false);
   const [detailModal, setDetailModal] = useState(false);
+  const [completeModal, setCompleteModal] = useState(false);
 
   return (
     <>
@@ -50,10 +52,19 @@ const index = () => {
         />
       </div>
       {trackModal == true && (
-        <TrackModal handleClose={() => setTrackModal(false)} />
+        <TrackModal
+          handleClose={() => setTrackModal(false)}
+          primaryBtnClick={() => {
+            setTrackModal(false);
+            setCompleteModal(true);
+          }}
+        />
       )}
       {detailModal == true && (
         <TransactionDetail handleClose={() => setDetailModal(false)} />
+      )}
+      {completeModal == true && (
+        <CounselCompleteModal handleClose={() => setCompleteModal(false)} />
       )}
     </>
   );
