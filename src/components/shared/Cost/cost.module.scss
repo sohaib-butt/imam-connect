@@ -1,0 +1,18 @@
+@import "../../../styles/variables";
+
+.price_div {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 21.01px 0px 21.01px;
+  background-color: #22c55e;
+  border-radius: 8px;
+  height: 30px;
+  .price {
+    color: $white-color;
+    font-family: $font-poppins;
+    font-size: 14px;
+    font-weight: 700;
+  }
+}

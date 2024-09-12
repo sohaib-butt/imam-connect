@@ -1,0 +1,16 @@
+.ant-picker:hover{
+    border: 1px solid #E7E7E7 !important;
+    outline: none !important;
+}
+
+.ant-picker-focused{
+    border: 1px solid #E7E7E7 !important;
+    outline: none !important;
+}
+
+.ant-picker .ant-picker-input > input {
+  font-family: var(--font-poppins) !important;
+    font-size: 16px;
+    font-weight: 400;
+    color: #999999;
+}

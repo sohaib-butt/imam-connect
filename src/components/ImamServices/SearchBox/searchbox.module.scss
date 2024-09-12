@@ -1,0 +1,175 @@
+@import "../../../styles/variables";
+
+.search_section {
+  position: absolute;
+  bottom: 10%;
+  z-index: 1000;
+  background-color: $white-color;
+  border: 1px solid #e7e7e7;
+  box-shadow: 0px 7px 15px rgba(0, 0, 0, 0.1), 0px 27px 27px rgba(0, 0, 0, 0.09),
+    0px 60px 36px rgba(0, 0, 0, 0.05), 0px 106px 43px rgba(0, 0, 0, 0.01),
+    0px 166px 47px rgba(0, 0, 0, 0);
+  padding: 2rem;
+  border-radius: 24px;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  gap: 2rem;
+
+  .search_section_heading {
+    font-family: $font-poppins;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 36px;
+    text-align: left;
+  }
+
+  .intro_search_div {
+    width: 100%;
+    height: 69px;
+    border-radius: 12px;
+    background-color: $white-color;
+    border: 1.56px solid $search-border-color;
+    color: $search-color;
+    font-family: $font-poppins;
+    font-weight: 400;
+    font-size: 20px;
+    padding-left: 2rem;
+    padding-right: $margin-top-small;
+    outline: none;
+
+    &::placeholder {
+      font-family: $font-poppins;
+      font-weight: 400;
+      font-size: 20px;
+      color: $search-color;
+    }
+
+    @media (max-width: 640px) {
+      width: 90%;
+      height: 44px;
+      border-radius: 12px;
+      background-color: $white-color;
+      border: 1px solid $search-border-color;
+      color: $search-color;
+      font-family: $font-poppins;
+      font-weight: 400;
+      font-size: 16px;
+      padding-left: 2rem;
+      padding-right: $margin-top-small;
+      outline: none;
+
+      &::placeholder {
+        font-family: $font-poppins;
+        font-weight: 400;
+        font-size: 16px;
+        color: $search-color;
+      }
+    }
+
+    @media (min-width: 641px) and (max-width: 1024px) {
+      width: 100%;
+      height: 44px;
+      border-radius: 12px;
+      background-color: $white-color;
+      border: 1px solid $search-border-color;
+      color: $search-color;
+      font-family: $font-poppins;
+      font-weight: 400;
+      font-size: 18px;
+      padding-left: 2rem;
+      padding-right: $margin-top-small;
+      outline: none;
+
+      &::placeholder {
+        font-family: $font-poppins;
+        font-weight: 400;
+        font-size: 18px;
+        color: $search-color;
+      }
+    }
+  }
+
+  .intro_search_icon {
+    position: absolute;
+    height: 35px;
+    width: 35px;
+    top: 18px;
+    right: 18px;
+
+    @media (min-width: 641px) and (max-width: 1024px) {
+      top: 10px;
+      right: 15px;
+      height: 24px;
+      width: 24px;
+    }
+  }
+
+  .filters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    width: 100%;
+    gap: 1rem;
+
+    select {
+      //   flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 5px;
+      border: 0.75px solid #e6e6e6;
+      border-radius: 4px;
+      background-color: #f9f9f9;
+      //   width: 18%;
+      min-width: 150px;
+      height: 44px;
+    }
+  }
+
+  .search_submit {
+    display: block;
+    width: 25%;
+    padding: 10px;
+    background-color: #00bac2;
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+}
+
+@keyframes slide_up {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.filter_slide_up {
+  position: fixed;
+  top: 10%;
+  left: 0;
+  z-index: 9999;
+  animation: slide_up 0.5s ease-out forwards;
+  overflow-y: scroll;
+  scrollbar-width: none;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 10;
+}

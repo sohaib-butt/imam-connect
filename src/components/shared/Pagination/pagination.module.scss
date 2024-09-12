@@ -1,0 +1,53 @@
+// Add these styles in your SCSS file
+@import "../../../styles/variables";
+
+.pagination_container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+
+  .page_item {
+    margin: 0 5px;
+
+    .page_link {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      border: 1px solid #f1f1f1;
+      color: #333333;
+      text-decoration: none;
+      font-size: 13px;
+      font-family: $font-poppins;
+      font-weight: 500;
+
+      &:hover {
+        background-color: #f9f9f9;
+      }
+    }
+
+    &.active .page_link {
+      background-color: #442d87;
+      color: #fff;
+      border-color: #442d87;
+    }
+  }
+
+  .previous .page_link,
+  .next .page_link,
+  .first .page_link,
+  .last .page_link {
+    border-radius: 50%;
+  }
+}

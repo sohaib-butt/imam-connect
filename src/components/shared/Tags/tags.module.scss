@@ -1,0 +1,48 @@
+@import "../../../styles/variables";
+
+.tags {
+  margin: 10px 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+
+  .tag_voice {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 4%;
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    height: 25px;
+    padding: 0.75rem;
+    // width: 126px;
+
+    .tag_voice_txt {
+      font-family: $font-poppins;
+      font-size: 12px;
+      font-weight: 400;
+      color: #6d8493;
+    }
+  }
+
+  .tag_role {
+    width: 147px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 4%;
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    height: 25px;
+    padding: 0.75rem;
+
+    .tag_role_txt {
+      font-family: $font-poppins;
+      font-size: 12px;
+      font-weight: 400;
+      color: #6d8493;
+    }
+  }
+}
