@@ -29,6 +29,50 @@ const pageData = [
     lastEdited: "28 Feb 2024 at 9.04pm",
     status: "Inactive",
   },
+  {
+    pageName: "About",
+    dateCreated: "23 Feb 2024 at 9.04pm",
+    lastEdited: "28 Feb 2024 at 9.04pm",
+    status: "Inactive",
+  },  {
+    pageName: "Team",
+    dateCreated: "23 Feb 2024 at 9.04pm",
+    lastEdited: "28 Feb 2024 at 9.04pm",
+    status: "Inactive",
+  },  {
+    pageName: "Privacy Policy",
+    dateCreated: "23 Feb 2024 at 9.04pm",
+    lastEdited: "28 Feb 2024 at 9.04pm",
+    status: "Inactive",
+  },  {
+    pageName: "Support",
+    dateCreated: "23 Feb 2024 at 9.04pm",
+    lastEdited: "28 Feb 2024 at 9.04pm",
+    status: "Inactive",
+  },  {
+    pageName: "Code of Conduct",
+    dateCreated: "23 Feb 2024 at 9.04pm",
+    lastEdited: "28 Feb 2024 at 9.04pm",
+    status: "Inactive",
+  },
+  {
+    pageName: "FAQ",
+    dateCreated: "23 Feb 2024 at 9.04pm",
+    lastEdited: "28 Feb 2024 at 9.04pm",
+    status: "Inactive",
+  }, {
+    pageName: "Contact Us",
+    dateCreated: "23 Feb 2024 at 9.04pm",
+    lastEdited: "28 Feb 2024 at 9.04pm",
+    status: "Inactive",
+  },
+  {
+    pageName: "Payment",
+    dateCreated: "23 Feb 2024 at 9.04pm",
+    lastEdited: "28 Feb 2024 at 9.04pm",
+    status: "Inactive",
+  },
+  
   // Add more rows as needed
 ];
 
